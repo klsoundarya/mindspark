@@ -17,10 +17,10 @@
     <title>{% block title %} Mindspark {% endblock %}</title>
 
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicons/apple-touch-icon.png' %}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicons/favicon-32x32.png' %}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicons/favicon-16x16.png' %}">
-    <link rel="manifest" href="{% static 'favicons/site.webmanifest' %}">
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'favicon/site.webmanifest' %}">
     {% endblock %}
 
     {% block extra_meta %}
@@ -61,6 +61,27 @@
 </head>
 
 <body>
+    <nav class="container-fluid fixed-top d-flex flex-column h-100">
+        <div class="wrapper">
+            <!-- NAVBAR -->
+            <nav class="navbar navbar-expand-md fixed-top">
+                <div class="container-fluid" id="nav-style">
+                    <!-- Logo -->
+                    <a class="navbar-brand" id="logo" href="{% url 'home' %}" style="margin-bottom: 5px;">
+                        <img src="{% static 'images/logo.png' %}" alt="Mindspark Logo"> Mindspark
+                    </a>
+
+                    <!-- Navbar Toggle Button -->
+                    <button class="navbar-toggler toggler-custom" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </nav>
+
 
     <!-- displaying messages -->
     {% if messages %}
