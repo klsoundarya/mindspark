@@ -1,0 +1,128 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    margin-top: 0px;
+    background-color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.alert {
+    color: white;
+    font-weight: bold;
+    background-color: #28a745;
+    padding: 10px;
+    margin-top: 120px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* ------- Error Page Styles ------- */
+
+
+
+/* ------- nav-bar styles ------- */
+
+
+#logo img {
+    width: 65px;
+}
+
+#logo {
+
+    color: #001d5a;
+    margin-right: 0;
+    font-family: "Emilys Candy", serif;
+    font-weight: 1000;
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+
+#logo:hover {
+
+    color: #bfa616;
+}
+
+.navbar {
+    background-color: #F3F5F5;
+}
+
+.toggler-custom {
+    border: none;
+}
+
+.toggler-custom i {
+    font-size: 24px;
+    color: #001d5a;
+    transition: color 0.3s ease;
+}
+
+.toggler-custom:hover i {
+    color: #bfa616;
+}
+
+.navbar-nav .nav-link {
+    color: #001d5a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #bfa616;
+}
+
+.navbar-nav .nav-link.active {
+    color: #0000ff;
+    opacity: 0.8;
+}
+
+.navbar-nav .dropdown-menu {
+    left: 0;
+    right: auto;
+    margin-top: 0.5rem;
+    min-width: 100%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0;
+    background-color: #F3F5F5;
+
+}
+
+.navbar-nav .dropdown-item {
+    padding: 5px 10px;
+    transition: color 0.3s ease;
+    font-weight: bold;
+}
+
+.navbar-nav .dropdown-item:hover {
+    color: #bfa616;
+    background-color: #F3F5F5;
+}
+
+#navbarCollapse {
+    text-align: end;
+}
+
+a.dropdown-item {
+    text-align: center;
+    background-color: transparent;
+}
+
+.nav-link.active {
+    margin-bottom: 4px;
+}
+
+/* -------- Hero Banner Styling -------- */
+
+
+/* -------- footer ------ */
