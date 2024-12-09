@@ -30,7 +30,6 @@ body {
 /* ------- Error Page Styles ------- */
 
 
-
 /* ------- nav-bar styles ------- */
 
 
@@ -126,3 +125,45 @@ a.dropdown-item {
 
 
 /* -------- footer ------ */
+
+footer {
+    margin-top: auto;
+    padding: 10px 0;
+}
+
+.footer-container {
+    width: 100%;
+    background-color: #F3F5F5;
+    color: #001d5a;
+    padding: 10px 0 5px 0;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer .social-links i {
+    color: #001d5a;
+    font-size: 1.5rem;
+    margin: 0 10px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer .social-links i:hover {
+    color: #bfa616;
+}
+
+.text-center .text-line {
+    color: rgb(0, 0, 255);
+    margin-top: 4px;
+    opacity: 0.5;
+}
+
+.text-center p {
+    font-size: 16px;
+    margin-top: 2px;
+    margin-bottom: 0px;
+}
