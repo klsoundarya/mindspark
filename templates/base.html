@@ -47,15 +47,10 @@
     {% endblock %}
 
     {% block corejs %}
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
-    <!-- Popper.js (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
         integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
         crossorigin="anonymous"></script>
-
-    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
         integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
         crossorigin="anonymous"></script>
@@ -68,38 +63,24 @@
 </head>
 
 <body>
-    <nav class="container-fluid fixed-top d-flex flex-column h-100">
-        <div class="wrapper">
-            <!-- NAVBAR -->
-            <nav class="navbar navbar-expand-md fixed-top">
-                <div class="container-fluid" id="nav-style">
-                    <!-- Logo -->
-                    <a class="navbar-brand" id="logo" href="{% url 'home' %}" style="margin-bottom: 5px;">
-                        <img src="{% static 'images/logo.png' %}" alt="Mindspark Logo"> Mindspark
-                    </a>
+    <header>
+        <nav class="container-fluid fixed-top d-flex flex-column h-100">
+            <div class="wrapper">
+                <!-- NAVBAR -->
+                <nav class="navbar navbar-expand-md fixed-top">
+                    <div class="container-fluid" id="nav-style">
+                        <!-- Logo -->
+                        <a class="navbar-brand" id="logo" href="{% url 'home' %}" style="margin-bottom: 5px;">
+                            <img src="{% static 'images/logo.png' %}" alt="Mindspark Logo"> Mindspark
+                        </a>
 
-                    <!-- Navbar Toggle Button -->
-                    <button class="navbar-toggler toggler-custom" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false"
-                        aria-label="Toggle navigation">
-                        <i class="fas fa-bars"></i>
-                    </button>
-
-                    <!-- Navigation Links -->
-                    <div class="collapse navbar-collapse justify-content-end" id="navbarCollapse">
-                        <ul class="navbar-nav mb-2 mb-md-0">
-                            <!-- Home -->
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif %}"
-                                    href="{% url 'home' %}">Home</a>
-                            </li>
-                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </form>
                     </div>
-                </div>
-            </nav>
-        </div>
-    </nav>
 
+    </header>
 
     <!-- displaying messages -->
     {% if messages %}
