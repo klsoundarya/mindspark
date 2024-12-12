@@ -63,8 +63,11 @@
 </head>
 
 <body>
-    <header>
-        <nav class="container-fluid fixed-top d-flex flex-column h-100">
+    <div id="pre-loader">
+        <img src="{% static 'images/loader.gif' %}" alt="Loading...">
+    </div>
+    <header class="container-fluid fixed-top">
+        <nav class="d-flex flex-column h-100">
             <div class="wrapper">
                 <!-- NAVBAR -->
                 <nav class="navbar navbar-expand-md fixed-top">
@@ -74,12 +77,21 @@
                             <img src="{% static 'images/logo.png' %}" alt="Mindspark Logo"> Mindspark
                         </a>
 
-                        <form class="form-inline my-2 my-lg-0">
-                            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <!-- Search Form -->
+                        <form class="form-inline ml-auto search-bar d-flex align-items-center" action="#" method="get">
+                            <input class="form-control search__input collapse" id="searchInput" type="search" name="q"
+                                placeholder="Search our products..." aria-label="Search" autocomplete="off" />
+                            <button class="btn" type="submit" id="searchButton">
+                                <i class="fa fa-search"></i>
+                            </button>
+                            <button class="btn btn-outline-danger collapse ml-2" type="button" id="closeSearch">
+                                <i class="fa fa-times"></i>
+                            </button>
                         </form>
                     </div>
-
+                </nav>
+            </div>
+        </nav>
     </header>
 
     <!-- displaying messages -->

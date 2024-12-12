@@ -121,6 +121,33 @@ a.dropdown-item {
     margin-bottom: 4px;
 }
 
+.search-bar {
+    position: relative;
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.search__input {
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.search__input.collapse.show {
+    width: 350px;
+}
+
+#searchButton {
+    color: #001d5a;
+}
+
+button#closeSearch {
+    display: none;
+}
+
+button#closeSearch.collapse.show {
+    display: inline-block;
+}
+
 /* -------- Hero Banner Styling -------- */
 
 /* Carousel Styling */
