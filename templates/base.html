@@ -68,30 +68,136 @@
     </div>
     <header class="container-fluid fixed-top">
         <nav class="d-flex flex-column h-100">
-            <div class="wrapper">
+            <div class="container">
                 <!-- NAVBAR -->
                 <nav class="navbar navbar-expand-md fixed-top">
-                    <div class="container-fluid" id="nav-style">
-                        <!-- Logo -->
-                        <a class="navbar-brand" id="logo" href="{% url 'home' %}" style="margin-bottom: 5px;">
-                            <img src="{% static 'images/logo.png' %}" alt="Mindspark Logo"> Mindspark
-                        </a>
+                    <!-- Logo -->
+                    <a class="navbar-brand" id="logo" href="{% url 'home' %}" style="margin-bottom: 5px;">
+                        <img src="{% static 'images/logo.png' %}" alt="Mindspark Logo"> Mindspark
+                    </a>
 
-                        <!-- Search Form -->
-                        <form class="form-inline ml-auto search-bar d-flex align-items-center" action="#" method="get">
-                            <input class="form-control search__input collapse" id="searchInput" type="search" name="q"
-                                placeholder="Search our products..." aria-label="Search" autocomplete="off" />
-                            <button class="btn" type="submit" id="searchButton">
-                                <i class="fa fa-search"></i>
-                            </button>
-                            <button class="btn btn-outline-danger collapse ml-2" type="button" id="closeSearch">
-                                <i class="fa fa-times"></i>
-                            </button>
-                        </form>
+                    <!-- Toggler for mobile view -->
+
+                    <button class="navbar-toggler toggler-custom" type="button" data-toggle="collapse"
+                        data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <!-- Navbar Content -->
+
+                    <div class="collapse navbar-collapse" id="navbarContent">
+
+                        <ul class="navbar-nav ml-auto align-items-center">
+
+                            <!-- Search Form -->
+
+                            <li class="nav-item">
+
+                                <form class="form-inline d-flex align-items-center" action="" method="get">
+
+                                    <input class="form-control search__input collapse nav-link"
+                                        id="searchInput" type="search" name="q" placeholder="Search our products..."
+                                        aria-label="Search" autocomplete="off">
+
+                                    <button class="btn" type="submit" id="searchButton">
+
+                                        <div><i class="fa-solid fa-magnifying-glass fa-lg"></i></div>
+                                        <p class="my-0 font-weight-bold mt-1">Search</p>
+
+                                    </button>
+
+                                    <button class="btn btn-outline-danger collapse ml-2" type="button" id="closeSearch">
+
+                                        <i class="fa fa-times fa-lg"></i>
+
+                                    </button>
+
+                                </form>
+
+                            </li>
+
+                            <!-- My Account -->
+
+                            <li class="nav-item dropdown">
+
+                                <a class="nav-link" href="" id="user-options" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+
+                                    <div class="text-center">
+
+                                        <i class="fas fa-user fa-lg"></i>
+
+                                        <p class="my-0">Account</p>
+
+                                    </div>
+
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
+
+                                    {% if request.user.is_authenticated %}
+
+                                    {% if request.user.is_superuser %}
+
+                                    <a href="" class="dropdown-item">Product Management</a>
+
+                                    {% endif %}
+
+                                    <a href="" class="dropdown-item">My Profile</a>
+
+                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
+
+                                    {% else %}
+
+                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+
+                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+
+                                    {% endif %}
+
+                                </div>
+
+                            </li>
+
+                            <li class="list-inline-item">
+
+                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
+                                    href="">
+
+                                    <div class="text-center">
+
+                                        <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+
+                                        <p class="my-0">
+
+                                            {% if grand_total %}
+
+                                            ${{ grand_total|floatformat:2 }}
+
+                                            {% else %}
+
+                                            $0.00
+
+                                            {% endif %}
+
+                                        </p>
+
+                                    </div>
+
+                                </a>
+
+                            </li>
+
+                        </ul>
+
                     </div>
+
                 </nav>
+
             </div>
+
         </nav>
+
     </header>
 
     <!-- displaying messages -->
@@ -110,6 +216,9 @@
         </div>
     </div>
     {% endif %}
+
+    {% block page_header %}
+    {% endblock %}
 
     <main class="flex-shrink-0 main-bg">
 
@@ -157,6 +266,9 @@
 
     {% block postloadjs %}
     <script src="{% static 'js/script.js' %}"></script>
+
+    <!-- Font Awesome Kit -->
+    <script src="https://kit.fontawesome.com/a2c377bf15.js" crossorigin="anonymous"></script>
     {% endblock %}
 
 

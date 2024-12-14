@@ -1,3 +1,60 @@
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background: #222;
+    color: white;
+}
+
+.text-black {
+    color: #000 !important;
+}
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 html,
 body {
     height: 100%;
@@ -14,6 +71,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
+    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
 }
 
 .alert {
@@ -45,6 +103,7 @@ body {
     font-weight: 1000;
     letter-spacing: 1px;
     font-size: 24px;
+    text-transform: uppercase;
 }
 
 #logo:hover {
@@ -85,18 +144,6 @@ body {
     opacity: 0.8;
 }
 
-.navbar-nav .dropdown-menu {
-    left: 0;
-    right: auto;
-    margin-top: 0.5rem;
-    min-width: 100%;
-    border-radius: 5px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 0;
-    background-color: #F3F5F5;
-
-}
-
 .navbar-nav .dropdown-item {
     padding: 5px 10px;
     transition: color 0.3s ease;
@@ -121,6 +168,12 @@ a.dropdown-item {
     margin-bottom: 4px;
 }
 
+.navbar .form-control:focus,
+.navbar .btn:focus {
+    outline: none;
+    box-shadow: none;
+}
+
 .search-bar {
     position: relative;
     max-width: 100%;
@@ -136,10 +189,6 @@ a.dropdown-item {
     width: 350px;
 }
 
-#searchButton {
-    color: #001d5a;
-}
-
 button#closeSearch {
     display: none;
 }
@@ -147,6 +196,44 @@ button#closeSearch {
 button#closeSearch.collapse.show {
     display: inline-block;
 }
+
+#user-options, #searchButton {
+    color: #001d5a;
+}
+
+#user-options:hover, 
+#searchButton:hover {
+    color: #bfa616;
+    transition: color 0.3s ease;
+}
+
+#user-options:hover i,
+#searchButton:hover i {
+    color: #bfa616;
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(-10px);
+    visibility: hidden;
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background-color: #bfa616;
+    color: #fff;
+}
+
 
 /* -------- Hero Banner Styling -------- */
 
@@ -216,6 +303,4 @@ footer {
 
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {
-
-}
+@media (max-width: 768px) {}
