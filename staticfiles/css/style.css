@@ -20,11 +20,7 @@
     color: white;
 }
 
-.text-black {
-    color: #000 !important;
-}
-
-/* -------------------------------- Media Queries */
+/* ------- Media Queries --------------- */
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
@@ -40,19 +36,6 @@
         padding-top: 164px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 html,
@@ -71,7 +54,6 @@ body {
     flex-direction: column;
     justify-content: space-between;
     min-height: 100vh;
-    background: url('/media/homepage_background_cropped.jpg') no-repeat center center fixed;
 }
 
 .alert {
@@ -86,6 +68,37 @@ body {
 }
 
 /* ------- Error Page Styles ------- */
+
+/* Top Bar Styles */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #001d5a;
+    color: #fff;
+    padding: 10px 0;
+    z-index: 10;
+    text-align: center;
+    font-size: 14px;
+    border-bottom: 1px solid #ffffff33;
+}
+
+.top-bar:hover{
+    background-color: #bfa616;
+    color:#000000;
+}
+
+.top-bar-text {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+header .navbar {
+    margin-top: 40px;
+}
+
 
 
 /* ------- nav-bar styles ------- */
@@ -197,11 +210,12 @@ button#closeSearch.collapse.show {
     display: inline-block;
 }
 
-#user-options, #searchButton {
+#user-options,
+#searchButton {
     color: #001d5a;
 }
 
-#user-options:hover, 
+#user-options:hover,
 #searchButton:hover {
     color: #bfa616;
     transition: color 0.3s ease;
