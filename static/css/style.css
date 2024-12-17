@@ -75,18 +75,13 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #001d5a;
+    background-color: #000000ec;
     color: #fff;
-    padding: 10px 0;
+    padding: 15px 0;
     z-index: 10;
-    text-align: center;
     font-size: 14px;
     border-bottom: 1px solid #ffffff33;
-}
-
-.top-bar:hover{
-    background-color: #bfa616;
-    color:#000000;
+    text-align: center;
 }
 
 .top-bar-text {
@@ -96,7 +91,51 @@ body {
 }
 
 header .navbar {
-    margin-top: 40px;
+    margin-top: 60px;
+}
+
+/* ------search -------- */
+.search-bar {
+    position: relative;
+    max-width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.search__input {
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+
+.search__input.collapse.show {
+    width: 250px;
+}
+
+button#closeSearch {
+    display: none;
+}
+
+button#closeSearch.collapse.show {
+    display: inline-block;
+}
+
+#searchButton {
+    color: #F3F5F5;
+}
+
+#searchButton:hover i{
+    color: #bfa616;
+}
+
+.form-control:focus,
+.btn:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 
@@ -181,48 +220,16 @@ a.dropdown-item {
     margin-bottom: 4px;
 }
 
-.navbar .form-control:focus,
-.navbar .btn:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.search-bar {
-    position: relative;
-    max-width: 100%;
-    transition: all 0.3s ease-in-out;
-}
-
-.search__input {
-    width: 0;
-    transition: width 0.3s ease-in-out;
-}
-
-.search__input.collapse.show {
-    width: 350px;
-}
-
-button#closeSearch {
-    display: none;
-}
-
-button#closeSearch.collapse.show {
-    display: inline-block;
-}
-
-#user-options,
-#searchButton {
+#user-options {
     color: #001d5a;
 }
 
-#user-options:hover,
-#searchButton:hover {
+#user-options:hover {
     color: #bfa616;
     transition: color 0.3s ease;
 }
 
-#user-options:hover i,
-#searchButton:hover i {
+#user-options:hover {
     color: #bfa616;
 }
 
@@ -317,4 +324,22 @@ footer {
 
 
 /* Responsive Adjustments */
-@media (max-width: 768px) {}
+@media (max-width: 768px) {
+
+    .top-bar {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .top-bar .form-inline {
+        width: 100%;
+        flex-shrink: 1;
+        display: flex;
+        align-items: center;
+    }
+
+    .search__input.collapse.show {
+        width: 90px;
+    }
+
+}

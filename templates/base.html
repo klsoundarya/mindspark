@@ -63,19 +63,29 @@
 </head>
 
 <body>
-    <div id="pre-loader">
-        <img src="{% static 'images/loader.gif' %}" alt="Loading...">
-    </div>
-    <header class="container-fluid fixed-top">
-        <div class="top-bar">
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col text-center">
-                        <p class="top-bar-text">Worldwide Shipping</p>
-                    </div>
-                </div>
-            </div>
+    <div class="top-bar d-flex justify-content-center align-items-center px-3">
+        <div class="text-left">
+            <p class="mb-0 top-bar-text mr-2">Worldwide Shipping</p>
         </div>
+        <div class="d-flex align-items-center flex-wrap">
+            <!-- Search -->
+            <form class="form-inline align-items-center mr-3 search-form" action="" method="get">
+                <input class="form-control search__input collapse nav-link" id="searchInput" type="search" name="q"
+                    placeholder="Search our products..." aria-label="Search" autocomplete="off">
+                <button class="btn" type="submit" id="searchButton">
+                    <div><i class="fa-solid fa-magnifying-glass fa-lg"></i></div>
+                </button>
+                <button class="btn btn-outline-danger collapse ml-2" type="button" id="closeSearch">
+
+                    <i class="fa fa-times fa-lg"></i>
+
+                </button>
+            </form>
+        </div>
+    </div>
+    <!--End Top Header-->
+
+    <header class="container-fluid fixed-top">
         <nav class="d-flex flex-column h-100">
             <div class="container">
                 <!-- NAVBAR -->
@@ -86,127 +96,119 @@
                     </a>
 
                     <!-- Toggler for mobile view -->
-
                     <button class="navbar-toggler toggler-custom" type="button" data-toggle="collapse"
                         data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false"
                         aria-label="Toggle navigation">
                         <i class="fas fa-bars"></i>
                     </button>
+
                     <!-- Navbar Content -->
-
                     <div class="collapse navbar-collapse" id="navbarContent">
-
-                        <ul class="navbar-nav ml-auto align-items-center">
-
-                            <!-- Search Form -->
-
-                            <li class="nav-item">
-
-                                <form class="form-inline d-flex align-items-center" action="" method="get">
-
-                                    <input class="form-control search__input collapse nav-link" id="searchInput"
-                                        type="search" name="q" placeholder="Search our products..." aria-label="Search"
-                                        autocomplete="off">
-
-                                    <button class="btn" type="submit" id="searchButton">
-
-                                        <div><i class="fa-solid fa-magnifying-glass fa-lg"></i></div>
-                                        <p class="my-0 font-weight-bold mt-1">Search</p>
-
-                                    </button>
-
-                                    <button class="btn btn-outline-danger collapse ml-2" type="button" id="closeSearch">
-
-                                        <i class="fa fa-times fa-lg"></i>
-
-                                    </button>
-
-                                </form>
-
-                            </li>
-
-                            <!-- My Account -->
-
-                            <li class="nav-item dropdown">
-
-                                <a class="nav-link" href="" id="user-options" data-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
-
-                                    <div class="text-center">
-
-                                        <i class="fas fa-user fa-lg"></i>
-
-                                        <p class="my-0">Account</p>
-
-                                    </div>
-
-                                </a>
-
-                                <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
-
-                                    {% if request.user.is_authenticated %}
-
-                                    {% if request.user.is_superuser %}
-
-                                    <a href="" class="dropdown-item">Product Management</a>
-
-                                    {% endif %}
-
-                                    <a href="" class="dropdown-item">My Profile</a>
-
-                                    <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
-
-                                    {% else %}
-
-                                    <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
-
-                                    <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
-
-                                    {% endif %}
-
-                                </div>
-
-                            </li>
-
-                            <li class="list-inline-item">
-
-                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
-                                    href="">
-
-                                    <div class="text-center">
-
-                                        <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
-
-                                        <p class="my-0">
-
-                                            {% if grand_total %}
-
-                                            ${{ grand_total|floatformat:2 }}
-
-                                            {% else %}
-
-                                            $0.00
-
-                                            {% endif %}
-
-                                        </p>
-
-                                    </div>
-
-                                </a>
-
-                            </li>
-
+                        <!-- Centered Navigation Links -->
+                        <ul class="navbar-nav mx-auto mb-2 mb-md-0 align-items-center">
                         </ul>
 
+                        <!-- Right-Side Navigation (Account, Wishlist, Cart) -->
+                        <ul class="navbar-nav ml-auto align-items-center">
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == home_url %}active{% endif %}"
+                                    aria-current="page" href="{% url 'home' %}">
+                                    <div class="text-center"><i class="fa-solid fa-house fa-lg"></i>
+                                        <p class="my-0">Home</p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="shopDropdown" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="text-center">
+                                        <i class="fa-solid fa-store fa-lg"></i>
+                                        <p class="my-0">Shop <i class="fa-solid fa-caret-down"></i></p>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="shopDropdown">
+                                    <a class="dropdown-item" href="">Montessori
+                                        Essentials</a>
+                                    <a class="dropdown-item" href="">Educational Toys</a>
+                                    <a class="dropdown-item" href="">Teaching
+                                        Tools</a>
+                                    <a class="dropdown-item" href="">Tech
+                                        Gadgets</a>
+                                    <a class="dropdown-item" href="">Lifestyle &
+                                        Personal</a>
+                                    <a class="dropdown-item" href="">General Tools</a>
+                                </div>
+                            </li>
+
+                            <li class="nav-item dropdown">
+                                <a class="nav-link" href="#" id="user-options" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="text-center">
+                                        <i class="fas fa-user fa-lg"></i>
+                                        <p class="my-0">Account <i class="fa-solid fa-caret-down"></i></p>
+                                    </div>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
+                                    {% if request.user.is_authenticated %}
+                                    {% if request.user.is_superuser %}
+                                    <li><a href="#" class="dropdown-item">Product Management</a></li>
+                                    {% endif %}
+                                    <li><a href="#" class="dropdown-item">Update Profile</a></li>
+                                    <li><a href="#" class="dropdown-item">Update Password</a></li>
+                                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                                    <li><a class="dropdown-item" href="">Delete</a></li>
+                                    {% else %}
+                                    <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                                    <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
+                                    </li>
+                                    {% endif %}
+                                </ul>
+                            </li>
+                            <li class="list-inline-item">
+                                {% if request.user.is_authenticated %}
+                                <a class="nav-link" href="#" title="Wishlist">
+                                    <div class="text-center">
+                                        <div><i class="fa-solid fa-heart fa-lg"></i></div>
+                                        <p class="my-0">Wishlist</p>
+                                    </div>
+                                </a>
+                                {% else %}
+                                <a class="" href="/accounts/login/" title="Wishlist">
+                                    <div class="text-center">
+                                        <div><i class="fa-solid fa-heart fa-lg"></i></div>
+                                        <p class="my-0">Wishlist</p>
+                                    </div>
+                                </a>
+                                {% endif %}
+                            </li>
+                            <li class="list-inline-item">
+                                <a class="{% if grand_total %}text-info font-weight-bold{% else %}{% endif %} nav-link"
+                                    href="#">
+                                    <div class="text-center">
+                                        <div><i class="fa-solid fa-cart-shopping fa-lg"></i></div>
+                                        <p class="my-0">
+                                            {% if grand_total %}
+                                            ${{ grand_total|floatformat:2 }}
+                                            {% else %}
+                                            $0.00
+                                            {% endif %}
+                                        </p>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link {% if request.path == contact_url %}active{% endif %}" href="">
+                                    <div class="text-center">
+                                        <div><i class="fa-solid fa-phone-volume fa-lg"></i></div>
+                                        <p class="my-0">Contact</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
-
                 </nav>
-
             </div>
-
         </nav>
-
     </header>
 
     <!-- displaying messages -->
