@@ -20,23 +20,7 @@
     color: white;
 }
 
-/* ------- Media Queries --------------- */
-
-/* Slightly larger container on xl screens */
-@media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
-}
-
-/* fixed top navbar only on medium and up */
-@media (min-width: 992px) {
-
-    .header-container {
-        padding-top: 164px;
-    }
-}
-
+/* ------ General Styling ------ */
 
 html,
 body {
@@ -69,7 +53,7 @@ body {
 }
 
 hr {
-    color:#bfa616;
+    color: #bfa616;
     opacity: 1;
     width: 30%;
     margin: 0 auto;
@@ -133,12 +117,13 @@ button#closeSearch.collapse.show {
     display: inline-block;
 }
 
-#searchButton, #custom-contact {
+#searchButton,
+#custom-contact {
     color: #F3F5F5;
 }
 
 #searchButton:hover i,
-#custom-contact:hover i{
+#custom-contact:hover i {
     color: #bfa616;
 }
 
@@ -147,7 +132,6 @@ button#closeSearch.collapse.show {
     outline: none;
     box-shadow: none;
 }
-
 
 
 /* ------- nav-bar styles ------- */
@@ -294,8 +278,8 @@ a.dropdown-item {
 .slider_section {
     position: relative;
     margin: 0 auto;
-    width: 90%;
-    margin-top: 150px;
+    width: 95%;
+    padding-bottom: 30px;
 }
 
 .banner-img {
@@ -305,10 +289,59 @@ a.dropdown-item {
 }
 
 .carousel-inner {
-    border: 5px solid black;
+    border: 5px solid #000000;
     border-radius: 10px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
+
+/* --------- store feature styling ------ */
+
+.store-feature {
+    background-color: #f8f9fa;
+    border-top: 1px solid #e5e5e5;
+}
+
+.store-info {
+    margin-bottom: 10px;
+}
+
+.store-info h5 {
+    font-size: 1.25rem;
+    color: #001d5a;
+    margin-bottom: 5px;
+}
+
+.store-info .sub-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
+.store-info-items {
+    margin-bottom: 10px;
+    border-left: 1px dotted #bfa616;
+}
+
+.store-info i {
+    padding: 20px;
+    color: #bfa616;
+}
+
+.store-info-items i {
+    padding: 20px;
+    color: #bfa616;
+}
+
+.store-info-items h5 {
+    font-size: 1.25rem;
+    color: #001d5a;
+    margin-bottom: 5px;
+}
+
+.store-info-items .sub-text {
+    font-size: 0.95rem;
+    color: #6c757d;
+}
+
 
 /* -------- footer ------ */
 
@@ -319,9 +352,13 @@ footer {
 
 .footer-container {
     width: 100%;
-    background-color: #F3F5F5;
-    color: #001d5a;
+    background-color: #000000ec;
+    color: #fff;
     padding: 10px 0 5px 0;
+    z-index: 10;
+    font-size: 16px;
+    border-bottom: 1px solid #ffffff33;
+    text-align: center;
 }
 
 .social-links {
@@ -331,11 +368,12 @@ footer {
 }
 
 .footer .social-links i {
-    color: #001d5a;
+    color: #F3F5F5;
     font-size: 1.5rem;
     margin: 0 10px;
     text-decoration: none;
     transition: color 0.3s ease;
+    padding: 10px;
 }
 
 .footer .social-links i:hover {
@@ -348,6 +386,33 @@ footer {
     opacity: 1;
 }
 
+
+/* ------- Media Queries --------------- */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 998px) {
+    .slider_section {
+        margin-top: 180px;
+    }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+
+    .header-container {
+        padding-top: 164px;
+    }
+
+    .slider_section {
+        margin-top: 30px;
+    }
+}
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -383,7 +448,7 @@ footer {
         position: absolute;
         z-index: 1050;
     }
-    
+
     .navbar-collapse {
         max-height: calc(100vh - 56px);
         overflow-y: auto;
