@@ -8,7 +8,7 @@
 }
 
 .shop-now-button {
-    background: black;
+    background: #000000;
     color: white;
     min-width: 260px;
 }
@@ -69,8 +69,8 @@ body {
 }
 
 hr {
-    color: #0000ff;
-    opacity: 0.5;
+    color:#bfa616;
+    opacity: 1;
     width: 30%;
     margin: 0 auto;
     padding: 2px;
@@ -243,6 +243,28 @@ a.dropdown-item {
     color: #bfa616;
 }
 
+/* Ensure the wishlist icon looks correct */
+.user-wishlist i {
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    color: inherit;
+    display: inline-block;
+}
+
+/* Prevent plain text look */
+.user-wishlist {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.user-wishlist div {
+    display: inline-block;
+}
+
+
 .navbar-nav .dropdown-menu {
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -320,16 +342,10 @@ footer {
     color: #bfa616;
 }
 
-.text-center .text-line {
-    color: rgb(0, 0, 255);
-    margin-top: 4px;
-    opacity: 0.5;
-}
-
-.text-center p {
-    font-size: 16px;
-    margin-top: 2px;
-    margin-bottom: 0px;
+.text-line {
+    border: none;
+    border-top: 2px solid #bfa616;
+    opacity: 1;
 }
 
 
