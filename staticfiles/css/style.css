@@ -8,16 +8,19 @@
 }
 
 .shop-now-button {
-    background: #000000;
-    color: white;
-    min-width: 260px;
+    background: #000000ec;
+    color: #ffffff;
+    min-width: 90px;
+    margin-bottom: 20px;
+    border: 1px solid #000000;
+    border-radius: 12px;
 }
 
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus {
-    background: #222;
-    color: white;
+    background-color: #bfa616;
+    color: #000000;
 }
 
 /* ------ General Styling ------ */
@@ -42,9 +45,9 @@ body {
 }
 
 .alert {
-    color: white;
+    color: #ffffff;
     font-weight: bold;
-    background-color: #28a745;
+    background-color: #000000ec;
     padding: 10px;
     margin-top: 120px;
     text-align: center;
@@ -342,6 +345,46 @@ a.dropdown-item {
     color: #6c757d;
 }
 
+/* ------- Newsletter Section Styling -------- */
+.newsletter-section {
+    background-color: #f9f9f9;
+    padding: 30px 0;
+    border: 1px dotted #bfa616;
+}
+
+.section-header h2 {
+    font-size: 1.8rem;
+    color: #001d5a;
+    font-weight: bold;
+}
+
+.section-header h2 span {
+    color: #bfa616;
+}
+
+.newsletter__input {
+    flex-grow: 1;
+    padding: 10px;
+    margin-right: 4px;
+    border: 1px solid #ddd;
+    border-radius: 5px 0 0 5px;
+    font-size: 1rem;
+}
+
+.newsletter__submit {
+    background-color: #bfa616;
+    color: #fff;
+    border: none;
+    padding: 5px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.newsletter__submit:hover {
+    background-color: #a88c14;
+    color: #000000;
+}
 
 /* -------- footer ------ */
 
