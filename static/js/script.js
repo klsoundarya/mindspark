@@ -1,3 +1,4 @@
+// search bar 
 document.addEventListener('DOMContentLoaded', function () {
     const searchTrigger = document.getElementById('searchButton');
     const searchInput = document.getElementById('searchInput');
@@ -24,3 +25,4 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
