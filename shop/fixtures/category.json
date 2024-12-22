@@ -1,0 +1,50 @@
+[
+    {
+        "pk": 1,
+        "model": "shop.category",
+        "fields": {
+            "name": "montessori_essentials",
+            "friendly_name": "Montessori Essentials"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "shop.category",
+        "fields": {
+            "name": "educational_toys",
+            "friendly_name": "Educational Toys"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "shop.category",
+        "fields": {
+            "name": "teaching_tools",
+            "friendly_name": "Teaching Tools"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "shop.category",
+        "fields": {
+            "name": "arts_crafts",
+            "friendly_name": "Arts & Crafts"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "shop.category",
+        "fields": {
+            "name": "sensory_play",
+            "friendly_name": "Sensory Play"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "shop.category",
+        "fields": {
+            "name": "board_games",
+            "friendly_name": "Board Games"
+        }
+    }
+]

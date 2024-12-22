@@ -1,0 +1,202 @@
+[
+    {
+        "pk": 1,
+        "model": "shop.product",
+        "fields": {
+            "name": "Wooden Letter Tracing Boards",
+            "category": 1,
+            "sku": "WLTB001",
+            "description": "A wooden board designed for tracing letters and building early writing skills.",
+            "price": 20.99,
+            "rating": 4.8,
+            "image_url": "https://example.com/images/wooden_letter_tracing.jpg",
+            "image": "DP0429201617074742M.jpg",
+            "in_stock": true,
+            "reviews_count": 15,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "3-5 years",
+            "created_at": "2024-01-01T10:00:00Z"
+        }
+    },
+    {
+        "pk": 2,
+        "model": "shop.product",
+        "fields": {
+            "name": "Montessori Sorting Trays",
+            "category": 1,
+            "sku": "MST001",
+            "description": "Colorful wooden trays for sorting and counting exercises.",
+            "price": 15.49,
+            "rating": 4.6,
+            "image_url": "https://example.com/images/sorting_trays.jpg",
+            "image": "DP0429201617074743M.jpg",
+            "in_stock": true,
+            "reviews_count": 10,
+            "delivery": "Usually ships in 2 to 4 business days",
+            "discount": 5,
+            "age_group": "3-5 years",
+            "created_at": "2024-01-02T12:00:00Z"
+        }
+    },
+    {
+        "pk": 3,
+        "model": "shop.product",
+        "fields": {
+            "name": "Counting Beads and Rods",
+            "category": 1,
+            "sku": "CBR001",
+            "description": "Helps children develop early math skills through hands-on practice.",
+            "price": 12.99,
+            "rating": 4.7,
+            "image_url": "https://example.com/images/counting_beads.jpg",
+            "image": "DP0429201617074744M.jpg",
+            "in_stock": true,
+            "reviews_count": 20,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "4-6 years",
+            "created_at": "2024-01-03T14:00:00Z"
+        }
+    },
+    {
+        "pk": 4,
+        "model": "shop.product",
+        "fields": {
+            "name": "Sandpaper Letters",
+            "category": 1,
+            "sku": "SL001",
+            "description": "A tactile way for children to learn the alphabet.",
+            "price": 18.99,
+            "rating": 4.9,
+            "image_url": "https://example.com/images/sandpaper_letters.jpg",
+            "image": "DP0429201617074745M.jpg",
+            "in_stock": true,
+            "reviews_count": 8,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 10,
+            "age_group": "3-5 years",
+            "created_at": "2024-01-04T16:00:00Z"
+        }
+    },
+    {
+        "pk": 5,
+        "model": "shop.product",
+        "fields": {
+            "name": "Wooden Puzzle Maps",
+            "category": 2,
+            "sku": "WPM001",
+            "description": "Geography puzzle maps to learn about countries and continents.",
+            "price": 25.99,
+            "rating": 4.5,
+            "image_url": "https://example.com/images/wooden_maps.jpg",
+            "image": "DP0429201617074746M.jpg",
+            "in_stock": true,
+            "reviews_count": 12,
+            "delivery": "Usually ships in 2 to 4 business days",
+            "discount": 0,
+            "age_group": "6-9 years",
+            "created_at": "2024-01-05T10:00:00Z"
+        }
+    },
+    {
+        "pk": 6,
+        "model": "shop.product",
+        "fields": {
+            "name": "Knobbed Cylinders",
+            "category": 1,
+            "sku": "KC001",
+            "description": "Helps children refine their visual discrimination of dimensions.",
+            "price": 19.99,
+            "rating": 4.4,
+            "image_url": "https://example.com/images/knobbed_cylinders.jpg",
+            "image": "DP0429201617074747M.jpg",
+            "in_stock": true,
+            "reviews_count": 5,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "3-6 years",
+            "created_at": "2024-01-06T10:00:00Z"
+        }
+    },
+    {
+        "pk": 7,
+        "model": "shop.product",
+        "fields": {
+            "name": "Pink Tower Blocks",
+            "category": 1,
+            "sku": "PTB001",
+            "description": "A classic Montessori material for building and size discrimination.",
+            "price": 22.99,
+            "rating": 4.8,
+            "image_url": "https://example.com/images/pink_tower.jpg",
+            "image": "DP0429201617074748M.jpg",
+            "in_stock": true,
+            "reviews_count": 18,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "3-6 years",
+            "created_at": "2024-01-07T10:00:00Z"
+        }
+    },
+    {
+        "pk": 8,
+        "model": "shop.product",
+        "fields": {
+            "name": "Practical Life Skills Set",
+            "category": 3,
+            "sku": "PLS001",
+            "description": "A set of tools for kids to learn cleaning and basic life skills.",
+            "price": 29.99,
+            "rating": 4.6,
+            "image_url": "https://example.com/images/life_skills.jpg",
+            "image": "DP0429201617074749M.jpg",
+            "in_stock": true,
+            "reviews_count": 25,
+            "delivery": "Usually ships in 2 to 4 business days",
+            "discount": 5,
+            "age_group": "4-6 years",
+            "created_at": "2024-01-08T10:00:00Z"
+        }
+    },
+    {
+        "pk": 9,
+        "model": "shop.product",
+        "fields": {
+            "name": "Sound Cylinders",
+            "category": 1,
+            "sku": "SC001",
+            "description": "Enhances auditory discrimination skills in children.",
+            "price": 17.99,
+            "rating": 4.7,
+            "image_url": "https://example.com/images/sound_cylinders.jpg",
+            "image": "DP0429201617074750M.jpg",
+            "in_stock": true,
+            "reviews_count": 7,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "3-5 years",
+            "created_at": "2024-01-09T10:00:00Z"
+        }
+    },
+    {
+        "pk": 10,
+        "model": "shop.product",
+        "fields": {
+            "name": "Botany Puzzle Set",
+            "category": 1,
+            "sku": "BPS001",
+            "description": "A wooden puzzle set focusing on botany (e.g., tree leaves).",
+            "price": 23.99,
+            "rating": 4.8,
+            "image_url": "https://example.com/images/botany_puzzle.jpg",
+            "image": "DP0429201617074751M.jpg",
+            "in_stock": true,
+            "reviews_count": 14,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "4-7 years",
+            "created_at": "2024-01-10T10:00:00Z"
+        }
+    }
+]
