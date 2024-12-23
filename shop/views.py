@@ -12,7 +12,7 @@ def all_essentials(request):
     products = Product.objects.all()
 
     context = {
-        'shop': products,
+        'products': products,
     }
 
     return render(request, 'shop/products.html', context)
