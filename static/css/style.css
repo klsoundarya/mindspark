@@ -66,6 +66,7 @@ header .navbar {
 }
 
 /* ------search -------- */
+
 .search-bar {
     position: relative;
     max-width: 100%;
@@ -337,15 +338,34 @@ a.dropdown-item {
 }
 
 /* ------------- shop app styling ----------- */
-.overlay {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    position: fixed;
-    background: white;
-    z-index: -1;
+
+.custom-shop {
+    background-color: #f5f5dc;
+    color: #001d5a;
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px #778899;
 }
+
+.custom-shop:hover {
+    background-color: #bfa616;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.rating .fa-star,
+.rating .fa-star-half-alt,
+.rating .fa-star-o {
+    font-size: 0.9rem;
+}
+
+
+/* Back to Top button */
 
 
 
@@ -507,6 +527,13 @@ footer {
         object-fit: contain;
     }
 
+    /* ----------shop styling----- */
+
+
+    .custom-shop {
+        margin-top: 165px;
+    }
+
 }
 
 @media (min-width: 992px) {
@@ -581,6 +608,7 @@ footer {
         object-fit: contain;
         max-height: 400px;
     }
+
 }
 
 /* Extra small screens (width <= 576px) */
