@@ -140,6 +140,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.codeinstitute-ide.net/",
     "http://localhost:8000",
     "http://127.0.0.1:8000",
+    "https://imagekit.io/"
 ]
 
 # Password validation
@@ -182,7 +183,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field

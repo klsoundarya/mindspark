@@ -27,21 +27,15 @@
             <div class="col-sm-6 col-md-6 col-lg-4 col-xl-3">
                 <div class="card h-100 border-0">
                     <div class="d-flex justify-content-center align-items-center">
-                        {% if product.image %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}"
-                                style="width: 200px; height: 200px; object-fit: cover;">
-                        </a>
-                        {% elif product.image_url %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}"
-                                style="width: 200px; height: 200px; object-fit: cover;">
-                        </a>
+                        {% if product.image_url %}
+                        <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}"
+                            style="width: 200px; height: 200px; object-fit: cover;">
+                        {% elif product.image %}
+                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}"
+                            style="width: 200px; height: 200px; object-fit: cover;">
                         {% else %}
-                        <a href="">
-                            <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default_image.png"
-                                alt="{{ product.name }}" style="width: 200px; height: 200px; object-fit: cover;">
-                        </a>
+                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default_image.png"
+                            alt="{{ product.name }}" style="width: 200px; height: 200px; object-fit: cover;">
                         {% endif %}
 
                     </div>
