@@ -344,6 +344,9 @@ a.dropdown-item {
     color: #001d5a;
     border-radius: 10px;
     box-shadow: 0px 5px 10px #778899;
+    font-family: "Fondamento", serif;
+    font-weight: 400;
+    font-style: italic;
 }
 
 .custom-shop:hover {
@@ -363,7 +366,6 @@ a.dropdown-item {
 .rating .fa-star-o {
     font-size: 0.9rem;
 }
-
 
 /* Back to Top button */
 
