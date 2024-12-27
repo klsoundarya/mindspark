@@ -139,8 +139,7 @@ CSRF_TRUSTED_ORIGINS = [
     "https://*.herokuapp.com",
     "https://*.codeinstitute-ide.net/",
     "http://localhost:8000",
-    "http://127.0.0.1:8000",
-    "https://imagekit.io/"
+    "http://127.0.0.1:8000"
 ]
 
 # Password validation
