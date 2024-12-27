@@ -28,13 +28,17 @@
 <div class="row">
     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
         <div class="image-container my-5">
-            {% if product.image %}
+            {% if product.image_url %}
+            <a href="{{ product.image_url }}" target="_blank">
+                <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}">
+            </a>
+            {% elif product.image %}
             <a href="{{ product.image.url }}" target="_blank">
                 <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}">
             </a>
             {% else %}
             <a href="">
-                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ product.name }}">
+                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default_image.png" alt="{{ product.name }}">
             </a>
             {% endif %}
         </div>
@@ -70,12 +74,12 @@
 
             <!-- Age Group -->
             {% if product.age_group %}
-            <p>Recommended Age Group: <strong>{{ product.age_group }}</strong></p>
+            <p class="custom-detail">Age Group: <strong>{{ product.age_group }}</strong></p>
             {% endif %}
 
             <!-- Delivery Information -->
             {% if product.delivery %}
-            <p>Delivery: {{ product.delivery }}</p>
+            <p class="custom-detail">Delivery: {{ product.delivery }}</p>
             {% endif %}
 
             <!-- Stock Status -->
@@ -109,19 +113,20 @@
         {% for related_product in related_products %}
         <div class="col-6 col-md-4 col-lg-3 mb-4 d-flex">
             <div class="card h-100 border-0 shadow-sm w-100">
-                {% if related_product.image %}
+                {% if related_product.image_url %}
                 <a href="{% url 'product_detail' related_product.pk %}">
-                    <img class="card-img-top img-fluid product-img" 
-                         src="{{ related_product.image.url }}" 
-                         alt="{{ related_product.name }}" 
-                         style="width: 100%; height: 200px; object-fit: cover;">
+                    <img class="card-img-top img-fluid product-img" src="{{ related_product.image_url }}"
+                        alt="{{ related_product.name }}" style="width: 100%; height: 200px; object-fit: cover;">
+                </a>
+                {% elif related_product.image %}
+                <a href="{% url 'product_detail' related_product.pk %}">
+                    <img class="card-img-top img-fluid product-img" src="{{ related_product.image.url }}"
+                        alt="{{ related_product.name }}" style="width: 100%; height: 200px; object-fit: cover;">
                 </a>
                 {% else %}
                 <a href="{% url 'product_detail' related_product.pk %}">
-                    <img class="card-img-top img-fluid" 
-                         src="{{ MEDIA_URL }}noimage.png" 
-                         alt="{{ related_product.name }}" 
-                         style="width: 100%; height: 200px; object-fit: cover;">
+                    <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default_image.png"
+                        alt="{{ related_product.name }}" style="width: 100%; height: 200px; object-fit: cover;">
                 </a>
                 {% endif %}
                 <div class="card-body text-center">

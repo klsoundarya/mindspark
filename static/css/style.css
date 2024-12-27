@@ -434,6 +434,10 @@ a.dropdown-item {
     color: black;
 }
 
+.custom-detail {
+    color:red;
+}
+
 .related-products {
     background-color: #f9f9f9;
     padding: 20px;
@@ -463,20 +467,6 @@ a.dropdown-item {
 .related-products .btn-outline-primary {
     width: 100%;
     font-size: 0.85rem;
-}
-
-@media (max-width: 768px) {
-    .product-details-container {
-        text-align: center;
-    }
-
-    .related-products .card img {
-        height: 150px;
-    }
-
-    .related-products .btn-outline-primary {
-        font-size: 0.75rem;
-    }
 }
 
 /* Back to Top button */
@@ -730,6 +720,20 @@ footer {
     .carousel-item img {
         object-fit: contain;
         max-height: 400px;
+    }
+
+    /* product detail stlying */
+
+    .product-details-container {
+        text-align: center;
+    }
+
+    .related-products .card img {
+        height: 150px;
+    }
+
+    .related-products .btn-outline-primary {
+        font-size: 0.75rem;
     }
 
 }
