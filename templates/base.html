@@ -77,7 +77,7 @@
         </div>
         <!-- Search Form -->
         <div class="d-flex align-items-center">
-            <form class="form-inline align-items-center search-form" action="" method="get">
+            <form class="form-inline align-items-center search-form" action="{% url 'shop' %}" method="get">
                 <input class="form-control search__input collapse nav-link" id="searchInput" type="search" name="q"
                     placeholder="Search our products..." aria-label="Search" autocomplete="off">
                 <button class="btn" type="submit" id="searchButton">
@@ -136,7 +136,7 @@
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="shopDropdown">
                                     <a class="dropdown-item text-center" href="{% url 'shop' %}">
-                                        All Essentials
+                                        All Products
                                     </a>
                                     <a class="dropdown-item text-center" href="#">Special Offers</a>
                                     <div class="dropdown-divider"></div>
