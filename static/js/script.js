@@ -26,3 +26,26 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// Show/Hide Back to Top Button on Scroll (shop app styling)
+const backToTopBtn = document.getElementById('bttBtn');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.remove('hidden');
+        backToTopBtn.classList.add('visible');
+    } else {
+        backToTopBtn.classList.remove('visible');
+        backToTopBtn.classList.add('hidden');
+    }
+});
+
+// Scroll to top when clicked
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+    });
+});
+
+

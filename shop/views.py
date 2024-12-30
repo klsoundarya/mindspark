@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from .models import Product, Category
+from django.core.paginator import Paginator
 from django.contrib import messages
 from django.db.models import Q
 
@@ -28,22 +29,26 @@ def all_essentials(request):
             queries = Q(name__icontains=query) | Q(description__icontains=query)
             products = products.filter(queries)
 
-   
-    for product in products:
+    # Pagination
+    paginator = Paginator(products, 10)  # Show 10 products per page
+    page_number = request.GET.get('page')
+    paginated_products = paginator.get_page(page_number)
+
+    # Adding ratings to display
+    for product in paginated_products:
         if product.rating:
             product.display_rating = round(product.rating * 2) / 2
         else:
             product.display_rating = None
 
     context = {
-        'products': products,
+        'products': paginated_products,
         'search_term': query,
         'current_categories': categories,
         'all_categories': Category.objects.all(),
     }
 
     return render(request, 'shop/products.html', context)
-
 
 def product_detail(request, product_id):
     """ A view to show individual product details """
