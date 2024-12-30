@@ -23,7 +23,7 @@
         "pk": 2,
         "model": "shop.product",
         "fields": {
-            "name": "Montessori Sorting Trays",
+            "name": "Sorting Trays",
             "category": 1,
             "sku": "MST001",
             "description": "Colorful wooden trays for sorting and counting exercises.",

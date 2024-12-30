@@ -135,19 +135,16 @@
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="shopDropdown">
-                                    <a class="dropdown-item text-center" href="{% url 'shop' %}">
-                                        All Products
-                                    </a>
-                                    <a class="dropdown-item text-center" href="#">Special Offers</a>
+                                    <a class="dropdown-item {% if 'Special Offers' in current_categories %}active{% endif %}"
+                                        href="{% url 'shop' %}?category=Special Offers">Special Offers</a>
                                     <div class="dropdown-divider"></div>
                                     <h6 class="dropdown-header">Montessori Subcategories</h6>
-                                    <a class="dropdown-item" href="#">Educational Toys</a>
-                                    <a class="dropdown-item" href="#">Teaching Tools</a>
-                                    <div class="dropdown-divider"></div>
-                                    <h6 class="dropdown-header text-center">Other Categories</h6>
-                                    <a class="dropdown-item" href="#">Arts & Crafts</a>
-                                    <a class="dropdown-item" href="#">Sensory Play</a>
-                                    <a class="dropdown-item" href="#">Board Games</a>
+                                    {% for category in all_categories %}
+                                    <a class="dropdown-item {% if category.name in current_categories %}active{% endif %}"
+                                        href="{% url 'shop' %}?category={{ category.name }}">
+                                        {{ category.friendly_name }}
+                                    </a>
+                                    {% endfor %}
                                 </div>
                             </li>
 
