@@ -5,7 +5,6 @@ from django.contrib import messages
 from django.db.models import Q
 
 # Create your views here.
-
 def all_essentials(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
@@ -30,7 +29,7 @@ def all_essentials(request):
             products = products.filter(queries)
 
     # Pagination
-    paginator = Paginator(products, 10)  # Show 10 products per page
+    paginator = Paginator(products, 8)
     page_number = request.GET.get('page')
     paginated_products = paginator.get_page(page_number)
 

@@ -4,7 +4,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Wooden Letter Tracing Boards",
-            "category": 1,
+            "category": 6,
             "sku": "WLTB001",
             "description": "A wooden board designed for tracing letters and building early writing skills.",
             "price": 20.99,
@@ -24,7 +24,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Sorting Trays",
-            "category": 1,
+            "category": 2,
             "sku": "MST001",
             "description": "Colorful wooden trays for sorting and counting exercises.",
             "price": 15.49,
@@ -44,7 +44,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Counting Beads and Rods",
-            "category": 1,
+            "category": 3,
             "sku": "CBR001",
             "description": "Helps children develop early math skills through hands-on practice.",
             "price": 12.99,
@@ -64,7 +64,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Sandpaper Letters",
-            "category": 1,
+            "category": 3,
             "sku": "SL001",
             "description": "A tactile way for children to learn the alphabet.",
             "price": 18.99,
@@ -104,7 +104,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Knobbed Cylinders",
-            "category": 1,
+            "category": 5,
             "sku": "KC001",
             "description": "Helps children refine their visual discrimination of dimensions.",
             "price": 19.99,
@@ -124,7 +124,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Pink Tower Blocks",
-            "category": 1,
+            "category": 3,
             "sku": "PTB001",
             "description": "A classic Montessori material for building and size discrimination.",
             "price": 22.99,
@@ -144,7 +144,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Practical Life Skills Set",
-            "category": 3,
+            "category": 1,
             "sku": "PLS001",
             "description": "A set of tools for kids to learn basic life skills.",
             "price": 29.99,
@@ -164,7 +164,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Sound Cylinders",
-            "category": 1,
+            "category": 5,
             "sku": "SC001",
             "description": "Enhances auditory discrimination skills in children.",
             "price": 17.99,
@@ -184,7 +184,7 @@
         "model": "shop.product",
         "fields": {
             "name": "Botany Puzzle Set",
-            "category": 1,
+            "category": 4,
             "sku": "BPS001",
             "description": "A wooden puzzle set focusing on botany (e.g., tree leaves).",
             "price": 23.99,
@@ -197,6 +197,206 @@
             "discount": 0,
             "age_group": "4-7 years",
             "created_at": "2024-01-10T10:00:00Z"
+        }
+    },
+    {
+        "pk": 11,
+        "model": "shop.product",
+        "fields": {
+            "name": "Fraction Circles",
+            "category": 3,
+            "sku": "FC001",
+            "description": "Hands-on tool to teach fractions and basic geometry.",
+            "price": 15.99,
+            "rating": 4.8,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660747/11_usf9iy.png",
+            "image": "11.png",
+            "in_stock": true,
+            "reviews_count": 30,
+            "delivery": "Usually ships in 2 to 4 business days",
+            "discount": 10,
+            "age_group": "6-8 years",
+            "created_at": "2024-01-04T10:00:00Z"
+        }
+    },
+    {
+        "pk": 12,
+        "model": "shop.product",
+        "fields": {
+            "name": "Phonics Flip Cards",
+            "category": 3,
+            "sku": "PFC002",
+            "description": "Engaging phonics tool to build reading skills.",
+            "price": 9.99,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660747/12_skh41i.png",
+            "image": "12.png",
+            "in_stock": true,
+            "reviews_count": 15,
+            "delivery": "Usually ships in 1 to 3 business days",
+            "discount": 5,
+            "age_group": "4-6 years",
+            "created_at": "2024-01-04T11:00:00Z"
+        }
+    },
+    {
+        "pk": 13,
+        "model": "shop.product",
+        "fields": {
+            "name": "Animal Stencils Set",
+            "category": 4,
+            "sku": "ASS003",
+            "description": "Fun way to introduce art and animal recognition.",
+            "price": 8.99,
+            "rating": 4.5,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660747/13_fqhfka.png",
+            "image": "13.png",
+            "in_stock": true,
+            "reviews_count": 25,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "5-7 years",
+            "created_at": "2024-01-04T12:00:00Z"
+        }
+    },
+    {
+        "pk": 14,
+        "model": "shop.product",
+        "fields": {
+            "name": "Rainbow Stacking Blocks",
+            "category": 5,
+            "sku": "RSB004",
+            "description": "Colorful blocks to enhance sensory and motor skills.",
+            "price": 14.99,
+            "rating": 4.9,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660747/14_tym6l3.png",
+            "image": "14.png",
+            "in_stock": true,
+            "reviews_count": 40,
+            "delivery": "Usually ships in 2 to 4 business days",
+            "discount": 15,
+            "age_group": "3-5 years",
+            "created_at": "2024-01-04T13:00:00Z"
+        }
+    },
+    {
+        "pk": 15,
+        "model": "shop.product",
+        "fields": {
+            "name": "Alphabet Puzzle Set",
+            "category": 3,
+            "sku": "APS005",
+            "description": "Interactive way to learn letters and spelling.",
+            "price": 10.99,
+            "rating": 4.7,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660748/15_bsk9jb.png",
+            "image": "15.png",
+            "in_stock": true,
+            "reviews_count": 18,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "3-6 years",
+            "created_at": "2024-01-04T14:00:00Z"
+        }
+    },
+    {
+        "pk": 16,
+        "model": "shop.product",
+        "fields": {
+            "name": "Magnetic Letter Tiles",
+            "category": 3,
+            "sku": "MLT006",
+            "description": "Build words with fun magnetic tiles.",
+            "price": 12.49,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660748/16_wtvzr7.png",
+            "image": "16.png",
+            "in_stock": true,
+            "reviews_count": 22,
+            "delivery": "Usually ships in 1 to 3 business days",
+            "discount": 5,
+            "age_group": "5-7 years",
+            "created_at": "2024-01-04T15:00:00Z"
+        }
+    },
+    {
+        "pk": 17,
+        "model": "shop.product",
+        "fields": {
+            "name": "Shape Sorting Cube",
+            "category": 3,
+            "sku": "SSC007",
+            "description": "Learn shapes and colors with a fun sorting activity.",
+            "price": 13.99,
+            "rating": 4.8,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660748/17_xk18db.png",
+            "image": "17.png",
+            "in_stock": true,
+            "reviews_count": 35,
+            "delivery": "Usually ships in 2 to 4 business days",
+            "discount": 10,
+            "age_group": "3-5 years",
+            "created_at": "2024-01-04T16:00:00Z"
+        }
+    },
+    {
+        "pk": 18,
+        "model": "shop.product",
+        "fields": {
+            "name": "Sensory Sand Kit",
+            "category": 5,
+            "sku": "SSK008",
+            "description": "Explore textures and shapes with moldable sensory sand.",
+            "price": 19.99,
+            "rating": 4.9,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660747/18_qqetzp.png",
+            "image": "18.png",
+            "in_stock": true,
+            "reviews_count": 45,
+            "delivery": "Usually ships in 1 to 3 business days",
+            "discount": 20,
+            "age_group": "4-6 years",
+            "created_at": "2024-01-04T17:00:00Z"
+        }
+    },
+    {
+        "pk": 19,
+        "model": "shop.product",
+        "fields": {
+            "name": "Wooden Dominoes",
+            "category": 6,
+            "sku": "WD009",
+            "description": "Classic domino game for strategic thinking and fun.",
+            "price": 11.99,
+            "rating": 4.7,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660747/19_g2ovv3.png",
+            "image": "19.png",
+            "in_stock": true,
+            "reviews_count": 28,
+            "delivery": "Usually ships in 3 to 5 business days",
+            "discount": 0,
+            "age_group": "6-8 years",
+            "created_at": "2024-01-04T18:00:00Z"
+        }
+    },
+    {
+        "pk": 20,
+        "model": "shop.product",
+        "fields": {
+            "name": "Botanical Exploration Kit",
+            "category": 3,
+            "sku": "BEK010",
+            "description": "Learn about plants and biology with this hands-on kit.",
+            "price": 18.99,
+            "rating": 4.9,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660748/20_y7pade.png",
+            "image": "20.png",
+            "in_stock": true,
+            "reviews_count": 50,
+            "delivery": "Usually ships in 2 to 4 business days",
+            "discount": 10,
+            "age_group": "8-10 years",
+            "created_at": "2024-01-04T19:00:00Z"
         }
     }
 ]

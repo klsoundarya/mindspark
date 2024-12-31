@@ -126,32 +126,38 @@
 
 <!-- Pagination -->
 {% if products.has_other_pages %}
-<nav aria-label="Page navigation" class="pagination-container mt-4">
+<nav aria-label="Page navigation" class="pagination-container">
     <ul class="pagination justify-content-center">
         {% if products.has_previous %}
         <li class="page-item">
-            <a href="?page={{ products.previous_page_number }}" class="page-link" aria-label="Previous">
-                <span class="bold-symbol">&laquo;</span> Previous
+            <a class="page-link"
+                href="?page={{ products.previous_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
+                &laquo;
             </a>
         </li>
         {% endif %}
 
         {% for num in products.paginator.page_range %}
         <li class="page-item {% if products.number == num %}active{% endif %}">
-            <a href="?page={{ num }}" class="page-link">{{ num }}</a>
+            <a class="page-link"
+                href="?page={{ num }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
+                {{ num }}
+            </a>
         </li>
         {% endfor %}
 
         {% if products.has_next %}
         <li class="page-item">
-            <a href="?page={{ products.next_page_number }}" class="page-link" aria-label="Next">
-                Next <span class="bold-symbol">&raquo;</span>
+            <a class="page-link"
+                href="?page={{ products.next_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
+                &raquo;
             </a>
         </li>
         {% endif %}
     </ul>
 </nav>
 {% endif %}
+
 
 
 <!-- Back to top button -->
