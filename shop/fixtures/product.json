@@ -249,7 +249,7 @@
             "description": "Fun way to introduce art and animal recognition.",
             "price": 8.99,
             "rating": 4.5,
-            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735660747/13_fqhfka.png",
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768037/xefzuud5yjnllwyqnvh2.png",
             "image": "13.png",
             "in_stock": true,
             "reviews_count": 25,
@@ -398,5 +398,206 @@
             "age_group": "8-10 years",
             "created_at": "2024-01-04T19:00:00Z"
         }
+    },
+    {
+        "pk": 21,
+        "model": "shop.product",
+        "fields": {
+            "name": "Classic Chess Set",
+            "category": 1,
+            "sku": "CCS011",
+            "description": "A timeless chess set to enhance strategy skills.",
+            "price": 15.99,
+            "rating": 4.7,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768038/h5wjhlrrgom1y2y1ahda.png",
+            "image": "21.png",
+            "in_stock": true,
+            "reviews_count": 34,
+            "delivery": "Ships within 1-2 business days",
+            "discount": 5,
+            "age_group": "6-12 years",
+            "created_at": "2024-01-04T19:10:00Z"
+        }
+    },
+    {
+        "pk": 22,
+        "model": "shop.product",
+        "fields": {
+            "name": "Fantasy Adventure Board Game",
+            "category": 1,
+            "sku": "FAB012",
+            "description": "An exciting board game with fantasy themes and cooperative gameplay.",
+            "price": 29.99,
+            "rating": 4.8,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768037/xqhrxuirr3hzwm9fajrw.png",
+            "image": "22.png",
+            "in_stock": true,
+            "reviews_count": 60,
+            "delivery": "Ships in 3-5 business days",
+            "discount": 15,
+            "age_group": "10+ years",
+            "created_at": "2024-01-04T19:20:00Z"
+        }
+    },
+    {
+        "pk": 23,
+        "model": "shop.product",
+        "fields": {
+            "name": "DIY Candle Making Kit",
+            "category": 2,
+            "sku": "CMK013",
+            "description": "Create your own candles with this fun and safe kit.",
+            "price": 19.99,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768037/mrdwc8nqnitgv9cwuwpt.png",
+            "image": "23.png",
+            "in_stock": true,
+            "reviews_count": 45,
+            "delivery": "Ships in 2-4 business days",
+            "discount": 10,
+            "age_group": "12+ years",
+            "created_at": "2024-01-04T19:30:00Z"
+        }
+    },
+    {
+        "pk": 24,
+        "model": "shop.product",
+        "fields": {
+            "name": "Creative Art Supplies Kit",
+            "category": 2,
+            "sku": "CAS014",
+            "description": "An all-in-one art supplies kit for creative minds.",
+            "price": 24.99,
+            "rating": 4.9,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768037/cupegq78wk95lrbogbsb.png",
+            "image": "24.png",
+            "in_stock": true,
+            "reviews_count": 70,
+            "delivery": "Usually ships in 1-3 business days",
+            "discount": 20,
+            "age_group": "8+ years",
+            "created_at": "2024-01-04T19:40:00Z"
+        }
+    },
+    {
+        "pk": 25,
+        "model": "shop.product",
+        "fields": {
+            "name": "STEM Robot Construction Kit",
+            "category": 3,
+            "sku": "SRC015",
+            "description": "Build and program your own robot with this STEM kit.",
+            "price": 34.99,
+            "rating": 4.8,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768037/jo3kyzjeax1hcwg9gtjm.png",
+            "image": "25.png",
+            "in_stock": true,
+            "reviews_count": 80,
+            "delivery": "Ships in 4-7 business days",
+            "discount": 15,
+            "age_group": "10+ years",
+            "created_at": "2024-01-04T19:50:00Z"
+        }
+    },
+    {
+        "pk": 26,
+        "model": "shop.product",
+        "fields": {
+            "name": "Magnetic Building Blocks Set",
+            "category": 4,
+            "sku": "MBB016",
+            "description": "Develop creativity and motor skills with magnetic blocks.",
+            "price": 25.99,
+            "rating": 4.7,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768037/h7sgkbgja0mmymzcuuap.png",
+            "image": "26.png",
+            "in_stock": true,
+            "reviews_count": 55,
+            "delivery": "Ships in 3-5 business days",
+            "discount": 10,
+            "age_group": "6-8 years",
+            "created_at": "2024-01-04T20:00:00Z"
+        }
+    },
+    {
+        "pk": 27,
+        "model": "shop.product",
+        "fields": {
+            "name": "Solar-Powered Science Kit",
+            "category": 2,
+            "sku": "SPS017",
+            "description": "Explore solar energy concepts with this fun and educational kit.",
+            "price": 22.99,
+            "rating": 4.8,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768038/hgy2sifxntrurmqvmygw.png",
+            "image": "27.png",
+            "in_stock": true,
+            "reviews_count": 65,
+            "delivery": "Ships in 2-4 business days",
+            "discount": 5,
+            "age_group": "9-12 years",
+            "created_at": "2024-01-04T20:10:00Z"
+        }
+    },
+    {
+        "pk": 28,
+        "model": "shop.product",
+        "fields": {
+            "name": "Eco-Friendly Reusable Bag Set",
+            "category": 4,
+            "sku": "EFB018",
+            "description": "A set of reusable bags for everyday essentials.",
+            "price": 12.99,
+            "rating": 4.5,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768038/kr7r1qxuf9pstw2cyyoi.png",
+            "image": "28.png",
+            "in_stock": true,
+            "reviews_count": 25,
+            "delivery": "Ships within 1-3 business days",
+            "discount": 5,
+            "age_group": "All ages",
+            "created_at": "2024-01-04T20:20:00Z"
+        }
+    },
+    {
+        "pk": 29,
+        "model": "shop.product",
+        "fields": {
+            "name": "Digital Notepad",
+            "category": 2,
+            "sku": "DNP019",
+            "description": "A sleek, portable digital notepad for all your essential notes.",
+            "price": 49.99,
+            "rating": 4.6,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768038/fc672cb4isf9uhf3hksa.png",
+            "image": "29.png",
+            "in_stock": true,
+            "reviews_count": 40,
+            "delivery": "Ships within 2-4 business days",
+            "discount": 10,
+            "age_group": "Teens & Adults",
+            "created_at": "2024-01-04T20:30:00Z"
+        }
+    },
+    {
+        "pk": 30,
+        "model": "shop.product",
+        "fields": {
+            "name": "Teacher's Classroom Planning Kit",
+            "category": 3,
+            "sku": "TCP020",
+            "description": "A comprehensive planning kit for teachers, including templates and tools.",
+            "price": 39.99,
+            "rating": 4.7,
+            "image_url": "https://res.cloudinary.com/dxlu7xxz9/image/upload/v1735768038/kxaynjxe31r4jdsbz1qy.png",
+            "image": "30.png",
+            "in_stock": true,
+            "reviews_count": 30,
+            "delivery": "Ships within 3-5 business days",
+            "discount": 5,
+            "age_group": "Adults",
+            "created_at": "2024-01-04T20:40:00Z"
+        }
     }
+    
 ]
