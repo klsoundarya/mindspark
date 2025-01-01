@@ -345,6 +345,65 @@ a.dropdown-item {
 
 /* ------------- shop app styling ----------- */
 
+/* sortby dropdown styling */
+.sort-select-wrapper select {
+    border-radius: 5px;
+    border: 2px solid #bfa616;
+    transition: border-color 0.3s ease, background-color 0.3s ease;
+    background-color: #f8f9fa;
+}
+
+.sort-select-wrapper select.border-info {
+    border-color: #bfa616;
+}
+
+.sort-select-wrapper select.border-black {
+    border-color: #000;
+}
+
+.sort-select-wrapper select:hover {
+    border-color: #000000;
+    background-color: #e9ecef;
+}
+
+.sort-select-wrapper select:focus {
+    outline: none;
+    border-color: #bfa616;
+    background-color: #ffffff;
+}
+
+.sort-select-wrapper select option {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.sort-select-wrapper select option:checked {
+    background-color: #bfa616;
+    color: #ffffff;
+}
+
+/* --------- Products home styling --------- */
+.text-muted.text-center {
+    text-align: center;
+}
+
+.text-muted.text-md-left {
+    text-align: left;
+}
+
+.text-muted a {
+    color: #bfa616;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.text-muted a:hover {
+    color: #0056b3;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .card {
     border: none;
     border-radius: 10px;

@@ -15,156 +15,201 @@
         </div>
     </div>
 </div>
+
 {% endblock %}
+
 
 {% block content %}
+
 <div class="container mt-5">
-    <!-- Products Display -->
     <div class="row">
-        {% for product in products %}
-        <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
-            <div class="card h-100 border-0">
-                <div class="d-flex justify-content-center align-items-center">
-                    {% if product.image_url %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ product.image_url }}" alt="{{ product.name }}"
-                            style="width: 200px; height: 200px; object-fit: cover;">
-                    </a>
-                    {% elif product.image %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ product.image.url }}" alt="{{ product.name }}"
-                            style="width: 200px; height: 200px; object-fit: cover;">
-                    </a>
-                    {% else %}
-                    <a href="{% url 'product_detail' product.id %}">
-                        <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default_image.png"
-                            alt="{{ product.name }}" style="width: 200px; height: 200px; object-fit: cover;">
-                    </a>
-                    {% endif %}
+        <div class="product-container col-10 offset-1">
+            <div class="row mt-1 mb-2">
+                <!-- Sorting Dropdown -->
+                <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
+                    <div class="sort-select-wrapper w-50">
+                        <select id="sort-selector" class="custom-select custom-select-sm border border-{% if current_sorting != 'None_None' %}info{% else %}black{% endif %}">
+                            <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
+                            <option value="?sort=price&direction=asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
+                            </option>
+                            <option value="?sort=price&direction=desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)
+                            </option>
+                            <option value="?sort=rating&direction=asc" {% if current_sorting == 'rating_asc' %}selected{% endif %}>Rating (low to
+                                high)
+                            </option>
+                            <option value="?sort=rating&direction=desc" {% if current_sorting == 'rating_desc' %}selected{% endif %}>Rating (high to
+                                low)
+                            </option>
+                            <option value="?sort=name&direction=asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)</option>
+                            <option value="?sort=name&direction=desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)</option>
+                            <option value="?sort=category&direction=asc" {% if current_sorting == 'category_asc' %}selected{% endif %}>Category (A-Z)
+                            </option>
+                            <option value="?sort=category&direction=desc" {% if current_sorting == 'category_desc' %}selected{% endif %}>Category
+                                (Z-A)
+                            </option>
+                        </select>
+                    </div>        
                 </div>
 
-                <div class="card-body card-title pb-0">
-                    <a href="{% url 'product_detail' product.id %}" class="product-link">
-                        <p class="mb-0 text-center">{{ product.name }}</p>
-                    </a>
-                    <p class="text-muted mb-3">Category: {{ product.category.get_friendly_name }}</p>
-                    </a>
-                </div>
-
-                <div class="card-footer bg-white pt-0 border-0 text-center">
-                    <div class="row">
-                        <div class="col">
-                            <p class="lead custom-price mb-0 text-center font-weight-bold">€ {{ product.price }}</p>
-                            {% if product.display_rating %}
-                            <div class="rating">
-                                {% for i in "12345" %}
-                                {% if product.display_rating >= forloop.counter %}
-                                <i class="fas fa-star text-warning"></i>
-                                {% elif product.display_rating > forloop.counter0 %}
-                                <i class="fas fa-star-half-alt text-warning"></i>
-                                {% else %}
-                                <i class="far fa-star text-warning"></i>
-                                {% endif %}
-                                {% endfor %}
-                            </div>
-                            {% else %}
-                            <small class="text-muted">No Rating</small>
-                            {% endif %}
-                        </div>
-                    </div>
-
-                    <div class="row mt-2">
-                        <div class="col-6">
-                            <form method="POST" action="">
-                                {% csrf_token %}
-                                <button class="btn btn-block" type="submit">
-                                    <i class="fas fa-shopping-cart"></i>
-                                </button>
-                            </form>
-                        </div>
-                        <div class="col-6">
-                            <form method="POST" action="">
-                                {% csrf_token %}
-                                <button class="btn btn-block" type="submit">
-                                    <i class="fas fa-heart"></i>
-                                </button>
-                            </form>
-                        </div>
-                    </div>
+                <!-- Product Info -->
+                <div class="col-12 col-md-6 order-md-first">
+                    <p class="text-muted mt-3 text-center text-md-left">
+                        {% if search_term or current_categories or current_sorting != 'None_None' %}
+                        <span class="small"><a href="{% url 'shop' %}">Products Home</a> | </span>
+                        {% endif %}
+                        {{ products|length }} Products{% if search_term %} found for <strong>"{{ search_term
+                            }}"</strong>{% endif %}
+                    </p>
                 </div>
             </div>
-        </div>
 
-        {% if forloop.counter|divisibleby:1 %}
-        <div class="col-12 d-sm-none mb-5 mt-2">
-            <hr>
+
+            <!-- Products Display -->
+            <div class="row">
+                {% for product in products %}
+                <div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+                    <div class="card h-100 border-0">
+                        <div class="d-flex justify-content-center align-items-center">
+                            {% if product.image_url %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image_url }}"
+                                    alt="{{ product.name }}" style="width: 200px; height: 200px; object-fit: cover;">
+                            </a>
+                            {% elif product.image %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ product.image.url }}"
+                                    alt="{{ product.name }}" style="width: 200px; height: 200px; object-fit: cover;">
+                            </a>
+                            {% else %}
+                            <a href="{% url 'product_detail' product.id %}">
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}default_image.png"
+                                    alt="{{ product.name }}" style="width: 200px; height: 200px; object-fit: cover;">
+                            </a>
+                            {% endif %}
+                        </div>
+
+                        <div class="card-body card-title pb-0">
+                            <a href="{% url 'product_detail' product.id %}" class="product-link">
+                                <p class="mb-0 text-center">{{ product.name }}</p>
+                            </a>
+                            <p class="text-muted mb-3">Category: {{ product.category.get_friendly_name }}</p>
+                            </a>
+                        </div>
+
+                        <div class="card-footer bg-white pt-0 border-0 text-center">
+                            <div class="row">
+                                <div class="col">
+                                    <p class="lead custom-price mb-0 text-center font-weight-bold">€ {{ product.price }}
+                                    </p>
+                                    {% if product.display_rating %}
+                                    <div class="rating">
+                                        {% for i in "12345" %}
+                                        {% if product.display_rating >= forloop.counter %}
+                                        <i class="fas fa-star text-warning"></i>
+                                        {% elif product.display_rating > forloop.counter0 %}
+                                        <i class="fas fa-star-half-alt text-warning"></i>
+                                        {% else %}
+                                        <i class="far fa-star text-warning"></i>
+                                        {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                    {% else %}
+                                    <small class="text-muted">No Rating</small>
+                                    {% endif %}
+                                </div>
+                            </div>
+
+                            <div class="row mt-2">
+                                <div class="col-6">
+                                    <form method="POST" action="">
+                                        {% csrf_token %}
+                                        <button class="btn btn-block" type="submit">
+                                            <i class="fas fa-shopping-cart"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                                <div class="col-6">
+                                    <form method="POST" action="">
+                                        {% csrf_token %}
+                                        <button class="btn btn-block" type="submit">
+                                            <i class="fas fa-heart"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                {% if forloop.counter|divisibleby:1 %}
+                <div class="col-12 d-sm-none mb-5 mt-2">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:2 %}
+                <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5 mt-2">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:3 %}
+                <div class="col-12 d-none d-lg-block d-xl-none mb-5 mt-2">
+                    <hr>
+                </div>
+                {% endif %}
+                {% if forloop.counter|divisibleby:4 %}
+                <div class="col-12 d-none d-xl-block mb-5 mt-2">
+                    <hr>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+
+            <!-- If no products found -->
+            {% if not products %}
+            <p class="text-center">No products found in this category.</p>
+            {% endif %}
         </div>
-        {% endif %}
-        {% if forloop.counter|divisibleby:2 %}
-        <div class="col-12 d-none d-sm-block d-md-block d-lg-none mb-5 mt-2">
-            <hr>
-        </div>
-        {% endif %}
-        {% if forloop.counter|divisibleby:3 %}
-        <div class="col-12 d-none d-lg-block d-xl-none mb-5 mt-2">
-            <hr>
-        </div>
-        {% endif %}
-        {% if forloop.counter|divisibleby:4 %}
-        <div class="col-12 d-none d-xl-block mb-5 mt-2">
-            <hr>
-        </div>
-        {% endif %}
-        {% endfor %}
     </div>
 
-    <!-- If no products found -->
-    {% if not products %}
-    <p class="text-center">No products found in this category.</p>
+    <!-- Pagination -->
+    {% if products.has_other_pages %}
+    <nav aria-label="Page navigation" class="pagination-container">
+        <ul class="pagination justify-content-center">
+            {% if products.has_previous %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="?page={{ products.previous_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
+                    &laquo;
+                </a>
+            </li>
+            {% endif %}
+
+            {% for num in products.paginator.page_range %}
+            <li class="page-item {% if products.number == num %}active{% endif %}">
+                <a class="page-link"
+                    href="?page={{ num }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
+                    {{ num }}
+                </a>
+            </li>
+            {% endfor %}
+
+            {% if products.has_next %}
+            <li class="page-item">
+                <a class="page-link"
+                    href="?page={{ products.next_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
+                    &raquo;
+                </a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
     {% endif %}
-</div>
 
-<!-- Pagination -->
-{% if products.has_other_pages %}
-<nav aria-label="Page navigation" class="pagination-container">
-    <ul class="pagination justify-content-center">
-        {% if products.has_previous %}
-        <li class="page-item">
-            <a class="page-link"
-                href="?page={{ products.previous_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
-                &laquo;
-            </a>
-        </li>
-        {% endif %}
+    <!-- Back to top button -->
+    <div class="btt-button shadow-sm" id="bttBtn">
+        <a class="btt-link d-flex h-100" title="Back to Top">
+            <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
+        </a>
+    </div>
 
-        {% for num in products.paginator.page_range %}
-        <li class="page-item {% if products.number == num %}active{% endif %}">
-            <a class="page-link"
-                href="?page={{ num }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
-                {{ num }}
-            </a>
-        </li>
-        {% endfor %}
-
-        {% if products.has_next %}
-        <li class="page-item">
-            <a class="page-link"
-                href="?page={{ products.next_page_number }}{% if request.GET.category %}&category={{ request.GET.category }}{% endif %}">
-                &raquo;
-            </a>
-        </li>
-        {% endif %}
-    </ul>
-</nav>
-{% endif %}
-
-
-
-<!-- Back to top button -->
-<div class="btt-button shadow-sm" id="bttBtn">
-    <a class="btt-link d-flex h-100" title="Back to Top">
-        <i class="fas fa-arrow-up text-black mx-auto my-auto"></i>
-    </a>
-</div>
-
-{% endblock %}
+    {% endblock %}

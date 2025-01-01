@@ -26,6 +26,23 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+// JavaScript to handle sorting selection
+document.getElementById('sort-selector').addEventListener('change', function () {
+    const selectedValue = this.value; // Get the selected value from the dropdown
+
+    if (selectedValue === 'reset') {
+        window.location.href = "/shop/";
+    } else if (selectedValue.includes('_')) {
+        // Handle sorting selection
+        const baseUrl = "{% url 'shop' %}";
+        const [sort, direction] = selectedValue.split('_');
+        const newUrl = `${baseUrl}?sort=${sort}&direction=${direction}`;
+        window.location.href = newUrl;
+    } else {
+        window.location.href = selectedValue;
+    }
+});
+
 
 // Show/Hide Back to Top Button on Scroll (shop app styling)
 const backToTopBtn = document.getElementById('bttBtn');

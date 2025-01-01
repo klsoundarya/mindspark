@@ -135,12 +135,10 @@
                                     </div>
                                 </a>
                                 <div class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="shopDropdown">
-                                    <!-- Categories Section -->
+                                    <!-- All Products -->
                                     <a class="dropdown-item" href="{% url 'shop' %}">All Products</a>
-                                    <a class="dropdown-item {% if 'Special Offers' in current_categories %}active{% endif %}"
-                                        href="{% url 'shop' %}?category=Special Offers">
-                                        Special Offers
-                                    </a>
+
+                                    <!-- Categories Section -->
                                     <div class="dropdown-divider"></div>
                                     <h6 class="dropdown-header">Montessori Categories</h6>
                                     {% for category in all_categories %}
@@ -149,9 +147,9 @@
                                         {{ category.friendly_name }}
                                     </a>
                                     {% endfor %}
-                                    <div class="dropdown-divider"></div>
                                 </div>
                             </li>
+
 
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="#" id="user-options" data-toggle="dropdown"
