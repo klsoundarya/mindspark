@@ -429,7 +429,7 @@ a.dropdown-item {
 .product-link {
     text-decoration: none !important;
     color: #001d5a;
-    font-weight: bold; 
+    font-weight: bold;
     transition: color 0.3s ease;
 }
 
@@ -548,7 +548,7 @@ a.dropdown-item {
 .breadcrumbs a,
 .breadcrumbs span {
     color: #bfa616;
-    font-weight: bold; 
+    font-weight: bold;
     display: inline-block;
     font-size: 14px;
     text-decoration: none;
@@ -561,7 +561,7 @@ a.dropdown-item {
 
 .breadcrumbs span {
     margin: 0 5px;
-    font-weight: bold; 
+    font-weight: bold;
     color: #bfa616;
 }
 
@@ -570,8 +570,59 @@ a.dropdown-item {
 }
 
 .custom-detail {
-    color:red;
+    color: red;
 }
+
+/*----------- Custom styles for the quantity input group --------*/
+
+.custom-quantity {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 150px;
+}
+
+.qty_input {
+    width: 60px;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    color: #333;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+
+.quantity-btn:hover {
+    background-color: #bfa616;
+    color: #fff;
+}
+
+.border-quantity {
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.quantity-btn .icon i {
+    font-size: 16px;
+
+}
+
 
 .related-products {
     background-color: #f9f9f9;
@@ -603,9 +654,6 @@ a.dropdown-item {
     width: 100%;
     font-size: 0.85rem;
 }
-
-/* Back to Top button */
-
 
 
 /* --------- store feature styling ------ */
@@ -858,6 +906,12 @@ footer {
     }
 
     /* product detail stlying */
+
+    .custom-quantity {
+        width: 100%;
+        max-width: 200px;
+        margin: 0 auto;
+    }
 
     .product-details-container {
         text-align: center;
