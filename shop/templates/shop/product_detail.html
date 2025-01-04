@@ -183,7 +183,7 @@
     $(document).ready(function () {
         // Decrement button click event
         $('.decrement-qty').click(function (event) {
-            event.preventDefault(); // Prevent form submission on button click
+            event.preventDefault();
             const qtyInput = $('#id_qty_' + $(this).data('item_id')); // Get the corresponding quantity input
             let qty = parseInt(qtyInput.val(), 10);
 
@@ -195,11 +195,11 @@
 
         // Increment button click event
         $('.increment-qty').click(function (event) {
-            event.preventDefault(); // Prevent form submission on button click
+            event.preventDefault();
             const qtyInput = $('#id_qty_' + $(this).data('item_id')); // Get the corresponding quantity input
             let qty = parseInt(qtyInput.val(), 10);
-            qty += 1; // Increase quantity
-            qtyInput.val(qty); // Update the input field value
+            qty += 1;
+            qtyInput.val(qty);
         });
     });
 </script>
