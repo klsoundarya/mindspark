@@ -545,6 +545,14 @@ a.dropdown-item {
     text-align: center;
 }
 
+.product-img{
+    transition: all 0.3s;
+}
+
+.product-img:hover {
+    transform: scale(1.05);
+}
+
 .breadcrumbs a,
 .breadcrumbs span {
     color: #bfa616;
@@ -623,7 +631,7 @@ a.dropdown-item {
 
 }
 
-
+/* -----footer related products ---- */
 .related-products {
     background-color: #f9f9f9;
     padding: 20px;
@@ -655,6 +663,55 @@ a.dropdown-item {
     font-size: 0.85rem;
 }
 
+/* --------- cart template styling ------ */
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table th,
+.table td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 1rem;
+}
+
+.table img {
+    max-width: 100px;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Checkout Button Styling */
+.btn-primary.btn-m {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    font-size: 1.25rem;
+    transition: all 0.3s;
+}
+
+.btn-primary.btn-m:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.btn-outline-secondary {
+    font-size: 1rem;
+    border: 1px solid #333;
+    color: #000;
+    transition: all 0.3s;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #bfa616;
+    color: #fff;
+    transform: scale(1.05);
+}
 
 /* --------- store feature styling ------ */
 
@@ -905,7 +962,7 @@ footer {
         max-height: 400px;
     }
 
-    /* product detail stlying */
+    /* -------- product detail stlying ---------- */
 
     .custom-quantity {
         width: 100%;
@@ -924,6 +981,45 @@ footer {
     .related-products .btn-outline-primary {
         font-size: 0.75rem;
     }
+
+    /* ---- cart styling ---- */
+
+    .table thead {
+        display: none;
+    }
+
+    .table tr {
+        display: block;
+        margin-bottom: 1rem;
+    }
+
+    .table td {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem;
+        font-size: 14px;
+    }
+
+    .table td:first-child {
+        border-top: 0;
+    }
+
+    .table td::before {
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+
+    .table img {
+        max-width: 80px;
+        margin-bottom: 0.5rem;
+    }
+
+    .cart-img{
+        padding-right:30px;
+        max-width: 80px;
+    }
+
 
 }
 
