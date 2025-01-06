@@ -1,0 +1,67 @@
+<script type="text/javascript">
+    document.addEventListener("DOMContentLoaded", function () {
+    // Increment Quantity
+    document.querySelectorAll(".increment-qty").forEach(function (button) {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const itemId = this.dataset.itemId;
+            const qtyInput = document.querySelector(`#id_qty_${itemId}`);
+            let currentQty = parseInt(qtyInput.value, 10);
+
+            if (currentQty < 99) {
+                qtyInput.value = currentQty + 1;
+                handleEnableDisable(itemId);
+            }
+        });
+    });
+
+    // Decrement Quantity
+    document.querySelectorAll(".decrement-qty").forEach(function (button) {
+        button.addEventListener("click", function (e) {
+            e.preventDefault();
+            const itemId = this.dataset.itemId;
+            const qtyInput = document.querySelector(`#id_qty_${itemId}`);
+            let currentQty = parseInt(qtyInput.value, 10);
+
+            if (currentQty > 1) {
+                qtyInput.value = currentQty - 1;
+                handleEnableDisable(itemId);
+            }
+        });
+    });
+
+    // Ensure proper enabling/disabling of buttons
+    function handleEnableDisable(itemId) {
+        const qtyInput = document.querySelector(`#id_qty_${itemId}`);
+        const decrementButton = document.querySelector(`#decrement-qty_${itemId}`);
+        const incrementButton = document.querySelector(`#increment-qty_${itemId}`);
+        const currentQty = parseInt(qtyInput.value, 10);
+
+        decrementButton.disabled = currentQty <= 1;
+        incrementButton.disabled = currentQty >= 99;
+    }
+
+    // On input change, ensure value stays in range and update button states
+    document.querySelectorAll(".qty_input").forEach(function (input) {
+        input.addEventListener("change", function () {
+            const itemId = this.dataset.itemId;
+            let currentQty = parseInt(this.value, 10);
+
+            if (isNaN(currentQty) || currentQty < 1) {
+                this.value = 1;
+            } else if (currentQty > 99) {
+                this.value = 99;
+            }
+
+            handleEnableDisable(itemId);
+        });
+    });
+
+    // Initialize button states on page load
+    document.querySelectorAll(".qty_input").forEach(function (input) {
+        const itemId = input.dataset.itemId;
+        handleEnableDisable(itemId);
+    });
+});
+
+</script>

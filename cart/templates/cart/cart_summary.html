@@ -63,33 +63,33 @@
                         <!-- Price -->
                         <td class="py-3 text-center">€ {{ item.product.price }}</td>
 
-                        <!-- Quantity -->
                         <td class="py-3 text-center">
                             <form method="POST" class="form-inline update-cart-form">
                                 {% csrf_token %}
                                 <input type="hidden" name="product_id" value="{{ item.product.id }}">
                                 <div class="input-group">
                                     <button type="button" class="btn btn-outline-secondary decrement-qty"
-                                        data-product-id="{{ item.product.id }}">
+                                        data-item-id="{{ item.product.id }}" id="decrement-qty_{{ item.product.id }}">
                                         <i class="fas fa-minus"></i>
                                     </button>
-                                    <input class="form-control text-center qty-input" type="number" name="quantity"
+                                    <input class="form-control text-center qty_input" type="number" name="quantity"
                                         value="{{ item.quantity }}" min="1" max="99"
-                                        data-product-id="{{ item.product.id }}">
+                                        data-item-id="{{ item.product.id }}" id="id_qty_{{ item.product.id }}">
                                     <button type="button" class="btn btn-outline-secondary increment-qty"
-                                        data-product-id="{{ item.product.id }}">
+                                        data-item-id="{{ item.product.id }}" id="increment-qty_{{ item.product.id }}">
                                         <i class="fas fa-plus"></i>
                                     </button>
                                 </div>
                             </form>
                         </td>
 
+
                         <!-- Subtotal -->
                         <td class="py-3 text-center">€ {{ item.quantity|floatformat:2|add:item.product.price }}</td>
 
                         <!-- Actions -->
                         <td class="py-3 text-center">
-                            <a class="btn btn-outline-dark btn-sm">Update</a>
+                            <a class="btn btn-outline-dark btn-sm item-update">Update</a>
                             <a href="" class="btn btn-danger btn-sm remove-item">
                                 Remove
                             </a>
@@ -121,12 +121,21 @@
                 </table>
             </div>
             {% else %}
-            <p class="text-center">Your cart is empty.</p>
-            <a href="{% url 'shop' %}" class="btn btn-outline-dark">
-                <i class="fas fa-chevron-left"></i> Back to Shop
-            </a>
+            <div class="empty-cart-container text-center my-5">
+                <p class="text-center empty-cart-message">Your cart is empty.</p>
+                <a href="{% url 'shop' %}" class="btn btn-outline-dark back-to-shop-btn">
+                    <i class="fas fa-chevron-left"></i> Back to Shop
+                </a>
+            </div>
+
             {% endif %}
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+{{ block.super }}
+{% include 'shop/includes/quantity_input_script.html' %}
+{% include 'cart/includes/update_script.html' %}
 {% endblock %}
