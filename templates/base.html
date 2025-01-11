@@ -217,6 +217,25 @@
 
     <!-- displaying messages -->
     {% if messages %}
+    <div class="message-container">
+        {% for message in messages %}
+        {% with message.level as level %}
+        {% if level == 40 %}
+        {% include 'includes/toasts/toast_error.html' %}
+        {% elif level == 30 %}
+        {% include 'includes/toasts/toast_warning.html' %}
+        {% elif level == 25 %}
+        {% include 'includes/toasts/toast_success.html' %}
+        {% else %}
+        {% include 'includes/toasts/toast_info.html' %}
+        {% endif %}
+        {% endwith %}
+
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    <!-- {% if messages %}
     <div class="container centered">
         <div class="row">
             <div class="col-md-8 offset-md-2 mt-2">
@@ -231,8 +250,7 @@
             </div>
         </div>
     </div>
-    {% endif %}
-
+    {% endif %} -->
 
     {% block page_header %}
     {% endblock %}
@@ -333,6 +351,11 @@
 
 
     {% block postloadjs %}
+
+    <script type="text/javascript">
+        $('.toast').toast('show');
+    </script>
+
     <script src="{% static 'js/script.js' %}"></script>
 
     <!-- Font Awesome Kit -->

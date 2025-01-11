@@ -162,8 +162,10 @@
                 </a>
                 {% endif %}
                 <div class="card-body text-center">
-                    <p class="font-weight-bold mb-1">{{ related_product.name }}</p>
-                    <p class="text-muted">€{{ related_product.price }}</p>
+                    <a href="{% url 'product_detail' related_product.id %}" class="text-dark text-decoration-none">
+                        <p class="font-weight-bold mb-1">{{ related_product.name }}</p>
+                        <p class="text-muted">€{{ related_product.price }}</p>
+                    </a>
                 </div>
             </div>
         </div>
