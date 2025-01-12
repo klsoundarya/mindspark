@@ -19,48 +19,7 @@ body {
     overflow-x: hidden;
 }
 
-.alert {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    color: #F3F5F5;
-    font-weight: bold;
-    background-color: #bfa616;
-    padding: 10px 20px;
-    border-radius: 5px;
-    top: 160px;
-    left: 50%;
-    transform: translateX(-50%);
-    max-width: 520px;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.alert span {
-    flex: 1;
-}
-
-.custom-close-btn {
-    color: #F3F5F5;
-    background: none;
-    border: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 0;
-    cursor: pointer;
-    line-height: 1;
-    position: relative;
-    margin-left: 10px;
-}
-
-.custom-close-btn:hover {
-    color: #ffffff;
-    opacity: 0.8;
-}
-
-/* ------------------------------- bootstrap toasts */
+/* --------- bootstrap toasts ------------ */
 
 .message-container {
     position: fixed;
@@ -75,6 +34,149 @@ body {
 
 .toast-capper {
     height: 2px;
+}
+
+/* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
+.toast.custom-toast .arrow-up {
+    width: 0; 
+    height: 0; 
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent; 
+    position: absolute;
+    top: -15px;
+    right: 36px;
+}
+
+.toast-header {
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+    color: #000;
+    border-bottom: 1px solid #0000004e;
+}
+
+.toast-header .close {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    line-height: 1;
+    opacity: 1.0;
+}
+
+.toast-header .close:hover {
+    opacity: 1;
+}
+
+.toast-body {
+    padding: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    background-color: #bfa616;
+    color: #001d5a;
+    border-bottom: 1px solid #0000004e;
+    margin-left: 10px;
+}
+
+.toast-body:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.custom-p {
+    background-color: #F3F5F5;
+    font-weight: bold;
+    padding: 18px;
+    margin-bottom: 2px !important;
+    border-bottom: 1px solid #0000004e;
+}
+
+.cart-notification-wrapper {
+    background-color: #F3F5F5;
+    height: 200px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-bottom: 1px solid #0000004e;
+    margin-bottom: 2px !important;
+}
+
+.cart-wrapper {
+    border-radius: 5px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+
+.cart-notification-wrapper .row {
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.cart-notification-wrapper p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Total Section Styling */
+.total-row {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+
+.total-row p {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    margin: 0 10px 0 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.total-row p span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #28a745;
+}
+
+.total-row .note {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+
+/* Total and Checkout Button */
+.black-button {
+    background-color: #bfa616;
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-weight: bold;
+}
+
+.black-button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+.black-button .icon {
+    font-size: 1.2rem;
+}
+
+
+/* Convenience classes - colors copied from Bootstrap */
+
+.arrow-success {
+    border-bottom-color: #28a745 !important;
+}
+
+.arrow-warning {
+    border-bottom-color: #ffc107 !important;
 }
 
 hr {
