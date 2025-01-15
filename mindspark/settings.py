@@ -46,14 +46,16 @@ INSTALLED_APPS = [
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
-    'crispy_forms',
-    'crispy_bootstrap5',
     'django_summernote',
     'cloudinary',
     'home',
     'shop',
     'cart',
     'checkout',
+
+    # Other
+    'crispy_forms',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +72,8 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'mindspark.urls'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -83,8 +87,13 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'shop.context_processors.global_categories',
+                'django.template.context_processors.media',
                 'cart.contexts.cart_contents',
             ],
+            'builtins': [
+                'crispy_forms.templatetags.crispy_forms_tags',
+                'crispy_forms.templatetags.crispy_forms_field',
+            ]
         },
     },
 ]
