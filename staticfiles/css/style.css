@@ -946,6 +946,13 @@ a.dropdown-item {
     border: 1px solid #000;
 }
 
+/* -------------checkout success styling ---------- */
+.custom-grey-box {
+    border: 1px solid #dee2e6; /* Light grey border */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+
 /* --------- store feature styling ------ */
 
 .store-feature {

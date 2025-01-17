@@ -9,7 +9,19 @@ from cart.contexts import cart_contents
 
 import stripe
 
+
+def order_details(request, order_id):
+    """
+    View to display order details by order ID.
+    """
+    order = get_object_or_404(Order, id=order_id)
+    return render(request, 'order_details.html', {'order': order})
+
+
 def checkout(request):
+    """
+    View to handle the checkout process.
+    """
     stripe_public_key = settings.STRIPE_PUBLIC_KEY
     stripe_secret_key = settings.STRIPE_SECRET_KEY
 
@@ -30,7 +42,7 @@ def checkout(request):
         order_form = OrderForm(form_data)
         if order_form.is_valid():
             order = order_form.save()
-            for item_id, quantity in cart.items():  # Directly iterate over cart items
+            for item_id, quantity in cart.items():
                 try:
                     product = Product.objects.get(id=item_id)
                     order_line_item = OrderLineItem(
@@ -50,8 +62,7 @@ def checkout(request):
             request.session['save_info'] = 'save-info' in request.POST
             return redirect(reverse('checkout_success', args=[order.order_number]))
         else:
-            messages.error(request, 'There was an error with your form. \
-                Please double check your information.')
+            messages.error(request, 'There was an error with your form. Please double-check your information.')
     else:
         cart = request.session.get('cart', {})
         if not cart:
@@ -70,8 +81,7 @@ def checkout(request):
         order_form = OrderForm()
 
     if not stripe_public_key:
-        messages.warning(request, 'Stripe public key is missing. \
-            Did you forget to set it in your environment?')
+        messages.warning(request, 'Stripe public key is missing. Did you forget to set it in your environment?')
 
     template = 'checkout/checkout.html'
     context = {
@@ -82,15 +92,15 @@ def checkout(request):
 
     return render(request, template, context)
 
+
 def checkout_success(request, order_number):
     """
-    Handle successful checkouts
+    Handle successful checkouts.
     """
     save_info = request.session.get('save_info')
     order = get_object_or_404(Order, order_number=order_number)
-    messages.success(request, f'Order successfully processed! \
-        Your order number is {order_number}. A confirmation \
-        email will be sent to {order.email}.')
+    messages.success(request, f'Order successfully processed! Your order number is {order_number}. '
+                              f'A confirmation email will be sent to {order.email}.')
 
     if 'cart' in request.session:
         del request.session['cart']
@@ -100,4 +110,4 @@ def checkout_success(request, order_number):
         'order': order,
     }
 
-    return render(request, template, context)
+    return render(request, 'checkout/checkout_success.html', context)
