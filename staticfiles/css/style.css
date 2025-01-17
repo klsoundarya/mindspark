@@ -902,6 +902,12 @@ a.dropdown-item {
     margin-bottom: 3px;
 }
 
+.form-check-label a {
+    color: #bfa616;
+    text-decoration: none;
+    cursor: pointer;
+}
+
 .StripeElement,
 .stripe-style-input {
   box-sizing: border-box;
@@ -1265,3 +1271,4 @@ footer {
         max-height: 300px;
     }
 }
+
