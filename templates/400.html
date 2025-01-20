@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- 400 Error Handling Page -->
+<div class="wrap-error mt-5"
+    style="min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center;">
+    <div>
+        <h1 id="custom-msg-number">
+            <span>4</span>
+            <span>0</span>
+            <span>0</span>
+        </h1>
+        <h2 style="font-size: 2rem; margin-top: 1rem;">Bad Request</h2>
+        <p style="font-size: 1.2rem; color: #666;">Sorry, there was an error with your request.</p>
+        <a href="{% url 'home' %}" class="btn btn-primary mt-3">Please, Return to Home</a>
+    </div>
+
+</div>
+{% endblock %}

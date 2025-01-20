@@ -19,6 +19,33 @@ body {
     overflow-x: hidden;
 }
 
+/* ------- Error Page Styles ------- */
+
+#custom-msg-number {
+    font-size: 6rem;
+    color: #dc3545;
+    font-weight: bold;
+    margin: 0;
+}
+
+#custom-msg-number span {
+    margin: 0 5px;
+    animation: pop 0.6s ease forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
 /* --------- bootstrap toasts ------------ */
 
 .message-container {
