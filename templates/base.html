@@ -165,7 +165,7 @@
                                 <ul class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
                                     {% if request.user.is_authenticated %}
                                     {% if request.user.is_superuser %}
-                                    <li><a href="#" class="dropdown-item">Product Management</a></li>
+                                    <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
                                     {% endif %}
                                     <li><a href="#" class="dropdown-item">Update Profile</a></li>
                                     <li><a href="#" class="dropdown-item">Update Password</a></li>
@@ -326,7 +326,7 @@
 
             <!-- Copyright Section -->
             <div class="text-center mb-2">
-                <hr class="text-line">
+                <hr class="mb-2">
                 <h6>&copy; 2024 Created by Soundarya | Mindspark. All rights reserved.</h6>
             </div>
         </footer>

@@ -2,10 +2,11 @@
 
 {% load i18n %}
 
-{% block head_title %}{% trans "Account Inactive" %}{% endblock head_title %}
+{% block head_title %}{% trans "Account Inactive" %}{% endblock %}
 
-{% block content %}
-<h1>{% trans "Account Inactive" %}</h1>
+{% block inner_content %}
+
+<h2 class="mt-5 font-weight-bold text-center">{% trans "Account Inactive" %}</h2>
 
 <p>{% trans "This account is inactive." %}</p>
-{% endblock content %}
+{% endblock %}

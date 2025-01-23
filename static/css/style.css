@@ -65,10 +65,10 @@ body {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .toast.custom-toast .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     position: absolute;
     top: -15px;
     right: 36px;
@@ -207,12 +207,14 @@ body {
 }
 
 hr {
-    color: #bfa616;
     opacity: 1;
-    width: 30%;
+    width: 40%;
     margin: 0 auto;
     padding: 2px;
+    border: 0 !important;
+    border-top: 3px solid #bfa616 !important;
 }
+
 
 /* ------- Error Page Styles ------- */
 
@@ -898,6 +900,134 @@ a.dropdown-item {
     object-fit: cover;
 }
 
+/* ----------- Allauth form formatting ----------- */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: #6c757d;
+}
+
+.allauth-form-inner-content input {
+    
+    border-radius: 7px;
+    border: 3px solid #bfa616;
+    max-width: 95%;
+    padding: 3px;
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: #aab7c4;
+}
+
+input[name='q']::placeholder {
+    color: #aab7c4;
+}
+
+.allauth-reminder {
+    text-align: center;
+    font-size: 20px;
+    color: #555;
+}
+
+.allauth-form-inner-content a {
+    color: rgb(255, 81, 0);
+    text-decoration: none;
+}
+
+.allauth-form-inner-content a:hover {
+    color: #001d5a;
+}
+
+/* --------- login styling ------ */
+
+.allauth-title {
+    font-size: 2rem;
+    color: #001d5a;
+    text-shadow: 1px 2px 4px #bfa616;
+    margin-bottom: 20px;
+}
+
+.allauth-custom {
+    color: #000;
+    font-weight: bolder;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-weight: bolder;
+    background-color: #f3f5f5;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.934);
+    max-width: 100%;
+    font-size: 20px;
+    font-family: "Fondamento", serif;
+}
+
+.form-check {
+    padding-right: 10px;
+}
+
+.allauth-submit-btn {
+    background-color: transparent;
+    color: #000;
+    font-weight: bold;
+    font-size: 19px;
+    padding: 10px 15px;
+    border: 2px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: auto;
+  }
+  
+  .allauth-submit-btn:hover {
+    background-color: #bfa616;
+    color: #fff;
+  }
+
+/* Forgot Password */
+#forgot-password-link {
+    text-align: center;
+    margin-top: 15px;
+}
+
+#forgot-password-link a {
+    font-size: 18px;
+    color: #ff4500;
+    text-decoration: underline;
+}
+
+#forgot-password-link a:hover {
+    color: #001d5a;
+}
+
+.btn-success {
+    display: block;
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+    width: 200px;
+    margin: auto;
+}
+
+.btn-success:hover {
+    background-color: #bfa616;
+    color: #fff;
+}
+
+/* --------- sign up styling ------ */
+
+#signup_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 8px 20px 0 10px;
+    padding: 10px 30px;
+    border-radius: 5px;
+}
+
+
 /*--------- Checkout Styling ---------------- */
 .btn-primary.btn-m {
     background-color: #007bff;
@@ -947,25 +1077,25 @@ select option[value=""] {
 
 .StripeElement,
 .stripe-style-input {
-  box-sizing: border-box;
-  height: 40px;
-  padding: 10px 12px;
-  border: 1px solid transparent;
-  border-radius: 0px;
-  background-color: white;
-  box-shadow: 0 1px 3px 0 #e6ebf1;
-  -webkit-transition: box-shadow 150ms ease;
-  transition: box-shadow 150ms ease;
+    box-sizing: border-box;
+    height: 40px;
+    padding: 10px 12px;
+    border: 1px solid transparent;
+    border-radius: 0px;
+    background-color: white;
+    box-shadow: 0 1px 3px 0 #e6ebf1;
+    -webkit-transition: box-shadow 150ms ease;
+    transition: box-shadow 150ms ease;
 }
 
 .StripeElement--focus,
 .stripe-style-input:focus,
 .stripe-style-input:active {
-  box-shadow: 0 1px 3px 0 #cfd7df;
+    box-shadow: 0 1px 3px 0 #cfd7df;
 }
 
 .StripeElement--webkit-autofill {
-  background-color: #fefde5 !important;
+    background-color: #fefde5 !important;
 }
 
 .stripe-style-input::placeholder {
@@ -984,8 +1114,8 @@ select option[value=""] {
 }
 
 #loading-overlay {
-	display: none;
-	position: fixed;
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -995,7 +1125,7 @@ select option[value=""] {
 }
 
 .loading-spinner {
-	display: flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     margin: 0;
@@ -1135,13 +1265,6 @@ footer {
     color: #bfa616;
 }
 
-.text-line {
-    border: none;
-    border-top: 2px solid #bfa616;
-    opacity: 1;
-}
-
-
 /* ------- Media Queries --------------- */
 
 @media (min-width: 1200px) {
@@ -1191,6 +1314,11 @@ footer {
         margin-top: 150px;
         width: 100%;
     }
+
+    .allauth-form-inner-content {
+        margin-top: 150px;
+    }
+
 }
 
 @media (max-width: 768px) {
@@ -1320,6 +1448,21 @@ footer {
         max-width: 80px;
     }
 
+    /* ---------- profile styling ------- */
+
+    .container {
+        padding: 15px;
+    }
+
+    .profile-button {
+        width: 100%;
+    }
+
+    img.rounded-circle {
+        width: 100px;
+        height: 100px;
+    }
+
 }
 
 /* Extra small screens (width <= 576px) */
@@ -1334,4 +1477,3 @@ footer {
         max-height: 300px;
     }
 }
-

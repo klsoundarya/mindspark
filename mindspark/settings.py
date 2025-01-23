@@ -121,11 +121,10 @@ ACCOUNT_USERNAME_MIN_LENGTH = 4
 ACCOUNT_USERNAME_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
 
-
+SITE_ID = 1
 LOGIN_URL = '/accounts/login/'
 LOGIN_REDIRECT_URL = 'home'
-LOGOUT_REDIRECT_URL = '/'
-
+LOGOUT_REDIRECT_URL = 'account_login'
 
 WSGI_APPLICATION = 'mindspark.wsgi.application'
 
