@@ -167,10 +167,10 @@
                                     {% if request.user.is_superuser %}
                                     <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
                                     {% endif %}
-                                    <li><a href="#" class="dropdown-item">Update Profile</a></li>
+                                    <li><a href="{% url 'profile' %}" class="dropdown-item">Update Profile</a></li>
                                     <li><a href="#" class="dropdown-item">Update Password</a></li>
                                     <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                                    <li><a class="dropdown-item" href="">Delete</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'delete_account' %}">Delete</a></li>
                                     {% else %}
                                     <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
                                     <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a>

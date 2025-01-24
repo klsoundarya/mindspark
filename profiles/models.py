@@ -4,6 +4,14 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_countries.fields import CountryField
+   
+class DeletedUser(models.Model):
+    username = models.CharField(max_length=150)
+    email = models.EmailField(blank=True, null=True)
+    deleted_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.username} (deleted at {self.deleted_at})"
 
 
 class UserProfile(models.Model):
