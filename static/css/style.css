@@ -19,33 +19,6 @@ body {
     overflow-x: hidden;
 }
 
-/* ------- Error Page Styles ------- */
-
-#custom-msg-number {
-    font-size: 6rem;
-    color: #dc3545;
-    font-weight: bold;
-    margin: 0;
-}
-
-#custom-msg-number span {
-    margin: 0 5px;
-    animation: pop 0.6s ease forwards;
-}
-
-@keyframes pop {
-    0% {
-        transform: scale(0.5);
-        opacity: 0;
-    }
-
-    100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
-
-
 /* --------- bootstrap toasts ------------ */
 
 .message-container {
@@ -241,6 +214,84 @@ hr {
 
 header .navbar {
     margin-top: 60px;
+}
+
+#custom-msg-number {
+    font-size: 6rem;
+    color: #dc3545;
+    font-weight: bold;
+    margin: 0;
+}
+
+#custom-msg-number span {
+    margin: 0 5px;
+    animation: pop 0.6s ease forwards;
+}
+
+@keyframes pop {
+    0% {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+
+/* ------- Contact form ------ */
+
+.custom-heading {
+    padding-top: 60px;
+    margin-top: 150px;
+}
+
+.custom-form {
+    margin-top: 10px;
+    padding: 25px 0 10px 35px;
+    border-radius: 5px;
+    max-width: 100%;
+    align-items: center;
+    background-color: #f3f5f5;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.934);
+    
+}
+
+.custom-form input,
+.custom-form textarea {
+    font-weight: bolder;
+    width: 93%;
+    padding: 10px;
+    border: 1px solid #bfa616;
+    border-radius: 4px;
+    font-size: 18px;
+    background-color: #f7f7f8;
+}
+
+.custom-form input::placeholder,
+.custom-form textarea::placeholder {
+    font-size: 19px;
+    color: #777;
+    text-align: center;
+}
+
+#custom-submit {
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    margin:auto;
+}
+
+#custom-submit:hover {
+    background-color: #bfa616;
+    color: #fff;
 }
 
 /* ------search -------- */
@@ -1308,7 +1359,6 @@ footer {
 
 }
 
-/*  ----- product detail styling ------- */
 @media (max-width: 991px) {
     #page-content {
         margin-top: 150px;
@@ -1318,6 +1368,16 @@ footer {
     .allauth-form-inner-content {
         margin-top: 150px;
     }
+    /* password change/update password */
+    .custom-password {
+        margin-top: 160px;
+    }
+
+    /* contact styling */
+    .custom-header {
+        margin-top: 180px;
+    }
+    
 
 }
 

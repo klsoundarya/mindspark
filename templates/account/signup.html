@@ -11,8 +11,9 @@
 
 <div class="allauth-custom mb-4">
 
-  <p class="allauth-reminder">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">log
-      in</a>.{% endblocktrans %}</p>
+  <p class="allauth-reminder">{% blocktrans %}Already have an account? Then please <a href="{{ login_url }}">log in</a>.
+  
+{% endblocktrans %}</p>
 
   <form class="form-check" id="signup_form" method="post" action="{% url 'account_signup' %}">
     {% csrf_token %}
