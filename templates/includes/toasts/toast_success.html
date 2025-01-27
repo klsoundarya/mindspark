@@ -11,7 +11,7 @@
     <div class="toast-body mb-1">
         {{ message }}
     </div>
-    {% if grand_total %}
+    {% if grand_total and not on_profile_page %}
     <p class="py-1 custom-p">Your cart ({{ product_count }})</p>
     <div class="cart-notification-wrapper">
         {% for item in cart_items %}

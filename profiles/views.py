@@ -5,6 +5,7 @@ from django.contrib.auth import logout, login
 from django.contrib import messages
 from .forms import (
     PasswordChangeForm,
+    UserProfileForm
 )
 
 from .models import UserProfile, DeletedUser
@@ -63,15 +64,26 @@ def password_update_view(request):
     else:
         messages.error(request, "Please log in to view this page!")
         return redirect('home')
-    
+
 
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
 
+    if request.method == 'POST':
+        form = UserProfileForm(request.POST, instance=profile)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Profile updated successfully')
+
+    form = UserProfileForm(instance=profile)
+    orders = profile.orders.all()
+
     template = 'profiles/profile.html'
     context = {
-        'profile': profile,
+        'form': form,
+        'orders': orders,
+        'on_profile_page': True
     }
 
     return render(request, template, context)
