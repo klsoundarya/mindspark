@@ -94,7 +94,7 @@
             </form>
         </div>
     </div>
-    <!--End Top Header--> 
+    <!--End Top Header-->
 
     <header class="container-fluid fixed-top">
         <nav class="d-flex flex-column h-100">
@@ -164,12 +164,16 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
                                     {% if request.user.is_authenticated %}
+                                        {% if request.user.is_superuser %}
+                                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                        {% endif %}
                                     <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
                                     <li><a href="{% url 'password_update' %}" class="dropdown-item">Update Password</a>
                                     </li>
                                     <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
                                     <hr style="width: 90%;">
-                                    <li><a class="dropdown-item" href="{% url 'delete_account' %}">Delete Account</a></li>
+                                    <li><a class="dropdown-item" href="{% url 'delete_account' %}">Delete Account</a>
+                                    </li>
                                     {% else %}
                                     <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
                                     <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
