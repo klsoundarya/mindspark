@@ -3,13 +3,14 @@
 
 {% block page_header %}
 
-<div class="container header-container">
+<div class="container header-container custom-product">
     <div class="row">
         <div class="col">
-            <div class="custom-shop mb-4">
+            <div class="allauth-title mb-4">
                 <div class="container-fluid px-4 px-lg-5">
                     <div class="text-center">
                         <h3 class="display-5">Product Management</h3>
+                        <hr>
                     </div>
                 </div>
             </div>
@@ -19,26 +20,25 @@
 {% endblock %}
 
 {% block content %}
-    <div class="overlay"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <h5 class="text-muted">Edit a Product</h5>
-                <hr>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <form method="POST" action="{% url 'edit_product' product.id %}" class="form mb-2" enctype="multipart/form-data">
-                    {% csrf_token %}
-                    {{ form | crispy }}
-                    <div class="text-right">
-                        <a class="btn btn-outline-black rounded-0" href="{% url 'shop' %}">Cancel</a>
-                        <button class="btn btn-black rounded-0" type="submit">Update Product</button>
-                    </div>
-                </form>
-            </div>            
+<div class="container">
+    <div class="row mb-4 justify-content-center">
+        <div class="col-12 text-center">
+            <h5 class="text-muted">Edit a Product</h5>
         </div>
     </div>
+
+    <div class="row allauth-custom mb-5 mt-2">
+        <div class="col-md-8 offset-md-2">
+            <form method="POST" action="{% url 'edit_product' product.id %}" class="form mt-3"
+                enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <div class="d-flex mt-2 justify-content-center">
+                    <a class="btn btn-danger rounded-0 px-4 py-2" style="margin-right: 5px;" href="{% url 'shop' %}">Cancel</a>
+                    <button class="btn btn-primary rounded-0 px-4 py-2" type="submit">Update Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 {% endblock %}
