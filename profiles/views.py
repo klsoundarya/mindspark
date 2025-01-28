@@ -67,6 +67,7 @@ def password_update_view(request):
         return redirect('home')
 
 
+@login_required
 def profile(request):
     """ Display the user's profile. """
     profile = get_object_or_404(UserProfile, user=request.user)
