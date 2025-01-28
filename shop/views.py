@@ -5,6 +5,7 @@ from django.contrib import messages
 from django.urls import reverse
 from django.db.models import Q
 from django.db.models.functions import Lower
+from .forms import ProductForm
 
 def all_essentials(request):
     """ A view to show all products, including sorting and search queries """
@@ -90,3 +91,13 @@ def product_detail(request, product_id):
     }
 
     return render(request, 'shop/product_detail.html', context)
+
+def add_product(request):
+    """ Add a product to the store """
+    form = ProductForm()
+    template = 'shop/add_product.html'
+    context = {
+        'form': form,
+    }
+
+    return render(request, template, context)
