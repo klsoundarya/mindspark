@@ -579,6 +579,14 @@ a.dropdown-item {
 .btn-file {
     position: relative;
     overflow: hidden;
+    font-weight: bolder;
+    font-size: 18px;
+    border: 1px solid #000;
+}
+
+.btn-file:hover {
+  background-color: #bfa616;
+  color: #fff;
 }
 
 .btn-file input[type="file"] {
@@ -601,9 +609,6 @@ a.dropdown-item {
     border-color: #dc3545;
     border-radius: 0;
 }
-
-
-
 
 
 /* sortby dropdown styling */
