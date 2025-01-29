@@ -31,13 +31,33 @@
         <div class="col-md-8 offset-md-2">
             <form method="POST" action="{% url 'add_product' %}" class="form mt-3" enctype="multipart/form-data">
                 {% csrf_token %}
+
+                {% for field in form %}
+                    {% if field.name != 'image' %}
+                        {{ field | as_crispy_field }}
+                    {% else %}
+                        {{ field }}
+                    {% endif %}
+                {% endfor %}
+
                 {{ form | crispy }}
                 <div class="d-flex mt-2 justify-content-center">
-                    <a class="btn btn-danger rounded-0 px-4 py-2" style="margin-right: 5px;" href="{% url 'shop' %}">Cancel</a>
+                    <a class="btn btn-danger rounded-0 px-4 py-2" style="margin-right: 5px;"
+                        href="{% url 'shop' %}">Cancel</a>
                     <button class="btn btn-primary rounded-0 px-4 py-2" type="submit">Add Product</button>
-                </div>                
+                </div>
             </form>
         </div>
     </div>
 </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script type="text/javascript">
+        $('#new-image').change(function() {
+            var file = $('#new-image')[0].files[0];
+            $('#filename').text(`Image will be set to: ${file.name}`);
+        });
+    </script>
 {% endblock %}

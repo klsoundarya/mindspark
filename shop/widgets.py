@@ -1,5 +1,6 @@
 from django.forms.widgets import ClearableFileInput
 from django.utils.translation import gettext_lazy as _
+from django.utils.safestring import mark_safe
 
 
 class CustomClearableFileInput(ClearableFileInput):
