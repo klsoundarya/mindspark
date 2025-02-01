@@ -1250,7 +1250,6 @@ select option[value=""] {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
 /* --------- store feature styling ------ */
 
 .store-feature {
@@ -1444,9 +1443,22 @@ footer {
 
 @media (max-width: 768px) {
 
+    .text-order {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 10px !important;
+        font-size: 1rem;
+        word-break: break-word;
+    }
+
+    .custom-shop h3 {
+        font-size: 1.5rem;
+    }
+
     .alert {
         margin-bottom: 20px;
-    }
+     }
 
     /* ----top header------ */
     .top-bar {
