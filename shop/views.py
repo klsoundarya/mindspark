@@ -8,6 +8,7 @@ from django.db.models.functions import Lower
 from .forms import ProductForm
 from django.contrib.auth.decorators import login_required
 
+
 def all_essentials(request):
     """ A view to show all products, including sorting and search queries """
     products = Product.objects.all()
