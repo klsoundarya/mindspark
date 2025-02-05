@@ -6,6 +6,10 @@ body {
     margin: 0;
 }
 
+h1{
+    font-size: 15px;
+}
+
 body {
     margin-top: 0px;
     background-color: #ffffff;
@@ -17,6 +21,12 @@ body {
     justify-content: space-between;
     min-height: 100vh;
     overflow-x: hidden;
+}
+
+/* -------- Mailchimp --------- */
+#mc_embed_signup {
+    clear: left;
+    font: 14px Helvetica, Arial, sans-serif;
 }
 
 /* --------- bootstrap toasts ------------ */
@@ -1301,14 +1311,16 @@ select option[value=""] {
 /* ------- Newsletter Section Styling -------- */
 .newsletter-section {
     background-color: #f9f9f9;
-    padding: 30px 0;
+    padding: 40px 0;
     border: 1px dotted #bfa616;
+    text-align: center;
 }
 
 .section-header h2 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: #001d5a;
     font-weight: bold;
+    margin-bottom: 15px;
 }
 
 .section-header h2 span {
@@ -1316,28 +1328,41 @@ select option[value=""] {
 }
 
 .newsletter__input {
-    flex-grow: 1;
-    padding: 10px;
-    margin-right: 4px;
+    padding: 12px 75px !important;
     border: 1px solid #ddd;
-    border-radius: 5px 0 0 5px;
+    border-radius: 5px;
     font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.newsletter__input:focus {
+    border-color: #bfa616;
+    outline: none;
 }
 
 .newsletter__submit {
-    background-color: #bfa616;
-    color: #fff;
+    background-color: #bfa616 !important;
+    color: #fff !important;
     border: none;
-    padding: 5px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    padding: 12px;
+    font-size: 1.2rem !important;
+    border-radius: 5px !important;
+    display: block !important;
+    margin: 0 auto !important;
+    transition: background-color 0.3s ease, transform 0.2s;
 }
 
 .newsletter__submit:hover {
     background-color: #a88c14;
-    color: #000000;
+    color: #fff;
+    transform: scale(1.05);
 }
+
+#mce-success-response {
+    padding: 0 !important;
+    margin: 2px 0 !important;
+}
+
 
 /* -------- footer ------ */
 

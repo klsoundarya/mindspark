@@ -29,7 +29,8 @@
     <!-- Google Fonts CSS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet">
 
     <!-- Font Awesome CSS -->
@@ -43,6 +44,7 @@
     {% block extra_css %}
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="//cdn-images.mailchimp.com/embedcode/classic-061523.css" rel="stylesheet" type="text/css">
     {% endblock %}
 
     {% block corejs %}
@@ -75,7 +77,7 @@
         <!-- Shipping Information -->
 
         <div class="text-left">
-            <p class="mb-0 top-bar-text">Worldwide Shipping</p>
+            <h1 class="mb-0 top-bar-text">Worldwide Shipping</h1>
         </div>
         <!-- Search Form -->
         <div class="d-flex align-items-center">
@@ -163,9 +165,9 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
                                     {% if request.user.is_authenticated %}
-                                        {% if request.user.is_superuser %}
-                                            <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                        {% endif %}
+                                    {% if request.user.is_superuser %}
+                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
+                                    {% endif %}
                                     <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
                                     <li><a href="{% url 'password_update' %}" class="dropdown-item">Update Password</a>
                                     </li>
@@ -276,31 +278,56 @@
     <!-- End Store Feature -->
 
     <!-- Newsletter Section -->
-    <div class="newsletter-section py-5">
-        <div class="container">
-            <div class="row justify-content-center text-center">
-                <div class="col-12 col-sm-10 col-md-8 col-lg-7">
-                    <div class="footer-newsletter">
-                        <div class="section-header text-center mb-4">
-                            <h2><span>Sign up for </span>Newsletter</h2>
-                        </div>
-                        <form action="#" method="post" class="d-flex flex-column flex-sm-row justify-content-center">
-                            <div class="input-group">
-                                <input type="email" class="form-control newsletter__input" name="EMAIL" value=""
-                                    placeholder="Email address" required="">
-                                <span class="input-group__btn">
-                                    <button type="submit" class="btn newsletter__submit" name="commit" id="Subscribe">
-                                        Subscribe
-                                    </button>
-                                </span>
+    <div id="mc_embed_shell">
+        <div class="newsletter-section py-5">
+            <div class="container">
+                <div class="row justify-content-center text-center">
+                    <div class="col-12 col-sm-10 col-md-8 col-lg-7">
+                        <div class="footer-newsletter">
+                            <div class="section-header text-center mb-4">
+                                <h2><span>Sign up for </span>Newsletter</h2>
                             </div>
-                        </form>
+                            <div id="mc_embed_signup">
+                                <form
+                                    action="https://herokuapp.us15.list-manage.com/subscribe/post?u=0168fe0eb0624172457a2e511&amp;id=f21a6d078e&amp;f_id=00598be0f0"
+                                    method="post"
+                                    class=" validate d-flex flex-column flex-sm-row justify-content-center"
+                                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                                    <div id="mc_embed_signup_scroll">
+                                        <div class="mc-field-group">
+                                            <input type="email" class="form-control newsletter__input" name="EMAIL"
+                                                value="" placeholder="Email address" required="">
+                                        </div>
+                                        <div id="mce-responses" class="clear foot">
+                                            <div class="response" id="mce-error-response" style="display: none;"></div>
+                                            <div class="response" id="mce-success-response" style="display: none;">
+                                            </div>
+                                        </div>
+                                        <div aria-hidden="true" style="position: absolute; left: -5000px;">
+                                            /* real people should not fill this in and expect good things - do not
+                                            remove this or risk form bot signups */
+                                            <input type="text" name="b_0168fe0eb0624172457a2e511_f21a6d078e"
+                                                tabindex="-1" value="">
+                                        </div>
+                                        <div class="optionalParent">
+                                            <div class="clear foot">
+                                                <input type="submit" name="subscribe" id="subscribe"
+                                                    class="button newsletter__submit" value="Subscribe">
+                                                <p style="margin: 0px auto;"><a href="http://eepurl.com/i9aSns"
+                                                        title="Mailchimp - email marketing made easy and fun"><span
+                                                            style="display: inline-block; background-color: transparent; border-radius: 4px;"></span></a>
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 
     <!-- Footer -->
     <div class="footer-container">
@@ -353,6 +380,9 @@
 
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/a2c377bf15.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script
+        type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
     {% endblock %}
 
 
