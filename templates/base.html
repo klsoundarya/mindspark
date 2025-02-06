@@ -287,38 +287,26 @@
                             <div class="section-header text-center mb-4">
                                 <h2><span>Sign up for </span>Newsletter</h2>
                             </div>
-                            <div id="mc_embed_signup">
+                            <div>
                                 <form
                                     action="https://herokuapp.us15.list-manage.com/subscribe/post?u=0168fe0eb0624172457a2e511&amp;id=f21a6d078e&amp;f_id=00598be0f0"
-                                    method="post"
-                                    class=" validate d-flex flex-column flex-sm-row justify-content-center"
-                                    id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+                                    method="post" class="newsletter-form validate" id="mc-embedded-subscribe-form"
+                                    name="mc-embedded-subscribe-form" target="_blank">
                                     <div id="mc_embed_signup_scroll">
                                         <div class="mc-field-group">
                                             <input type="email" class="form-control newsletter__input" name="EMAIL"
                                                 value="" placeholder="Email address" required="">
                                         </div>
                                         <div id="mce-responses" class="clear foot">
-                                            <div class="response" id="mce-error-response" style="display: none;"></div>
-                                            <div class="response" id="mce-success-response" style="display: none;">
-                                            </div>
+                                            <div class="response" id="mce-error-response"></div>
+                                            <div class="response" id="mce-success-response"></div>
                                         </div>
+                                        <!-- Hidden field to prevent bot signups -->
                                         <div aria-hidden="true" style="position: absolute; left: -5000px;">
-                                            /* real people should not fill this in and expect good things - do not
-                                            remove this or risk form bot signups */
                                             <input type="text" name="b_0168fe0eb0624172457a2e511_f21a6d078e"
                                                 tabindex="-1" value="">
                                         </div>
-                                        <div class="optionalParent">
-                                            <div class="clear foot">
-                                                <input type="submit" name="subscribe" id="subscribe"
-                                                    class="button newsletter__submit" value="Subscribe">
-                                                <p style="margin: 0px auto;"><a href="http://eepurl.com/i9aSns"
-                                                        title="Mailchimp - email marketing made easy and fun"><span
-                                                            style="display: inline-block; background-color: transparent; border-radius: 4px;"></span></a>
-                                                </p>
-                                            </div>
-                                        </div>
+                                        <button type="submit" class="button newsletter__submit">Subscribe</button>
                                     </div>
                                 </form>
                             </div>

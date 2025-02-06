@@ -23,11 +23,6 @@ body {
     overflow-x: hidden;
 }
 
-/* -------- Mailchimp --------- */
-#mc_embed_signup {
-    clear: left;
-    font: 14px Helvetica, Arial, sans-serif;
-}
 
 /* --------- bootstrap toasts ------------ */
 
@@ -1309,6 +1304,7 @@ select option[value=""] {
 }
 
 /* ------- Newsletter Section Styling -------- */
+/* -------- Mailchimp --------- */
 .newsletter-section {
     background-color: #f9f9f9;
     padding: 40px 0;
@@ -1358,9 +1354,25 @@ select option[value=""] {
     transform: scale(1.05);
 }
 
-#mce-success-response {
-    padding: 0 !important;
+#mce-responses {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8px  !important;
     margin: 2px 0 !important;
+    color: #dc3545;
+}
+
+#mce-error-response,
+#mce-success-response {
+    width: 100%;
+    max-width: 500px !important;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 18px;
 }
 
 
