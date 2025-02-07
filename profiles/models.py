@@ -4,6 +4,16 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 
 from django_countries.fields import CountryField
+
+class Faq(models.Model):
+    question = models.TextField(verbose_name="FAQ Question")
+    answer = models.TextField(verbose_name="FAQ Answer")
+    is_active = models.BooleanField(default=True, verbose_name="Is Active?")
+    created_at = models.DateTimeField(auto_now_add=True, null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True, blank=True)
+
+    def __str__(self):
+        return self.question
    
 class DeletedUser(models.Model):
     username = models.CharField(max_length=150)

@@ -9,7 +9,15 @@ from .forms import (
 )
 from checkout.models import Order
 
-from .models import UserProfile, DeletedUser
+from .models import UserProfile, DeletedUser, Faq
+
+
+def faq(request):
+    context = {
+        'faqs': Faq.objects.filter(is_active=True),  # Fetch only active FAQs
+    }
+    return render(request, 'profiles/faq.html', context)
+
 
 @login_required
 def delete_account(request):

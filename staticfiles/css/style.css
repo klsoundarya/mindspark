@@ -1023,6 +1023,32 @@ a.dropdown-item {
     color: #aab7c4;
 }
 
+/* ------- FAQs styling ---------- */
+
+.faq-custom {
+    background-color: #f3f5f5;
+    color: #000;
+    padding: 15px;
+    border-radius: 20px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.934);
+    max-width: 100%;
+}
+
+.card-faq {
+    margin-bottom: 0 !important;
+}
+
+.btn-q-custom {
+    text-decoration: none !important;
+    cursor: pointer;
+    color: #006400;
+    font-size: 18px;
+}
+
+.btn-a-custom {
+    color: #a88c14;
+}
+
 /* ----------- Allauth form formatting ----------- */
 
 .allauth-form-inner-content p {
