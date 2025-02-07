@@ -10,6 +10,12 @@ h1{
     font-size: 15px;
 }
 
+.custom-privacy a {
+    color: #ffe552 !important;
+    text-decoration: none;
+    cursor: pointer; 
+}
+
 body {
     margin-top: 0px;
     background-color: #ffffff;
