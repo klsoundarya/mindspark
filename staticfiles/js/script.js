@@ -65,7 +65,7 @@ backToTopBtn.addEventListener('click', () => {
     });
 });
 
-// Get the back to top button
+// Get the back to top button (faq)
 const backToTopButton = document.getElementById('bttBtn-1');
 
 // Show/Hide button on scroll

@@ -126,7 +126,7 @@ body {
     font-weight: bold;
 }
 
-/* Total Section Styling */
+/* ---------- Total Section Styling --------------- */
 .total-row {
     font-family: Arial, sans-serif;
     background-color: white;
@@ -155,7 +155,7 @@ body {
 }
 
 
-/* Total and Checkout Button */
+/* --------- Total and Checkout Button ------------ */
 .black-button {
     background-color: #bfa616;
     color: #fff;
@@ -494,7 +494,7 @@ a.dropdown-item {
     color: #fff;
 }
 
-
+/* --------Home Page Styling --------- */
 /* -------- Hero Banner Styling -------- */
 
 /* Carousel Styling */
@@ -536,6 +536,13 @@ a.dropdown-item {
 
 
 /* -------- About Us styling --------- */
+
+.about-title{
+    font-size: 2rem;
+    color: #001d5a;
+    text-shadow: 1px 2px 4px #bfa616;
+    margin-bottom: 20px;
+}
 
 .image-section {
     border: 1px solid #423801;
@@ -581,6 +588,73 @@ a.dropdown-item {
 .shop-now-button:focus {
     background-color: #bfa616;
     color: #000000;
+}
+
+/* -------- Testimonial Styling --------- */
+.testimonial-title {
+    font-size: 2rem;
+    color: #001d5a;
+    text-shadow: 1px 2px 4px #bfa616;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Testimonial Form Container */
+.testimonial-custom {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Testimonial Form */
+.testimonial-field {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.testimonial-field button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.testimonial-field button:hover {
+    background-color: #218838;
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease-in-out;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Rating Styling */
+.testimonial-card p:nth-child(2) {
+    font-weight: bold;
+    color: #bfa616;
+}
+
+/* Responsive Grid */
+@media (max-width: 768px) {
+    .testimonial-card {
+        margin-bottom: 20px;
+    }
 }
 
 /* ------------- shop app styling ----------- */
@@ -1002,7 +1076,7 @@ a.dropdown-item {
 /* ------------- My Profile Styling --------- */
 
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
+    max-height: 416px;
     overflow-y: auto;
 }
 
@@ -1047,6 +1121,8 @@ a.dropdown-item {
 
 .btn-a-custom {
     color: #a88c14;
+    font-weight: bold;
+    font-size: 18px;
 }
 
 /* ----------- Allauth form formatting ----------- */
