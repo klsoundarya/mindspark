@@ -79,7 +79,7 @@ body {
 
 .toast-body {
     padding: 1rem;
-    font-size: 0.9rem;
+    font-size: 14px;
     line-height: 1.5;
     background-color: #bfa616;
     color: #001d5a;
@@ -89,7 +89,7 @@ body {
 
 .toast-body:hover {
     background-color: #333;
-    color: #fff;
+    color: #bfa616;
 }
 
 .custom-p {
@@ -459,7 +459,6 @@ a.dropdown-item {
     display: inline-block;
 }
 
-
 .navbar-nav .dropdown-menu {
     background-color: #ffffff;
     border: 1px solid #ccc;
@@ -659,6 +658,15 @@ a.dropdown-item {
 
 /* ------------- shop app styling ----------- */
 
+/* -----------wishlist---------- */
+.wishlist-title{
+    font-size: 2rem;
+    color: #001d5a;
+    text-shadow: 1px 2px 4px #bfa616;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* Product Form */
 
 .btn-file {
@@ -696,7 +704,7 @@ a.dropdown-item {
 }
 
 
-/* sortby dropdown styling */
+/*-------- sortby dropdown styling ----------*/
 .sort-select-wrapper select {
     border-radius: 5px;
     border: 2px solid #bfa616;
@@ -1604,6 +1612,17 @@ footer {
     .alert {
         margin-bottom: 20px;
      }
+
+    /* .alert-warning {
+        color: #856404 !important;
+        background-color: #fff3cd !important;
+        border-color: #ffeeba !important;
+    }
+    .alert-warning:hover {
+        background-color: #ffecb5 !important;
+        color: #654321 !important;
+    }
+     */
 
     /* ----top header------ */
     .top-bar {
