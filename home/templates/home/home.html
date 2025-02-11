@@ -132,13 +132,21 @@
                     {% for _ in "12345"|make_list %}
                     {% if forloop.counter <= testimonial.rating %} ⭐ {% else %} ☆ {% endif %} {% endfor %} </p>
 
-                        {% if user.is_authenticated and testimonial.user == request.user %}
-                        <form action="{% url 'delete_testimonial' testimonial.id %}" method="POST" class="mt-2">
-                            {% csrf_token %}
-                            <button type="submit" class="btn btn-danger btn-sm mb-2">Delete</button>
-                            <a href="{% url 'edit_testimonial' testimonial.id %}"
-                                class="btn btn-primary btn-sm mb-2">Edit</a>
-                        </form>
+                        {% if user.is_authenticated %}
+                            {% if testimonial.user == request.user or user.is_staff %}
+                                <form action="{% url 'delete_testimonial' testimonial.id %}" method="POST" class="mt-2"
+                                    onsubmit="return confirmDelete();">
+                                    {% csrf_token %}
+                                    <button type="submit" class="btn btn-danger btn-sm mb-2">Delete
+                                    </button>
+
+                                    {% if testimonial.user == request.user %}
+                                    <a href="{% url 'edit_testimonial' testimonial.id %}"
+                                        class="btn btn-primary btn-sm mb-2">Edit
+                                    </a>
+                                    {% endif %}
+                                </form>
+                            {% endif %}
                         {% endif %}
                         <!-- Username stays at bottom -->
                         <h5 class="mt-auto text-center"
@@ -156,5 +164,10 @@
 
 <a href="{% url 'submit_testimonial' %}" class="btn btn-success mt-3 mb-5">Leave a Testimonial</a>
 
+<script>
+    function confirmDelete() {
+        return confirm("Are you sure you want to delete this testimonial? This action cannot be undone.");
+    }
+</script>
 
 {% endblock %}

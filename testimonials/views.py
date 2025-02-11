@@ -4,16 +4,23 @@ from .models import Testimonial
 from django.contrib.auth.decorators import login_required
 from .forms import TestimonialForm
 
+from django.contrib.admin.views.decorators import staff_member_required
+
+@staff_member_required
+def admin_testimonials(request):
+    testimonials = Testimonial.objects.all()
+    return render(request, 'admin_testimonials.html', {'testimonials': testimonials})
+
 @login_required
 def delete_testimonial(request, testimonial_id):
     testimonial = get_object_or_404(Testimonial, id=testimonial_id)
 
-    # Ensure the testimonial belongs to the logged-in user or is anonymous
-    if testimonial.user == request.user or testimonial.user is None:
+    # Allow admins or the original user to delete
+    if request.user == testimonial.user or request.user.is_staff:
         testimonial.delete()
         messages.success(request, "Testimonial deleted successfully.")
     else:
-        messages.error(request, "You can only delete your own testimonials.")
+        messages.error(request, "You do not have permission to delete this testimonial.")
 
     return redirect('home')
 
