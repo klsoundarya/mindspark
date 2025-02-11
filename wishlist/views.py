@@ -3,6 +3,15 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from .models import Wishlist
 from shop.models import Product
+from django.contrib.auth.decorators import user_passes_test
+
+def is_admin(user):
+    return user.is_superuser
+
+@user_passes_test(is_admin)
+def admin_wishlist_view(request):
+    wishlists = Wishlist.objects.all().select_related('user', 'product')
+    return render(request, 'admin_wishlist.html', {'wishlists': wishlists})
 
 @login_required
 def wishlist_view(request):

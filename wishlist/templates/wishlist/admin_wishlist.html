@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Admin Wishlist{% endblock %}
+
+{% block page_header %}
+<div class="container header-container custom-product">
+    <div class="row">
+        <div class="col">
+            <div class="wishlist-title mt-3 mb-4">
+                <div class="container-fluid px-4 px-lg-5">
+                    <div class="text-center">
+                        <h3 class="display-5">Admin Wishlist</h3>
+                        <hr class="mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content %}
+<div class="container my-5 text-center">
+    <div class="row wishlist-border p-2 mb-4 m-2 shadow">
+        <div class="col-12">
+            {% if wishlists %}
+            <ul class="list-group">
+                {% for wishlist in wishlists %}
+                <li class="list-group-item">
+                    <div class="row align-items-center">
+                        <div class="col-lg-2 col-sm-4">
+                            <a href="{% url 'product_detail' wishlist.product.id %}">
+                                {% if wishlist.product.image %}
+                                <img class="w-100 wishlist-prod" src="{{ wishlist.product.image.url }}" alt="{{ wishlist.product.name }}">
+                                {% else %}
+                                <img class="w-100 wishlist-prod" src="{{ MEDIA_URL }}product_placeholder.png" alt="{{ wishlist.product.name }}">
+                                {% endif %}
+                            </a>
+                        </div>
+                        <div class="col-lg-6 col-sm-4 text-left">
+                            <p class="my-0">{{ wishlist.product.name }}</p>
+                            <p class="my-0 text-muted">Added by: {{ wishlist.user.username }}</p>
+                        </div>
+                    </div>
+                </li>
+                {% endfor %}
+            </ul>
+            {% else %}
+            <div class="col-12 text-center my-5">
+                <p class="p-txt">No wishlists available.</p>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock %}
