@@ -6,7 +6,7 @@
 <div class="container header-container">
     <div class="row">
         <div class="col">
-            <div class="allauth-title mt-3 mb-4">
+            <div class="contact-title mt-3 mb-4">
                 <div class="container-fluid px-4 px-lg-5">
                     <div class="text-center">
                         <h3 class="display-5 custom-header">Get in Touch</h3>
@@ -16,18 +16,21 @@
             </div>
         </div>
     </div>
+</div>
 {% endblock %}
 
+
 {% block content %}
-<div class="row">
+<div class="row justify-content-center">
     <!-- Contact Form -->
-    <div class="col-sm-12 mb-5">
+    <div class="col-sm-12 col-md-8 col-lg-6 mb-5">
         <form method="POST" class="mb-4 custom-form">
             {% csrf_token %}
             {{ form|crispy }} <!-- Render form fields -->
-            <button type="submit" class="btn btn-primary" id="custom-submit">Submit</button>
-            <div class="mt-3 d-flex justify-content-end">
-                <button type="button" class="btn btn-success" id="clearBtn">Clear</button>
+            <div class="d-flex justify-content-between align-items-center">
+                <button type="submit" class="btn btn-primary" id="custom-submit">Submit</button>
+
+                <button type="button" class="btn btn-primary" id="clearBtn">Clear</button>
             </div>
         </form>
     </div>
@@ -35,21 +38,26 @@
 
 <!-- Contact List Display (Admin Only) -->
 {% if contacts %}
-<div class="container mt-4">
-    <h2>Contact Messages</h2>
-    <ul class="list-group mb-4">
+<div class="container mt-4 mb-4">
+    <h2 class="mb-4">Contact Messages</h2>
+    <div class="list-group">
         {% for contact in contacts %}
-        <li class="list-group-item">
-            <h5>{{ contact.name }} - {{ contact.email }}</h5>
-            <p>{{ contact.message }}</p>
-            <small>Sent on {{ contact.created_at }}</small>
-        </li>
+        <div class="list-group-item">
+            <div class="d-flex justify-content-between">
+                <div>
+                    <h5 class="font-weight-bold" style="color:green;">Name: {{ contact.name }}</h5>
+                    <p class="text-muted">Email: {{ contact.email }}</p>
+                </div>
+                <small class="text-muted">Sent on {{ contact.created_at|date:"M d, Y" }}</small>
+            </div>
+            <p style="color: #ff0000;">Message: {{ contact.message }}</p>
+        </div>
         {% endfor %}
-    </ul>
+    </div>
 </div>
-{% elif request.user.is_superuser %}
+{% elif is_superuser %}
 <div class="container mt-4">
-    <p>No messages to display.</p>
+    <p class="alert alert-info">No messages to display.</p>
 </div>
 {% endif %}
 

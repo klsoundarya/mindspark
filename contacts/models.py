@@ -19,5 +19,9 @@ class ContactUs(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     read = models.BooleanField(default=False)
 
+    class Meta:
+        verbose_name = "Contact Us"
+        verbose_name_plural = "Contact Messages"
+
     def __str__(self):
         return f"{self.name} - {self.message}"

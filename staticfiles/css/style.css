@@ -79,7 +79,7 @@ body {
 
 .toast-body {
     padding: 1rem;
-    font-size: 0.9rem;
+    font-size: 14px;
     line-height: 1.5;
     background-color: #bfa616;
     color: #001d5a;
@@ -89,7 +89,7 @@ body {
 
 .toast-body:hover {
     background-color: #333;
-    color: #fff;
+    color: #bfa616;
 }
 
 .custom-p {
@@ -305,6 +305,57 @@ header .navbar {
     color: #fff;
 }
 
+#clearBtn {
+    font-weight: bold;
+    background-color: transparent;
+    color: black;
+    border: 2px solid #000000;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    align-items: center;
+    margin:auto;
+}
+
+#clearBtn:hover {
+    background-color: #bfa616;
+    color: #fff;
+}
+
+.list-group-item {
+    border-radius: 8px;
+    margin-bottom: 10px;
+    padding: 15px;
+    background-color: #f8f9fa;
+}
+
+.list-group-item h5 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.list-group-item p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.list-group-item small {
+    font-size: 0.9rem;
+}
+
+.list-group-item hr {
+    margin: 10px 0;
+    border-color: #dee2e6;
+}
+
+.alert-info {
+    padding: 15px;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+    color: #0c5460;
+    font-size: 1.1rem;
+}
+
 /* ------search -------- */
 
 .search-bar {
@@ -458,7 +509,6 @@ a.dropdown-item {
 .user-wishlist div {
     display: inline-block;
 }
-
 
 .navbar-nav .dropdown-menu {
     background-color: #ffffff;
@@ -659,6 +709,15 @@ a.dropdown-item {
 
 /* ------------- shop app styling ----------- */
 
+/* -----------wishlist---------- */
+.wishlist-title{
+    font-size: 2rem;
+    color: #001d5a;
+    text-shadow: 1px 2px 4px #bfa616;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
 /* Product Form */
 
 .btn-file {
@@ -696,7 +755,7 @@ a.dropdown-item {
 }
 
 
-/* sortby dropdown styling */
+/*-------- sortby dropdown styling ----------*/
 .sort-select-wrapper select {
     border-radius: 5px;
     border: 2px solid #bfa616;
@@ -1604,6 +1663,17 @@ footer {
     .alert {
         margin-bottom: 20px;
      }
+
+    /* .alert-warning {
+        color: #856404 !important;
+        background-color: #fff3cd !important;
+        border-color: #ffeeba !important;
+    }
+    .alert-warning:hover {
+        background-color: #ffecb5 !important;
+        color: #654321 !important;
+    }
+     */
 
     /* ----top header------ */
     .top-bar {

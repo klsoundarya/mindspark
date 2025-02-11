@@ -15,21 +15,17 @@ def contact(request):
     - If the user is a superuser, retrieves all submitted contact messages in descending order of creation.
     - Renders the 'contact/contact.html' template with the form and contact messages (for superusers).
     """
-    form = ContactForm(request.POST or None)  # Instantiate form with POST data if available
-    contacts = None  # Initialize contacts as None
+    form = ContactForm(request.POST or None)
+    contacts = ContactUs.objects.all().order_by('-created_at') if request.user.is_superuser else None  
 
     if request.method == "POST":
         if form.is_valid():
-            form.save() # Save valid form data
+            form.save()
             messages.success(
-                request,
-                "I’ll respond within 2 working days."
-                "Thank you for submitting the form!")
-            return redirect('contact')  # Redirect to the same page
-
-
-    if request.user.is_superuser:
-        contacts = ContactUs.objects.all().order_by('-created_at')  # Fetch all messages for superusers
+                request, "I will respond within 2 working days. Thank you for submitting the form!"
+            )
+            return redirect('contacts:contacts')
 
     return render(
-        request, 'contact/contact.html', {'form': form, 'contacts': contacts})
+        request, 'contacts/contact.html', {'form': form, 'contacts': contacts, 'is_superuser': request.user.is_superuser}
+    )

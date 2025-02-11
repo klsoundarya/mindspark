@@ -24,7 +24,7 @@ urlpatterns = [
     path('cart/', include('cart.urls')),
     path('checkout/', include('checkout.urls')),
     path('profile/', include('profiles.urls')),
-    path('contact/', include('contact.urls')),
+    path('contacts/', include('contacts.urls', namespace='contacts')),
     path('summernote/', include('django_summernote.urls')),
     path('shop/', include('shop.urls')),
     path('testimonials/', include('testimonials.urls')),

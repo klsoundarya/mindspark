@@ -15,9 +15,9 @@ verify ownership of your email address. {% endblocktrans %}</p>
 
 <p>We have sent an email to you for
 verification. Please click on the link inside that email. If you do not see the verification email in your main inbox, check your spam folder. Otherwise
-<a href="{% url 'contact' %}">contact us</a> if you do not receive it within a few minutes.</p>
+<a href="{% url 'contacts:contacts' %}">contact us</a> if you do not receive it within a few minutes.</p>
 
-<p>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}">change your email address</a>.{% url 'contact' %}</p>
+<p>{% blocktrans %}<strong>Note:</strong> you can still <a href="{{ email_url }}">change your email address</a>.{% url 'contacts:contacts' %}</p>
 
 
 {% endblock content %}
