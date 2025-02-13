@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_header %}
+<div class="container header-container custom-product">
+    <div class="row">
+        <div class="col">
+            <div class="allauth-title mt-3 mb-4">
+                <div class="container-fluid px-4 px-lg-5">
+                    <div class="text-center">
+                        <h3 class="display-5">New Article<</h3>
+                        <hr class="mb-3">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Save</button>
+    </form>
+    <a href="{% url 'article_list' %}">Cancel</a>
+{% endblock %}
