@@ -6,6 +6,12 @@ from .forms import ArticleForm
 from django.contrib.admin.views.decorators import staff_member_required
 
 @staff_member_required
+def delete_article(request, pk):
+    article = get_object_or_404(Article, pk=pk)
+    article.delete()
+    return redirect('article_list')
+
+@staff_member_required
 def publish_article(request, pk):
     article = get_object_or_404(Article, pk=pk)
     article.published = True
