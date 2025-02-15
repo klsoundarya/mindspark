@@ -20,7 +20,21 @@
 {% endblock %}
 
 {% block content %}
-    <h2>{{ article.title }}</h2>
-    <p>{{ article.content }}</p>
-    <a href="{% url 'article_list' %}">Back to Blog</a>
+<h2>{{ article.title }}</h2>
+<p>{{ article.content }}</p>
+
+{% if article.image %}
+    <img src="{{ article.image.url }}" alt="{{ article.title }}" width="400">
+{% else %}
+    <p>No image available</p>
+{% endif %}
+
+{% if request.user.is_superuser and not article.published %}
+    <form method="post" action="{% url 'publish_article' article.pk %}">
+        {% csrf_token %}
+        <button type="submit" class="btn btn-success">Publish Article</button>
+    </form>
+{% endif %}
+
+<a href="{% url 'article_list' %}">Back to Blog</a>
 {% endblock %}
