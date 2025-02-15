@@ -7,4 +7,5 @@ urlpatterns = [
     path('blog/new/', views.article_create, name='article_create'),  # Superuser only
     path('publish_article/<int:pk>/', views.publish_article, name='publish_article'),
     path('delete_article/<int:pk>/', views.delete_article, name='delete_article'), 
+    path('article/<int:pk>/edit/', views.edit_article, name='edit_article'),
 ]

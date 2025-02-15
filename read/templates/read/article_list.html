@@ -8,7 +8,7 @@
             <div class="allauth-title mt-3 mb-4">
                 <div class="container-fluid px-4 px-lg-5">
                     <div class="text-center">
-                        <h3 class="display-5">Articles</h3>
+                        <h3 class="display-5">Blog Articles</h3>
                         <hr class="mb-3">
                     </div>
                 </div>
@@ -20,27 +20,39 @@
 {% endblock %}
 
 {% block content %}
-<h2>Blog Articles</h2>
+<div class="container mt-2">
 
-{% if request.user.is_superuser %}
-    <a href="{% url 'article_create' %}" class="btn btn-primary">Create New Article</a>
-{% endif %}
+    {% if request.user.is_superuser %}
+        <div class="text-center mb-3">
+            <a href="{% url 'article_create' %}" class="btn btn-outline-secondary px-4" style="font-weight: bold;">Create New Article</a>
+        </div>
+    {% endif %}
 
-<ul>
-    {% for article in articles %}
-    <li>
-        {% if article.image %}
-            <img src="{{ article.image.url }}" alt="{{ article.title }}" width="400">
-        {% endif %}
-        
-        <a href="{% url 'article_detail' article.pk %}">{{ article.title }}</a>
+    <div class="row mt-5">
+        {% for article in articles %}
+        <div class="col-md-6 col-lg-4 mb-4">
+            <div class="card border-0 shadow-sm">
+                {% if article.image %}
+                    <img src="{{ article.image.url }}" alt="{{ article.title }}" class="card-img-top rounded-top"
+                         style="height: 150px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body">
+                    <h5 class="card-title">
+                        <a href="{% url 'article_detail' article.pk %}" class="text-decoration-none text-dark">
+                            {{ article.title }}
+                        </a>
+                    </h5>
 
-        {% if request.user.is_superuser and not article.published %}
-            <span style="color: red; font-weight: bold;">(DRAFT)</span>
-        {% endif %}
-    </li>
-    {% empty %}
-    <p>No articles available.</p>
-    {% endfor %}
-</ul>
+                    {% if request.user.is_superuser and not article.published %}
+                        <span class="badge bg-danger">Draft</span>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center text-muted" style="display: block; margin-top: 0; text-align: center; width: 100%;">No articles available.</p>
+
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

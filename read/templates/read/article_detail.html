@@ -20,28 +20,42 @@
 {% endblock %}
 
 {% block content %}
-<h2>{{ article.title }}</h2>
-<p>{{ article.content }}</p>
+<div class="container mt-4 mb-4">
+    <div class="row align-items-center">
+        <!-- Image on the left -->
+        <div class="col-md-4">
+            {% if article.image %}
+                <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid rounded shadow-sm"
+                     style="width: 100%; max-width: 350px; height: auto; object-fit: cover;">
+            {% else %}
+                <p class="text-muted">No image available</p>
+            {% endif %}
+        </div>
 
-{% if article.image %}
-    <img src="{{ article.image.url }}" alt="{{ article.title }}" width="400">
-{% else %}
-    <p>No image available</p>
-{% endif %}
+        <!-- Content on the right -->
+        <div class="col-md-8">
+            <p class="text-muted">{{ article.content }}</p>
 
-{% if request.user.is_superuser %}
-    {% if not article.published %}
-        <form method="post" action="{% url 'publish_article' article.pk %}">
-            {% csrf_token %}
-            <button type="submit" class="btn btn-success">Publish Article</button>
-        </form>
-    {% endif %}
-    <!-- Delete button -->
-    <form method="post" action="{% url 'delete_article' article.pk %}">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-danger">Delete Article</button>
-    </form>
-{% endif %}
+            {% if request.user.is_superuser %}
+                <div class="d-flex flex-wrap gap-3 mt-3">
+                    {% if not article.published %}
+                        <form method="post" action="{% url 'publish_article' article.pk %}">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-success fw-bold">Publish</button>
+                        </form>
+                    {% endif %}
+                    <a href="{% url 'edit_article' article.pk %}" class="btn btn-warning fw-bold mr-2">Edit</a>
+                    <form method="post" action="{% url 'delete_article' article.pk %}">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger fw-bold">Delete</button>
+                    </form>
+                </div>
+            {% endif %}
 
-<a href="{% url 'article_list' %}">Back to Blog</a>
+            <div class="mt-4">
+                <a href="{% url 'article_list' %}" class="btn btn-outline-primary fw-bold">Back to Blog</a>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -39,6 +39,20 @@ def article_detail(request, pk):
 def is_superuser(user):
     return user.is_superuser
 
+# Edit article view
+@login_required
+@user_passes_test(is_superuser)
+def edit_article(request, pk):
+    article = get_object_or_404(Article, pk=pk)
+    if request.method == "POST":
+        form = ArticleForm(request.POST, request.FILES, instance=article)
+        if form.is_valid():
+            form.save()
+            return redirect("article_detail", pk=article.pk)
+    else:
+        form = ArticleForm(instance=article)
+    return render(request, "read/edit_article.html", {"form": form, "article": article})
+
 @login_required
 @user_passes_test(is_superuser)  # Restrict access to superusers only
 def article_create(request):
