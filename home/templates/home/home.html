@@ -108,8 +108,44 @@
                     </div>
                 </div>
             </div>
-            <a href="{% url 'shop' %}" class="shop-now-button btn text-uppercase py-3">Shop Now</a>
+            <a href="{% url 'shop' %}" class="shop-now-button btn btn-success">Shop Now</a>
         </div>
+    </div>
+</div>
+<!-- blog highlights -->
+<div class="container mt-5 mb-2">
+    <div class="testimonial-title mt-3 mb-4">
+        <div class="container-fluid px-4 px-lg-5">
+            <div class="text-center">
+                <h3 class="display-5">Latest Blog Highlights</h3>
+                <hr class="mb-3">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        {% for article in latest_articles %}
+        <div class="col-md-4 mb-4">
+            <div class="card h-100 border-0 shadow-sm">
+                {% if article.image %}
+                <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}"
+                    style="height: 200px; object-fit: cover;">
+                {% endif %}
+                <div class="card-body mt-2">
+                    <h5 class="card-title">{{ article.title }}</h5>
+                    <a href="{% url 'article_detail' article.pk %}"
+                        class="btn btn-secondary mb-2 mt-2 d-flex justify-content-center">Click to Read</a>
+                    <p class="text-muted">{{ article.created_at|date:"F d, Y" }}</p>
+                </div>
+            </div>
+        </div>
+        {% empty %}
+        <p class="text-center text-muted">No articles available.</p>
+        {% endfor %}
+    </div>
+    <div class="text-center mt-4">
+        <a href="{% url 'article_list' %}" class="btn btn-success">
+            Read Blog
+        </a>
     </div>
 </div>
 
@@ -133,20 +169,20 @@
                     {% if forloop.counter <= testimonial.rating %} ⭐ {% else %} ☆ {% endif %} {% endfor %} </p>
 
                         {% if user.is_authenticated %}
-                            {% if testimonial.user == request.user or user.is_staff %}
-                                <form action="{% url 'delete_testimonial' testimonial.id %}" method="POST" class="mt-2"
-                                    onsubmit="return confirmDelete();">
-                                    {% csrf_token %}
-                                    <button type="submit" class="btn btn-danger btn-sm mb-2">Delete
-                                    </button>
+                        {% if testimonial.user == request.user or user.is_staff %}
+                        <form action="{% url 'delete_testimonial' testimonial.id %}" method="POST" class="mt-2"
+                            onsubmit="return confirmDelete();">
+                            {% csrf_token %}
+                            <button type="submit" class="btn btn-danger btn-sm mb-2">Delete
+                            </button>
 
-                                    {% if testimonial.user == request.user %}
-                                    <a href="{% url 'edit_testimonial' testimonial.id %}"
-                                        class="btn btn-primary btn-sm mb-2">Edit
-                                    </a>
-                                    {% endif %}
-                                </form>
+                            {% if testimonial.user == request.user %}
+                            <a href="{% url 'edit_testimonial' testimonial.id %}"
+                                class="btn btn-primary btn-sm mb-2">Edit
+                            </a>
                             {% endif %}
+                        </form>
+                        {% endif %}
                         {% endif %}
                         <!-- Username stays at bottom -->
                         <h5 class="mt-auto text-center"
@@ -159,10 +195,10 @@
         <p>No testimonials yet. Be the first to share your experience!</p>
         {% endfor %}
     </div>
-
+    <div class="text-center mt-4">
+        <a href="{% url 'submit_testimonial' %}" class="btn btn-success mt-3 mb-5">Leave a Testimonial</a>
+    </div>
 </div>
-
-<a href="{% url 'submit_testimonial' %}" class="btn btn-success mt-3 mb-5">Leave a Testimonial</a>
 
 <script>
     function confirmDelete() {
