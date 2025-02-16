@@ -34,14 +34,14 @@
 
         <!-- Content on the right -->
         <div class="col-md-8">
-            <p class="text-muted">{{ article.content }}</p>
+            <p class="text-muted">{{ article.content|safe }}</p>
 
             {% if request.user.is_superuser %}
                 <div class="d-flex flex-wrap gap-3 mt-3">
                     {% if not article.published %}
                         <form method="post" action="{% url 'publish_article' article.pk %}">
                             {% csrf_token %}
-                            <button type="submit" class="btn btn-success fw-bold">Publish</button>
+                            <button type="submit" class="btn btn-outline-secondary fw-bold mr-2">Publish</button>
                         </form>
                     {% endif %}
                     <a href="{% url 'edit_article' article.pk %}" class="btn btn-warning fw-bold mr-2">Edit</a>

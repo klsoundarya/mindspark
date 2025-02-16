@@ -3,7 +3,7 @@ from cloudinary.models import CloudinaryField
 
 class Article(models.Model):
     title = models.CharField(max_length=200, unique=True)
-    content = models.TextField()
+    content = models.TextField(blank=True)
     published = models.BooleanField(default=False) 
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
