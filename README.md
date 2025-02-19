@@ -445,3 +445,98 @@ Mindspark uses Stripe API for secure payment processing. Follow these steps to s
 
 
 </details>
+
+### Design
+
+<details>
+<summary>Design Overview</summary>
+<br>
+
+## UX
+
+### Five Planes of User Experience
+
+The five planes are like layers that designers think about when making things for people to use. It starts with big ideas and end with the actual look and feel of what users interact with.
+
+
+#### Typography
+
+Mindspark incorporates a mix of playful yet professional typefaces to enhance readability and engagement. The primary fonts used are:
+
+- Emilys Candy (Serif) – Adds a creative and fun touch, making learning tools visually appealing.
+- Arial (Sans-serif) – Ensures a clean and modern look, improving readability across devices.
+- Fondamento (Serif) – Provides an elegant, handwritten feel, reinforcing the Montessori-inspired theme.
+- Kavoon, Merriweather, Lucida Sans Regular, Verdana (Sans-serif & Serif mix) – Offers versatility and a balance between decorative and readable text.
+- Font Awesome 6 Free – Used for icons and UI elements to enhance navigation and user experience.
+
+#### Gallery
+
+- All app design, wireframes, favicon, structured images for readme are sourced  from [Canva](https://www.canva.com/).
+
+#### Color Scheme
+
+- #ffe552 (Bright Yellow) – Highlights important elements and call-to-action buttons, creating an engaging experience.
+- #001d5a (Deep Blue) – Used for text and accents, adding depth and contrast.
+- #bfa616 (Golden Hue) – Adds a touch of elegance, often used in branding elements.
+- #f3f5f5 (Soft Grayish White) – Provides a neutral, clean background for content sections.
+- #666 (Muted Gray) – Used for secondary text to maintain readability without overpowering key content.
+- #28a745 (Green) & #ffc107 (Amber) – Utilized for success and warning messages, making alerts clear and intuitive.
+- #000000ec (Dark Black) – Enhances contrast for footers and overlays, ensuring accessibility.
+- #dc3545 (Vibrant Red) – Used sparingly for error messages and urgent notifications.
+- #f7f7f8 (Light Gray) – Maintains a soft, minimalist aesthetic for backgrounds.
+- #777 (Neutral Gray) – Provides subtle contrast for body text and UI components.
+
+![Primary colors used](read-me/features/color-scheme.png)
+
+</details>
+
+## Marketing
+
+<details>
+<summary>Social Media Marketing Overview</summary>
+<br>
+
+A dedicated [Mindspark Facebook Page] (https://www.facebook.com/profile.php?id=61569773265756) and [Instagram account](https://www.instagram.com/mind.spark2/) have been created to enhance brand visibility, engage with the target audience, and drive traffic to the Mindspark e-commerce platform. These social media platforms serve as primary channels for promoting Montessori learning tools, tech gadgets, and lifestyle accessories.
+
+**Facebook & Instagram Strategy**
+- Regular posts on both platforms will focus on:
+
+  - Showcasing new and featured products.
+  - Sharing informative content about Montessori learning and tech innovations.
+  - Announcing exclusive deals, discounts, and limited-time offers.
+  - Posting user testimonials and customer stories to build trust.
+  - Engaging with followers through interactive content such as polls, quizzes, and live Q&A sessions.
+  - Running paid ad campaigns and utilizing Facebook’s ‘Boost’ feature to extend reach to potential customers.
+  - By maintaining an active presence on both Facebook and Instagram, Mindspark aims to create a strong community of parents, educators, and tech enthusiasts who are   - passionate about hands-on learning and innovation.
+
+**SEO & Keyword Optimization**
+Mindspark incorporates researched keywords into social media content, website meta tags, and product descriptions to improve search engine ranking. These keywords include:
+
+- Montessori learning tools
+- STEM educational toys
+- Hands-on learning products
+- Innovative tech gadgets
+- Montessori toys for kids
+- Educational tools for all ages
+- Creative learning resources
+- STEM kits for children
+- Shop Montessori essentials
+- Buy interactive learning gadgets
+- Search Engine Optimization (SEO) Features
+
+To further optimize online visibility, Mindspark includes:
+
+ - Meta tags & descriptions in the website’s <head> section, using relevant keywords to improve search engine indexing.
+ - sitemap.xml & robots.txt files to guide search engines on crawling site content effectively, enhancing SEO ranking.
+ - Alt text on images to improve accessibility and searchability of product images.
+ - By leveraging social media marketing and SEO strategies, Mindspark aims to establish itself as a trusted brand for innovative learning tools and gadgets, reaching a wider audience and increasing customer engagement.
+
+*Mindspark Facebook Business Page*
+![Mindspark Facebook Business Page](read-me/features/marketing/fb-1.JPG)
+![Mindspark Facebook Business Page](read-me/features/marketing/fb-2.JPG)
+![Mindspark Facebook Business Page](read-me/features/marketing/fb-3.JPG)
+*Mindspark Instagram Page*
+![Mindspark Instagram Page](read-me/features/marketing/insta-1.JPG)
+![Mindspark Instagram Page](read-me/features/marketing/insta-2.JPG)
+
+</details>
