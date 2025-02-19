@@ -540,3 +540,46 @@ To further optimize online visibility, Mindspark includes:
 ![Mindspark Instagram Page](read-me/features/marketing/insta-2.JPG)
 
 </details>
+
+### Credits
+
+<details>
+<summary>Technologies</summary>
+<br>
+
+### Tools & Technologies Used
+
+The following technologies were used in this overall project.
+
+- My project is inspired from [code institute](https://learn.codeinstitute.net/) Boutique Ado walkthrough project .
+- I used [Canva](https://www.canva.com/) to create the color scheme, readme images collage, favicon image, wireframes.
+- Additionally, I used [freepik](https://www.freepik.com/), [remove bg](https://www.remove.bg/), [templates hub](https://www.templateshub.net/templates/e-commerce), [app.leonardo.ai](https://leonardo.ai/), [imagekit.io](https://imagekit.io/) for images and website.
+- [ChatGPT](https://chat.openai.com/), [Grammarly](https://app.grammarly.com/) and a [plagiarism checker](https://www.duplichecker.com/) is used to review the text, code and ensure there were no grammar or spelling mistakes.
+- I used [Am I Responsive](https://ui.dev/amiresponsive) design to show my webiste in various screen sizes.
+- [CI Python Linter](https://pep8ci.herokuapp.com/) is been used to check for the bugs
+- I referred to resources such as [stack overflow](https://stackoverflow.com/), [W3Schools](https://www.w3schools.com/css/default.asp) for assistance in understanding code in few places and finding answers to questions relevant to my coding.
+- [Django Docs](https://www.djangoproject.com/) used as the resources.
+- [Visual Studio Code](https://code.visualstudio.com/) used as a remote code editor.
+- [GitHub](https://github.com) used for secure online code storage.
+- [Heroku](https://www.heroku.com/) used for hosting the deployed back-end site.
+- [Git](https://git-scm.com/) was used for version control by utilizing the command line terminal in VS code to commit and Push to GitHub.
+- Added high contrast text against the background color in many places, which improves readability for users with visual impairments.
+- Focus [Bootstrap](https://getbootstrap.com/docs/5.0/getting-started/introduction/) styles are applied to interactive elements like links and buttons, making it easier for keyboard users to navigate site.
+- Used media queries and responsive design principles to ensure that website is accessible on a variety of devices, including mobile phones and tablets.
+- [Favicon.io](https://favicon.io/favicon-converter/) is used to create the various favicon files for my website.
+- [Font Awesome](https://fontawesome.com/) icons were used throughout my project.
+- [cloud convert](https://cloudconvert.com/png-to-webp) was used to convert from PNG to webp.
+- I utilized Font Joy and Google Fonts for font pairing and to visualize the look and feel of my website.
+
+### Acknowledgements
+
+- I want to express my gratitude to my Code Institute mentor, [Dick Vlaanderen](https://github.com/dickvla), for his invaluable support, encouragement, and feedback throughout this project.
+- I would like to thank my Cohort Facilitator, [lewis](https://github.com/LewisMDillon), for guidance and support, providing us with the relevant learning materials, 
+- I would like to thank my fellow teammates to be sharing their knowledge and
+- I personally want to thank my partner for his critique review and unwavering support, belief, and feedback.
+
+### Disclaimer
+
+> I Used my previous project readme as a reference to write the documentation (my previous project link is: <https://github.com/klsoundarya/echo-of-animals>).
+
+</details>
