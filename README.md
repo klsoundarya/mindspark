@@ -25,7 +25,56 @@ Any payments made using a valid debit/credit card will not be processed and the 
 
 User stories and features recorded and managed on [GitHub Projects](<https://github.com/users/klsoundarya/projects/5>)
 
-<!-- Some of the mentioned user stories have already been implemented, while the remaining ones are planned for future features. -->
+**Overview**
+
+Mindspark is an innovative e-commerce platform offering Montessori learning tools, tech gadgets, and lifestyle accessories. The platform is designed to promote hands-on learning and innovation for users of all ages. Mindspark provides an engaging shopping experience with the following features:
+
+1. Browse and explore products as a guest.
+2. Register for an account to unlock additional features.
+3. View, add, and edit items in the shopping cart.
+4. Discover Montessori-inspired educational tools for children.
+5. Shop for unique tech gadgets and lifestyle accessories.
+6. Read blog articles on learning techniques, tech trends, and lifestyle tips.
+7. Stay updated with the latest product highlights and promotions.
+8. Mindspark is fully responsive, accessible on all browsers and devices, ensuring a seamless shopping experience for users.
+
+### Content Challenge
+
+1. **What do your users need?**
+- Users need an easy-to-navigate platform that offers thoughtfully curated products like Montessori learning tools, educational toys, tech essentials, and lifestyle accessories. They are looking for products that support innovation, creativity, and hands-on learning for both children and adults.
+
+2. **What information and features can you provide to meet those needs?**
+- Product Descriptions & Details: Clear, concise, and informative product descriptions, images, and usage instructions.
+- Search & Filter Options: To help users easily find what they're looking for (e.g., by category, age group, or price).
+- Customer Reviews & Testimonials: To build trust and allow users to see feedback from others.
+- Educational Content: Blog posts on topics related to Montessori learning and innovation.
+- User Account Features: Allow customers to track their orders, save favorites, and manage their personal information.
+
+3. **How can you make the information easy to understand?**
+- Use simple, straightforward language to explain product features and benefits.
+- Utilize bullet points, images to break down complex information.
+- Have a FAQ section to address common questions about the products and services.
+
+4. **How can you demonstrate expertise, authoritativeness, and trustworthiness in your content?**
+- Include expert reviews or input from Montessori educators or specialists.
+- Feature real customer testimonials and success stories to show the impact of your products.
+
+5. **Would there be other pages within your own site you could link to from your chosen page?**
+- Related Products: Linking to similar or complementary items on product detail pages (e.g., Montessori toys, learning kits).
+- Blog Posts: Link blog posts that discuss Montessori methods, benefits of educational tech tools, or ways to encourage creativity in children.
+- Testimonials Page: Link to a dedicated page showing all customer testimonials.
+
+6. **Are there opportunities to link back to external websites that already rank highly on Google?**
+- Link to authoritative Montessori organizations and educational institutions to support the credibility of your learning tools.
+- You can also link to relevant research articles or educational blogs that talk about the importance of hands-on learning and Montessori principles.
+
+7. **How can you help users discover other relevant parts of your web application?**
+- Use recommendation algorithms to show customers products they may like based on their browsing and purchase history.
+- Add featured product sections or highlight new products that align with the users’ interests.
+- Include call-to-action buttons (e.g., “Discover more educational tools”) to guide users to other sections of the website like the blog, shop categories, or featured collections.
+
+
+<!-- Some of the mentioned user stories have already been implemented, while the remaining ones from above content challenge are planned for future features. -->
 
 <details>
 <summary>User Goals</summary>
@@ -58,6 +107,20 @@ User stories and features recorded and managed on [GitHub Projects](<https://git
 - As a blog reader, I want to explore trending topics and see expert insights in hands-on education.
 - As a blog reader, I want to share blogs on social media to spread valuable learning resources.
 
+### Business Goals ###
+Mindspark provides efficient admin functionality with an intuitive dashboard to manage:
+
+- Product inventory for seamless additions and updates.
+- Blog articles to keep customers engaged with insightful content.
+- Order tracking and user management through the Django Admin Panel.
+- Mindspark is designed to build a strong community of lifelong learners, tech enthusiasts, and parents looking for innovative educational tools. 
+
+The platform's marketing efforts focus on:
+
+- SEO-driven blog content to attract organic traffic.
+- Social media promotions to engage with potential customers.
+- Email newsletters to provide updates on new arrivals, trends, and exclusive offers
+
 #### Site Owner Goals
 
 - As the site owner, I want to showcase Mindspark’s vision and mission clearly on the homepage.
@@ -70,6 +133,15 @@ User stories and features recorded and managed on [GitHub Projects](<https://git
 - Parents & Educators – Looking for Montessori tools to enhance learning for children.
 - Young Professionals & Students – Searching for tech gadgets and lifestyle products to boost productivity.
 - Innovative Learners & Thinkers – Interested in educational tools that encourage creativity and self-improvement.
+
+### Customer Goals ###
+Mindspark aims to provide a user-friendly shopping experience where customers can easily browse, learn about, and purchase innovative products. 
+Customers are encouraged to:
+- Find Montessori learning tools to support early education.
+- Discover tech gadgets that enhance productivity and daily life.
+- Stay informed through blog posts covering learning strategies, technology, and lifestyle trends.
+- Register an account to manage purchases and receive exclusive updates.
+- By offering high-quality educational and tech-based products, Mindspark empowers users to spark creativity and innovation in learning and everyday life.
 
 </details>
 
@@ -334,5 +406,42 @@ __Press Enter and your local clone will be created.__
 7. Using the ``pip3 install -r requirements.txt`` command, the dependencies and libraries needed for **Mindspark** will be installed.
 8. Set up your **env.py** file and from the above steps for Cloudinary and PostgreSQL, gather the Cloudinary API key and the PostgreSQL url for additon to your code.
 9. Ensure that your **env.py** file is placed in your **.gitignore** file and follow the remaining steps in the above Django Project Setup section before pushing your code to GitHub.
+
+## Google Mail Setup
+
+1. Create a Gmail Account to manage emails for your Mindspark project.
+2. Enable 2-Step Verification:
+  - Go to **Settings** -> **Other Google Account Settings** -> **Accounts** -> **Import** -> **Other Account Settings**.
+  - Activate 2-Step Verification for enhanced security.
+3. Generate an App Password:
+  - Navigate to **App Passwords** under Security Settings.
+  - Select **Other** and enter a name (e.g., "Mindspark").
+4. Click **Create** and copy the 16-digit app password provided.
+5. Configure Django Email Settings in `settings.py`:
+  - Add the EMAIL_HOST_USER (your Gmail address).
+  - Add the EMAIL_HOST_PASS (the generated app password).
+6. Update Heroku Config Vars:
+  - Add EMAIL_HOST_USER and EMAIL_HOST_PASS to your Heroku environment variables.
+
+## Stripe Config
+
+Mindspark uses Stripe API for secure payment processing. Follow these steps to set up Stripe:
+
+1. Create a Stripe Account and log in to the Stripe Dashboard.
+2. Obtain Test API Keys:
+  - In the Stripe Dashboard, navigate to **Developers → API Keys**.
+  - Copy your `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY`.
+3. Update Environment Variables:
+  - Store STRIPE_PUBLIC_KEY and STRIPE_SECRET_KEY in env.py.
+  - Connect them in `settings.py` using environment variables.
+4. Add these keys to your Heroku Config Vars.
+5. Set Up Webhooks for Payment Security:
+  - In Stripe Dashboard, go to **Developers** → **Webhooks**.
+  - Click **Add Endpoint** and enter: https://your-heroku-app-url/checkout/wh.
+6. Select **Retrieve all events** and **save the endpoint**.
+7. Secure Webhooks:
+  - Generate a **STRIPE_WH_SECRET** key.
+  - Add it to env.py, settings.py, and Heroku Config Vars as before.
+
 
 </details>
