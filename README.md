@@ -9,7 +9,6 @@
 
 If you wish to make a test purchase, you can use the following [Stripe Dummy Card](https://stripe.com/docs/testing) details:
 
-- **US Card Number: 4242424242424242**
 - **3D Secure Ireland Auth Number: 4000003720000005**
 - **Exp Date: Any date in the future using the format MM/YY**
 - **CVC: any 3 digit number**
@@ -71,5 +70,62 @@ User stories and features recorded and managed on [GitHub Projects](<https://git
 - Parents & Educators – Looking for Montessori tools to enhance learning for children.
 - Young Professionals & Students – Searching for tech gadgets and lifestyle products to boost productivity.
 - Innovative Learners & Thinkers – Interested in educational tools that encourage creativity and self-improvement.
+
+</details>
+
+### Wireframes
+
+I have used [Canva](https://www.canva.com/) to design my website wireframes for mobile, laptop and desktop screen sizes to see and work on my website designing.
+
+### Mobile Wireframes
+<!-- learnt the dropdown from https://dev.to/asyraf/how-to-add-dropdown-in-markdown-o78 -->
+<!-- My website has evolved from the initial wireframes I created earlier in the project. While the design now looks bit different from the original plan, I see this as a natural progression as the project developed. The changes reflect new ideas and insights that came up during the development process, resulting in a structure that aligns better with the project’s goals. -->
+
+<details>
+<summary>Mobile Wireframes</summary>
+<br>
+
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/1.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/2.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/3.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/4.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/5.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/6.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/7.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/8.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/9.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/10.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/11.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/12.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/13.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/14.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/15.png)
+![phone wireframes](read-me/wireframes/mindspark-mobile-wireframe/16.png)
+
+
+</details>
+
+### Laptop & Desktop Wireframes
+
+<details>
+<summary>Laptop & Desktop Wireframes</summary>
+<br>
+
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/1.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/2.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/3.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/4.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/5.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/6.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/7.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/8.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/9.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/10.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/11.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/12.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/13.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/14.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/15.png)
+![Laptop and desktop Wireframes](read-me/wireframes/mindspark-website-wireframe/16.png)
 
 </details>
