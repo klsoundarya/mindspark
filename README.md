@@ -541,6 +541,169 @@ To further optimize online visibility, Mindspark includes:
 
 </details>
 
+### Project Planning 
+
+<details>
+<summary>Stages of Planning</summary>
+<br>
+
+## Strategy Plane
+
+The "Mindspark" website is an innovative e-commerce platform dedicated to providing thoughtfully curated products that enhance hands-on learning, productivity, and lifestyle. The project began with a focus on Montessori learning tools, aiming to support young minds with interactive, educational resources.
+
+## Agile Methodologies
+
+The development of the "Mindspark" website followed Agile methodologies, focusing on iterative progress and continuous feedback. I used my [Github Projects Board](https://github.com/users/klsoundarya/projects/5) to plan and document all of my work.
+
+### MoSCoW Prioritization
+
+For the development of **Mindspark**, I applied the **MoSCoW Prioritization Method** to efficiently manage features and ensure that key elements were delivered on time:
+
+**Must Haves:** These are the essential features needed to launch the MVP. They include:
+
+- User registration and authentication system.
+- Home page with Latest Blog Highlights, about us with Shop Now button.
+- A product catalog with shopping cart functionality.
+- The ability for users to add products to their cart and checkout.
+- An e-commerce page showcasing the products, sorting features, related products.
+- Integration with payment systems like Stripe.
+
+**Should Haves:** These features are important but not essential for the initial release:
+
+- Product reviews and ratings.
+- Product search and filter functionality.
+- User profile management and order history.
+
+**Could Haves:** Features that add extra value but are not necessary for the MVP:
+
+- Email notifications for order confirmation and shipping updates.
+- User wishlist functionality.
+- Interactive educational content related to Montessori tools.
+
+**Won’t Haves:** Features excluded or deprioritized for this release:
+
+- Multi-language support.
+- Advanced recommendation system.
+
+This prioritization helped keep the project focused on key features while leaving room for future enhancements.
+
+### Sprints
+
+The project was broken down into sprints to help structure development and ensure timely delivery of core features. Each sprint is planned from the project starting in December and a deadline of March 3rd for submission.
+
+**Sprint 1:**
+
+- Set up the project environment and database.
+- Developed models for products, categories, and users.
+- Implemented basic user authentication (login, signup, logout).
+- Created Home page with featured products and categories.
+
+**Retrospection:** The sprint went well, but it took a bit longer than expected to implement the user authentication system.
+
+**Sprint 2:**
+
+- Built out the product catalog page.
+- Implemented basic shopping cart functionality.
+- Started integration with Stripe payment system.
+- Designed a responsive layout using Bootstrap.
+
+**Retrospection:** The cart system worked smoothly, but we realized a few UI tweaks were needed for a more intuitive experience.
+
+**Sprint 3:**
+
+- Finalized product pages and checkout process.
+- Added product details pages with images and descriptions.
+- Integrated Stripe for payment processing.
+- Implemented product search and filters.
+
+**Retrospection:** There were some bugs in the Stripe integration, but they were resolved by adjusting payment handling.
+
+**Sprint 4:**
+
+- Developed user profile management (view/edit profile, order history).
+- Added functionality for users to view past orders.
+- Integrated product reviews and ratings.
+- Added newsletter subscription feature.
+
+**Retrospection:** This sprint was productive; however, some UI aspects still need refining.
+
+**Sprint 5:**
+
+- Enhanced checkout page with shipping details.
+- Refined product filtering and sorting system.
+- Completed Stripe and checkout testing for bugs.
+- Worked on product recommendations based on user preferences.
+
+**Retrospection:** Integration and testing went smoothly, but some more optimizations are needed for product recommendations.
+
+**Sprint 6:**
+
+- Added wishlist functionality for logged-in users.
+- Created educational content for product page (Montessori tools).
+- Refined the order confirmation and email notifications.
+
+**Retrospection:** The wishlist feature is a nice-to-have but could be improved with better UI.
+
+**Sprint 7:**
+
+- Finalized order history page for users.
+- Completed all Stripe testing and deployed to production.
+- Completed database schema optimization.
+
+**Retrospection:** Some minor fixes were needed after testing, but overall everything is working well.
+
+**Sprint 8:**
+
+- Refined user interface across all pages.
+- Focused on adding missing features and bug fixes.
+- Implemented final design adjustments.
+- Start preparing for deployment.
+
+**Retrospection:** The sprint was smooth, and now the site is nearly complete with final touches before submission.
+
+#### The Scope Plane
+
+The website will include core features such as:
+
+- Product catalog with product details, images, and descriptions.
+- User authentication system (registration, login, logout).
+- Shopping cart and checkout with Stripe payment integration.
+- User profile and order history.
+- Wishlist and product reviews.
+- Educational content on Montessori principles and tools.
+
+Future plans include adding additional features like multi-language support, and a mobile app.
+
+**ERD and Models:**
+
+For Entity Relationship Diagram (ERD), below is an overview of the models that i used:
+
+**Blog:** Represents article information (title, content, published, created_at, updated_at, image).
+**Shop:** Stores product details, order, category (name,  friendly_name, description, price, delivery, reviews_count, discount, in_stock, image, category, age_group, sku, rating).
+**Wishlist:** Stores products users have saved (user, product, added_at).
+**Testimonials:** Stores user reviews (user, message, rating, created_at).
+**Profiles**: Represents FAQs  ( question, answer, is_active, created_at, updated_at), 
+stores deleted user details ( username, email, deleted_at) and 
+User delivery information (user, default_phone_number, default_street_address1, default_street_address2, default_town_or_city, default_county, default_postcode, default_country).
+**Contact Us:** Represents user contact messages (name, email, message, created_at, read).
+**Checkout:** Stores items data and user delivery information (
+ order_number, full_name, user_profile, email, phone_number, country, postcode, town_or_city, street_address1, street_address2, county, date, delivery_cost, order_total, grand_total, original_cart, stripe_pid, order, product, quantity, lineitem_total).
+
+  
+#### The Structure Plane
+
+The website is structured with a clear navigation system, featuring dedicated pages for Home, Blog, Shop, Contact, Search bar, Wishlist, Cart and user account management (Product Management, Login, Logout, Signup, Delete Account, Profile settings, Password Update, FAQs), ensuring a seamless user experience.
+
+#### The Skeleton Plane
+
+Please refer to the [Wireframes](#wireframes) section.
+
+#### The Surface Plane
+
+[View the live site here.](https://mind-spark-139c9f977593.herokuapp.com/)
+
+</details>
+
 ### Credits
 
 <details>
