@@ -21,6 +21,57 @@ Any payments made using a valid debit/credit card will not be processed and the 
 
 <hr>
 
+## Table of Contents
+
+- [User Stories](#user-stories)
+- [content challenge](#content-challenge)
+  - [First Time User Goals](#first-time-user-goals)
+  - [Returning Site Users](#returning-site-users)
+  - [E-Commerce Buyer Goals](#e-commerce-buyer-goals)
+  - [Blog Readers & Knowledge Seekers](#blog-readers-&-knowledge-seekers)
+  - [Business Goals](#business-goals)
+  - [Site Owner Goals](#site-owner-goals)
+  - [Target Audience](#target-audience)
+  - [Customer Goals](#customer-goals)
+- [Wireframes](#wireframes)
+  - [Mobile Wireframes](#mobile-wireframes)
+  - [Laptop & Desktop Wireframes](#laptop--desktop-wireframes)
+- [Deployment](#deployment)
+  - [GitHub Pages](#github-pages)
+  - [Django Project Setup](#django-project-setup)
+  - [Cloudinary API](#cloudinary-api)
+  - [PostgreSQL](#elephant-sql)
+  - [Heroku deployment](#heroku-deployment)
+  - [Forking](#forking)
+  - [Making a Local Clone](#making-a-local-clone)
+  - [Google Mail Setup](#google-mail-setup)
+  - [Stripe Config](#stripe-config)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Features to Implement](#features-to-implement)
+- [Testing](#testing)
+- [Design](#design)
+  - [UX](#ux)
+  - [Typography](#typography)
+  - [Gallery](#gallery)
+  - [Color Scheme](#color-scheme)
+- [Marketing](#marketing)
+- [Project Planning](#project-planning)
+  - [Strategy Plane](#strategy-plane)
+  - [Agile Methodologies](#agile-methodologies)
+    - [MoSCoW Prioritization](#moscow-prioritization)
+    - [Sprints](#sprints)
+  - [The Scope Plane](#the-scope-plane)
+  - [The Structure Plane](#the-structure-plane)
+  - [ERD and Models](#erd-and-models)
+  - [The Skeleton Plane](#the-skeleton-plane)
+  - [The Surface Plane](#the-surface-plane)
+- [Credits](#credits)
+  - [Tools & Technologies Used](#tools--technologies-used)
+  - [Acknowledgments](#acknowledgements)
+  - [Disclaimer](#disclaimer)
+
+
 ### User Stories
 
 User stories and features recorded and managed on [GitHub Projects](<https://github.com/users/klsoundarya/projects/5>)
@@ -107,7 +158,7 @@ Mindspark is an innovative e-commerce platform offering Montessori learning tool
 - As a blog reader, I want to explore trending topics and see expert insights in hands-on education.
 - As a blog reader, I want to share blogs on social media to spread valuable learning resources.
 
-### Business Goals ###
+### Business Goals
 Mindspark provides efficient admin functionality with an intuitive dashboard to manage:
 
 - Product inventory for seamless additions and updates.
@@ -134,7 +185,7 @@ The platform's marketing efforts focus on:
 - Young Professionals & Students – Searching for tech gadgets and lifestyle products to boost productivity.
 - Innovative Learners & Thinkers – Interested in educational tools that encourage creativity and self-improvement.
 
-### Customer Goals ###
+### Customer Goals
 Mindspark aims to provide a user-friendly shopping experience where customers can easily browse, learn about, and purchase innovative products. 
 Customers are encouraged to:
 - Find Montessori learning tools to support early education.
@@ -485,6 +536,13 @@ Mindspark uses Stripe API for secure payment processing. Follow these steps to s
 - Contains a contact form for users to reach out to the website administrators.
 - Displays relevant contact information, including email and social media links.
 
+**Newsletter subscription:**
+
+- Users can subscribe to the newsletter by entering their email in the designated field on the website.  
+- The subscription details, includes user's email in the audience section, where the info is securely stored in the **Mailchimp dashboard**, allowing for easy management and communication.
+
+![mailchimp](read-me/features/mailchimp.JPG)
+
 **Password Update:**
 
 - Users can update their password via a secure form.
@@ -627,6 +685,9 @@ While the Mindspark project includes core functionalities, future improvements a
 - Implement automated email campaigns for abandoned carts and personalized offers.
 
 </details>
+
+## Testing
+- For all testing, please refer to the [TESTING.md](TESTING.md) file.
 
 ### Design
 
@@ -855,8 +916,12 @@ The website will include core features such as:
 - Educational content on Montessori principles and tools.
 
 Future plans include adding additional features like multi-language support, and a mobile app.
+  
+#### The Structure Plane
 
-**ERD and Models:**
+The website is structured with a clear navigation system, featuring dedicated pages for Home, Blog, Shop, Contact, Search bar, Wishlist, Cart and user account management (Product Management, Login, Logout, Signup, Delete Account, Profile settings, Password Update, FAQs), ensuring a seamless user experience.
+
+#### ERD and Models:
 
 For Entity Relationship Diagram (ERD), below is an overview of the models that i used:
 
@@ -871,10 +936,6 @@ User delivery information (user, default_phone_number, default_street_address1, 
 **Checkout:** Stores items data and user delivery information (
  order_number, full_name, user_profile, email, phone_number, country, postcode, town_or_city, street_address1, street_address2, county, date, delivery_cost, order_total, grand_total, original_cart, stripe_pid, order, product, quantity, lineitem_total).
 
-  
-#### The Structure Plane
-
-The website is structured with a clear navigation system, featuring dedicated pages for Home, Blog, Shop, Contact, Search bar, Wishlist, Cart and user account management (Product Management, Login, Logout, Signup, Delete Account, Profile settings, Password Update, FAQs), ensuring a seamless user experience.
 
 #### The Skeleton Plane
 
