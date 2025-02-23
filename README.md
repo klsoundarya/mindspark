@@ -591,6 +591,41 @@ There are media query breakpoints. This convenient feature allows users to easil
 
 ## Features to Implement
 
+While the Mindspark project includes core functionalities, future improvements and enhancements will further refine the user experience and expand its capabilities. Below are planned features to be implemented:
+
+**AI-Powered Product Recommendations:**
+
+- Implement an AI-based recommendation system that suggests products based on user browsing history, wishlist, and purchase behavior.
+- Display "You May Also Like" and "Frequently Bought Together" sections on product pages.
+
+**User Reviews & Ratings System**
+
+- Allow users to leave product reviews and ratings.
+- Implement a review approval system for moderation before publishing.
+- Display average product ratings on shop and product detail pages.
+
+**Blog Enhancement**
+
+- Enable comments and discussions on blog posts.
+- Implement a "Related Articles" section to encourage further reading.
+- Allow users to bookmark or share articles on social media.
+
+**Social Media Integration**
+
+- Enable social media logins (Google, Facebook) for seamless account creation.
+- Implement share buttons on product and blog pages for social engagement.
+- Auto-post new product launches and blog updates to linked social media accounts.
+
+**Wishlist Improvements**
+
+- Enable users to categorize and save multiple wishlists (e.g., "For Kids," "Tech Gadgets").
+- Provide an option to share wishlists with friends and family.
+
+**Subscription & Newsletter Integration**
+
+- Allow users to subscribe to newsletters for updates on new products and special deals.
+- Implement automated email campaigns for abandoned carts and personalized offers.
+
 </details>
 
 ### Design
