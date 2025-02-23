@@ -446,6 +446,153 @@ Mindspark uses Stripe API for secure payment processing. Follow these steps to s
 
 </details>
 
+
+## Features
+
+<details>
+<summary>Project Features</summary>
+<br>
+
+### Existing Features
+
+**Home Page:**
+
+- Displays a welcoming layout with carousel about images showcasing the website features, and essential navigation links.
+- Offers quick access to the most popular or recently updated blog posts.
+
+**Blog Page:**
+
+- Displays a list of blog articles related to Montessori learning tools, gadgets, and lifestyle accessories.
+- Includes article images, titles, publication dates, and short excerpts.
+- Provides a "Read More" button to access full articles.
+- Enables filtering by category or keyword search for easy navigation.
+
+**Shop Page:**
+
+- Displays all available products categorized for easy browsing.
+- Allows users to filter products by price, category, and popularity.
+- Includes pagination to enhance user experience.
+
+**Product-detail Posts:**
+
+- Displays detailed information about a selected product, including title, description, price, and images.
+- Shows available stock and an option to add the product to the cart or wishlist.
+- Provides customer reviews and ratings for transparency.
+- Displays related product recommendations.
+
+**Contact Page:**
+
+- Contains a contact form for users to reach out to the website administrators.
+- Displays relevant contact information, including email and social media links.
+
+**Password Update:**
+
+- Users can update their password via a secure form.
+- Ensures password strength guidelines are followed (e.g., minimum length, no common passwords).
+- Provides a confirmation message upon successful password update.
+
+**My profile:**
+
+- Displays user information, including name, email, and order history.
+- Allows users to update their personal details.
+- Provides easy navigation to wishlist, cart, and order history.
+
+
+**Add a product:**
+(For Admin or Authorized Users)
+
+- Allows authorized users to add new products with images, descriptions, and pricing.
+- Enables category selection and inventory management.
+- Provides an intuitive interface for quick product additions.
+
+**Wishlist:**
+
+- Enables users to save favorite products for later purchase.
+- Provides an option to move wishlist items to the cart directly.
+- Displays product availability and price updates.
+
+**Cart:**
+
+- Displays all selected products with their prices, quantities, and total cost.
+- Allows users to update product quantities or remove items.
+- Provides a "Proceed to Checkout" button for payment.
+
+**Checkout:**
+
+- Allows users to enter shipping and billing details.
+- Provides multiple payment options (Stripe integration).
+- Displays order summary before final confirmation.
+- Includes secure transaction processing.
+
+**Thank you checkout**
+
+- Displays order confirmation and estimated delivery time.
+- Provides an order reference number for tracking.
+- Encourages users to continue shopping or explore the home.
+
+**Delete Account:**
+
+- Allows users to delete their account from mindspark.
+
+**Login:**
+
+- Authenticated users can log in to access personalized features like updating profile delivery information, saving the user profile details.
+- Supports username/email and password-based authentication.
+
+**Logout:**
+
+- Logged-in users can log out to end their session and return to the public view of login site.
+
+**AllAuth**  
+
+Django AllAuth is a versatile framework designed to handle user registration, login, email verification, password forgot and authentication seamlessly. It ensures secure access control by managing registered and unregistered users, determining what content is accessible on the "Mindspark" website.
+
+The setup process for AllAuth included the following steps:
+
+- Installing the package as a project dependency.
+- Adding it to the INSTALLED_APPS section in settings.py.
+- Configuring the AUTHENTICATION_BACKENDS as recommended in the AllAuth documentation.
+- Including AllAuth URLs in the project's urls.py file for routing.
+- Running database migrations to create the required authentication-related tables.
+
+**CSRF Tokens** 
+
+CSRF (Cross-Site Request Forgery) tokens are security features included in every form on the site. These tokens help ensure that form submissions are authenticated and come from legitimate users. Without CSRF tokens, the website could be vulnerable to malicious attacks where unauthorized users might attempt to steal sensitive user data or perform actions without permission.
+
+- When links are broken users can see the custom error code for 400, 403, 404, 500 pages.
+
+There are media query breakpoints. This convenient feature allows users to easily access different sections of the website, making the browsing experience smoother and more efficient.
+
+| Features        	| Desktop                                            	| Phone                                            	|
+|-----------------	|----------------------------------------------------	|--------------------------------------------------	|
+| Top Header       |![top header](read-me/features/desktop/top-header.jpg)| ![top header](read-me/features/phone/top-header.jpg)|
+| Nav            	  | ![nav](read-me/features/desktop/nav.jpg)           	| ![nav](read-me/features/phone/nav.jpg)           	|
+| Footer          	| ![footer](read-me/features/desktop/footer.jpg)     	| ![footer](read-me/features/phone/footer.jpg)     	|
+| Alert          	| ![alert](read-me/features/desktop/alert.JPG)     	| ![alert](read-me/features/phone/alert.JPG)     	|
+| Home            	| ![home](read-me/features/desktop/1.PNG)            	| ![home](read-me/features/phone/1.PNG)            	|
+| Blog           	| ![blog](read-me/features/desktop/2.jpg)           	| ![blog](read-me/features/phone/2.jpg)           	|
+| Shop          	| ![shop](read-me/features/desktop/3.jpg)          	| ![shop](read-me/features/phone/3.JPG)          	|
+| Product-detail          	| ![product](read-me/features/desktop/4.jpg)          	| ![product](read-me/features/phone/4.JPG)          	|
+| Shop-Footer   	| ![shop-footer](read-me/features/desktop/5.jpg)   	| ![shop-footer](read-me/features/phone/5.jpg)   	|
+| Contact         	| ![contact](read-me/features/desktop/6.JPG)         	| ![contact](read-me/features/phone/6.JPG)         	|
+| Log In          	| ![login](read-me/features/desktop/7.jpg)           	| ![login](read-me/features/phone/7.JPG)           	|
+| Log Out         	| ![logout](read-me/features/desktop/8.jpg)          	| ![logout](read-me/features/phone/8.JPG)          	|
+| Sign Up         	| ![sign Up](read-me/features/desktop/9.JPG)         	| ![sign Up](read-me/features/phone/9.JPG)         	|
+| FAQ        	| ![faq](read-me/features/desktop/10.JPG)         	| ![faq](read-me/features/phone/10.JPG)         	|
+| Update Password 	| ![Update Password](read-me/features/desktop/11.JPG) 	| ![Update Password](read-me/features/phone/11.JPG) 	|
+| Delete Account 	| ![Delete Account](read-me/features/desktop/12.JPG) 	| ![Delete Account](read-me/features/phone/12.JPG) 	|
+| My Profile  	| ![My Profile](read-me/features/desktop/13.JPG) 	| ![My Profile](read-me/features/phone/13.JPG) 	|
+| Add a Product 	| ![add product](read-me/features/desktop/14.JPG) 	| ![add product](read-me/features/phone/14.JPG) 	|
+| Wishlist 	| ![wishlist](read-me/features/desktop/15.JPG) 	| ![wishlist](read-me/features/phone/15.JPG) 	|
+| Cart 	| ![cart](read-me/features/desktop/16.JPG) 	| ![cart](read-me/features/phone/16.JPG) 	|
+| Checkout 	| ![checkout](read-me/features/desktop/17.JPG) 	| ![checkout](read-me/features/phone/17.JPG) 	|
+| Thank You 	| ![thank you](read-me/features/desktop/18.JPG) 	| ![thank you](read-me/features/phone/18.JPG) 	|
+
+
+## Features to Implement
+
+</details>
+
 ### Design
 
 <details>
