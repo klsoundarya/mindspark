@@ -77,7 +77,7 @@ All pages have passed through the [W3 Markup HTML Validator](https://validator.w
 
 CSS stylesheet have passed through the [W3 CSS Validator](https://jigsaw.w3.org/css-validator/)
 
-![CSS stylesheet passed through the CSS validator](read-me/testing-validators/css-validator/css-validator-no-errors.PNG)
+![CSS stylesheet passed through the CSS validator](read-me/testing-validators/css-validator/1.JPG)
 
 <hr>
 
