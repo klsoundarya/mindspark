@@ -26,7 +26,7 @@
         <div class="col-md-4">
             {% if article.image %}
                 <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid rounded shadow-sm"
-                     style="width: 100%; max-width: 350px; height: auto; object-fit: cover;">
+                     style="width: 100%; max-width: 350px; height: auto; object-fit: cover;" loading="lazy">
             {% else %}
                 <p class="text-muted">No image available</p>
             {% endif %}
