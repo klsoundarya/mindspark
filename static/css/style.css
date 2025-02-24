@@ -30,7 +30,6 @@ body {
     overflow-x: hidden;
 }
 
-
 /* --------- bootstrap toasts ------------ */
 .message-container{position:fixed;top:135px;right:15px;z-index:99999999999}.custom-toast{overflow:visible}.toast-capper{height:2px}.toast.custom-toast .arrow-up{width:0;height:0;border-left:4px solid transparent;border-right:4px solid transparent;position:absolute;top:-15px;right:36px}.toast-header{padding:.5rem 1rem;font-weight:700;color:#000;border-bottom:1px solid #0000004e}.toast-header .close{background:0 0;border:none;font-size:1.2rem;line-height:1;opacity:1}.toast-header .close:hover{opacity:1}.toast-body{padding:1rem;font-size:14px;line-height:1.5;background-color:#bfa616;color:#001d5a;border-bottom:1px solid #0000004e;margin-left:10px}.cart-notification-wrapper,.custom-p{background-color:#f3f5f5;border-bottom:1px solid #0000004e;margin-bottom:2px!important}.toast-body:hover{background-color:#333;color:#bfa616}.custom-p{font-weight:700;padding:18px}.cart-notification-wrapper{height:200px;overflow-x:hidden;overflow-y:auto}.cart-wrapper{border-radius:5px;object-fit:cover;margin-left:10px}.cart-notification-wrapper .row{align-items:center;margin-bottom:.5rem}.cart-notification-wrapper p{margin:0;font-size:16px;font-weight:700}
 

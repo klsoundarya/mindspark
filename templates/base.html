@@ -34,7 +34,7 @@
         rel="stylesheet">
 
     <!-- Font Awesome CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" loading="lazy" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" crossorigin="anonymous">
 
     {% block corecss %}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
@@ -60,10 +60,6 @@
     <script src="https://js.stripe.com/v3/"></script>
     {% endblock %}
 
-    {% block extra_js %}
-    {% endblock %}
-
-    <title>{% block extra_title %}{% endblock %}</title>
 </head>
 
 <body>
@@ -85,7 +81,7 @@
                 <input class="form-control search__input collapse nav-link" id="searchInput" type="search" name="q"
                     placeholder="Search our products..." aria-label="Search" autocomplete="off">
                 <button class="btn" type="submit" id="searchButton">
-                    <div><i class="fa-solid fa-magnifying-glass fa-lg"></i></div>
+                    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
                 </button>
                 <button class="btn btn-outline-danger collapse ml-2" type="button" id="closeSearch">
 
@@ -163,7 +159,6 @@
                                 </div>
                             </li>
 
-
                             <li class="nav-item dropdown">
                                 <a class="nav-link" href="{% url 'profile' %}" id="user-options" data-toggle="dropdown"
                                     aria-haspopup="true" aria-expanded="false">
@@ -174,22 +169,19 @@
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-right border-0" aria-labelledby="user-options">
                                     {% if request.user.is_authenticated %}
-                                    {% if request.user.is_superuser %}
-                                    <a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a>
-                                    {% endif %}
-                                    <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
-                                    <li><a href="{% url 'password_update' %}" class="dropdown-item">Update Password</a>
-                                    </li>
-                                    <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
-                                    <hr style="width: 90%;">
-                                    <li><a class="dropdown-item" href="{% url 'delete_account' %}">Delete Account</a>
-                                    </li>
+                                        {% if request.user.is_superuser %}
+                                            <li><a href="{% url 'add_product' %}" class="dropdown-item">Product Management</a></li>
+                                        {% endif %}
+                                        <li><a href="{% url 'profile' %}" class="dropdown-item">My Profile</a></li>
+                                        <li><a href="{% url 'password_update' %}" class="dropdown-item">Update Password</a></li>
+                                        <li><a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a></li>
+                                        <li class="dropdown-divider"></li> <!-- Bootstrap alternative to <hr> -->
+                                        <li><a href="{% url 'delete_account' %}" class="dropdown-item">Delete Account</a></li>
                                     {% else %}
-                                    <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
-                                    <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
+                                        <li><a href="{% url 'account_signup' %}" class="dropdown-item">Register</a></li>
+                                        <li><a href="{% url 'account_login' %}" class="dropdown-item">Login</a></li>
                                     {% endif %}
-                                    <!-- FAQ Link (Visible to All Users) -->
-                                    <hr style="width: 90%;">
+                                    <li class="dropdown-divider"></li>
                                     <li><a href="{% url 'faq' %}" class="dropdown-item">FAQs</a></li>
                                 </ul>
                             </li>
@@ -373,7 +365,7 @@
 
     {% block postloadjs %}
 
-    <script type="text/javascript">
+    <script>
         $('.toast').toast('show');
 
         // Automatically hide the toast after 7 seconds
@@ -386,9 +378,8 @@
 
     <!-- Font Awesome Kit -->
     <script src="https://kit.fontawesome.com/a2c377bf15.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
-    <script
-        type="text/javascript">(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
+    <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"></script>
+    <script>(function ($) { window.fnames = new Array(); window.ftypes = new Array(); fnames[0] = 'EMAIL'; ftypes[0] = 'email'; fnames[1] = 'FNAME'; ftypes[1] = 'text'; fnames[2] = 'LNAME'; ftypes[2] = 'text'; fnames[3] = 'ADDRESS'; ftypes[3] = 'address'; fnames[4] = 'PHONE'; ftypes[4] = 'phone'; fnames[5] = 'BIRTHDAY'; ftypes[5] = 'birthday'; fnames[6] = 'COMPANY'; ftypes[6] = 'text'; }(jQuery)); var $mcj = jQuery.noConflict(true);</script>
     {% endblock %}
 
 

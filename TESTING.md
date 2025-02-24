@@ -26,10 +26,25 @@ Return back to the [README.md](README.md) file.
 
 All pages passed through the Lighthouse test
 
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/mobile-part-1.png)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/mobile-part-2.png)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/mobile-part-3.png)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/mobile-part-4.png)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/1.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/2.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/3.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/4.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/5.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/6.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/7.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/8.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/9.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/10.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/11.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/12.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/13.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/14.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/15.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/16.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/17.JPG)
+- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/18.JPG)
+
 
 - [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/1.JPG)
 - [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/2.JPG)
@@ -47,7 +62,6 @@ All pages passed through the Lighthouse test
 - [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/14.JPG)
 - [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/15.JPG)
 - [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/16.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/17.JPG)
 
 <hr>
 
