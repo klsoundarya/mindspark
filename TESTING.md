@@ -69,7 +69,7 @@ All pages passed through the Lighthouse test
 
 All pages have passed through the [W3 Markup HTML Validator](https://validator.w3.org/). I navigated to each page of the deployed site and used the "View Page Source" option to access the HTML code, and validated it in the W3C Markup HTML Validator.
 
-![All pages passed through the HTML validator](read-me/testing-validators/html-validator/errors-fixed.PNG)
+![All pages passed through the HTML validator](read-me/testing-validators/html-validator/1.JPG)
 
 <hr>
 
