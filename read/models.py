@@ -8,6 +8,7 @@ class Article(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     image = CloudinaryField('image', blank=True, null=True)
+    external_link = models.URLField(blank=True, null=True)
 
     def __str__(self):
         return self.title

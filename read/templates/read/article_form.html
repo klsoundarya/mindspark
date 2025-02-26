@@ -27,6 +27,8 @@
                 <form method="post" enctype="multipart/form-data">
                     {% csrf_token %}
                     {{ form|crispy }}
+                    <label for="external_link">External Resource (Optional):</label>
+                    <input type="url" name="external_link" class="form-control" placeholder="https://example.com">
                     <div class="d-flex justify-content-between mt-3">
                         <a href="{% url 'article_list' %}" class="btn btn-outline-secondary">Cancel</a>
                         <button type="submit" class="btn btn-outline-secondary px-4">Publish Article</button>

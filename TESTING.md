@@ -194,12 +194,15 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 | 6.  	| ![Bug 6](read-me/bugs/html-validator/6.JPG)     	| Fixed 	|
 | 7. 	  | ![Bug 7](read-me/bugs/js-hint-validator/1.JPG) 	  | Fixed 	|
 | 8. 	  | ![Bug 8](read-me/bugs/ci-linter/1.JPG) 	          | Fixed 	|
+| 9. 	  | ![Bug 9](read-me/bugs/ci-linter/2.JPG) 	          | Fixed 	|
+| 10. 	  | ![Bug 10](read-me/bugs/ci-linter/3.JPG) 	          | Fixed 	|
+| 11. 	  | ![Bug 11](read-me/bugs/ci-linter/4.JPG) 	          | Fixed 	|
+| 12. 	  | ![Bug 12](read-me/bugs/ci-linter/5.JPG) 	          | Fixed 	|
+| 13. 	  | ![Bug 13](read-me/bugs/ci-linter/6.JPG) 	          | Fixed 	|
 
 
 ### Unfixed Bugs
 
-There are no other bugs to be fixed, apart from the below point:
-
-- CI linter errors for long characters.
+There are no other known bugs to be fixed.
 
 </details>

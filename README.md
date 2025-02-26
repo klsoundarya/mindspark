@@ -960,7 +960,7 @@ The following technologies were used in this overall project.
 
 - My project is inspired from [code institute](https://learn.codeinstitute.net/) Boutique Ado walkthrough project .
 - I used [Canva](https://www.canva.com/) to create the color scheme, readme images collage, favicon image, wireframes.
-- Additionally, I used [freepik](https://www.freepik.com/), [remove bg](https://www.remove.bg/), [templates hub](https://www.templateshub.net/templates/e-commerce), [app.leonardo.ai](https://leonardo.ai/), [imagekit.io](https://imagekit.io/) for images and website.
+- Additionally, I used [freepik](https://www.freepik.com/), [remove bg](https://www.remove.bg/), [templates hub](https://www.templateshub.net/templates/e-commerce), [app.leonardo.ai](https://leonardo.ai/), [imagekit.io](https://imagekit.io/), [contrast checker](https://coolors.co/contrast-checker) for images and website.
 - [ChatGPT](https://chat.openai.com/), [Grammarly](https://app.grammarly.com/) and a [plagiarism checker](https://www.duplichecker.com/) is used to review the text, code and ensure there were no grammar or spelling mistakes.
 - I used [Am I Responsive](https://ui.dev/amiresponsive) design to show my webiste in various screen sizes.
 - [CI Python Linter](https://pep8ci.herokuapp.com/) is been used to check for the bugs
