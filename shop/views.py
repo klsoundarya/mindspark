@@ -18,7 +18,6 @@ def all_essentials(request):
     direction = None
 
     if request.GET:
-    
         # Handle sorting
         if 'sort' in request.GET:
             sortkey = request.GET['sort']
@@ -46,7 +45,8 @@ def all_essentials(request):
             if not query:
                 messages.error(request, "Please enter a search term")
                 return redirect(reverse('shop'))
-            queries = Q(name__icontains=query) | Q(description__icontains=query)
+            queries = Q(name__icontains=query) | Q(
+                description__icontains=query)
             products = products.filter(queries)
 
     current_sorting = f'{sort}_{direction}'
@@ -78,13 +78,15 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
-    # Fetch related products in the same category (excluding the current product)
-    related_products = Product.objects.filter(category=product.category).exclude(pk=product_id)[:4]
+    # Fetch related products in the same category
+    related_products = Product.objects.filter(
+        category=product.category).exclude(pk=product_id)[:4]
 
-    # If fewer than 4 products are found, fetch additional products from other categories
+    # If fewer than 4 products are found, fetch additional products
     if related_products.count() < 4:
-        additional_products = Product.objects.exclude(pk__in=related_products.values_list('pk', flat=True)) \
-                                         .exclude(pk=product_id)[:4 - related_products.count()]
+        additional_products = Product.objects.exclude(
+            pk__in=related_products.values_list('pk', flat=True)) \
+            .exclude(pk=product_id)[:4 - related_products.count()]
         related_products = list(related_products) + list(additional_products)
 
     context = {
@@ -94,13 +96,14 @@ def product_detail(request, product_id):
 
     return render(request, 'shop/product_detail.html', context)
 
+
 @login_required
 def add_product(request):
     """ Add a product to the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
@@ -108,10 +111,12 @@ def add_product(request):
             messages.success(request, 'Successfully added product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to add product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to add product. Please ensure '
+                'the form is valid.')
     else:
         form = ProductForm()
-        
     template = 'shop/add_product.html'
     context = {
         'form': form,
@@ -119,13 +124,14 @@ def add_product(request):
 
     return render(request, template, context)
 
+
 @login_required
 def edit_product(request, product_id):
     """ Edit a product in the store """
     if not request.user.is_superuser:
         messages.error(request, 'Sorry, only store owners can do that.')
         return redirect(reverse('home'))
-    
+
     product = get_object_or_404(Product, pk=product_id)
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES, instance=product)
@@ -134,7 +140,9 @@ def edit_product(request, product_id):
             messages.success(request, 'Successfully updated product!')
             return redirect(reverse('product_detail', args=[product.id]))
         else:
-            messages.error(request, 'Failed to update product. Please ensure the form is valid.')
+            messages.error(
+                request,
+                'Failed to update product. Please ensure the form is valid.')
     else:
         form = ProductForm(instance=product)
         messages.info(request, f'You are editing {product.name}')
@@ -146,6 +154,7 @@ def edit_product(request, product_id):
     }
 
     return render(request, template, context)
+
 
 @login_required
 def delete_product(request, product_id):

@@ -6,7 +6,8 @@ class ContactForm(forms.ModelForm):
     """
     Form for handling contact submissions.
 
-    - Uses the Contact model to gather user input for first name, last name, email, subject, and message.
+    - Uses the Contact model to gather user input for first name,
+    last name, email, subject, and message.
     - Includes custom placeholders for each field to guide the user.
     """
     class Meta:

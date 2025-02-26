@@ -28,18 +28,20 @@ def delete_account(request):
         DeletedUser.objects.create(username=user.username, email=user.email)
         user.delete()
         logout(request)
-        messages.success(request, "Your account has been deleted successfully.")
+        messages.success(
+                request, "Your account has been deleted successfully.")
         return redirect('account_login')
     else:
         return render(request, 'profiles/delete_account.html')
-    
+
 
 @login_required
 # password update
 def password_update_view(request):
     """
     View to handle password updates for authenticated users.
-    If the user is logged in, the form to update the password is displayed and saved.
+    If the user is logged in, the form to
+    update the password is displayed and saved.
     Displays success or error messages based on the form submission result.
     Returns:
         - A redirect to the password update page on error.
@@ -55,7 +57,8 @@ def password_update_view(request):
             if form.is_valid():
                 form.save()
 
-                current_user.backend = 'django.contrib.auth.backends.ModelBackend'
+                current_user.backend = (
+                    'django.contrib.auth.backends.ModelBackend')
 
                 messages.success(request, "Your Password Has Been Updated")
                 login(request, current_user)
@@ -68,7 +71,8 @@ def password_update_view(request):
                 return redirect('password_update')
         else:
             form = PasswordChangeForm(current_user)
-            return render(request, "profiles/password_update.html", {'form': form})
+            return render(
+                    request, "profiles/password_update.html", {'form': form})
 
     else:
         messages.error(request, "Please log in to view this page!")
@@ -86,7 +90,8 @@ def profile(request):
             form.save()
             messages.success(request, 'Profile updated successfully')
         else:
-            messages.error(request, 'Update failed. Please ensure the form is valid.')
+            messages.error(
+                    request, 'Update failed. Please ensure the form is valid.')
     else:
         form = UserProfileForm(instance=profile)
     orders = profile.orders.all()
@@ -99,6 +104,7 @@ def profile(request):
     }
 
     return render(request, template, context)
+
 
 def order_history(request, order_number):
     order = get_object_or_404(Order, order_number=order_number)

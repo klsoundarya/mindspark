@@ -3,15 +3,18 @@ from django.contrib.auth.models import User
 from shop.models import Product
 from wishlist.models import Wishlist
 
+
 class WishlistModelTest(TestCase):
     def setUp(self):
         """Set up test user and product before each test"""
-        self.user = User.objects.create_user(username="testuser", password="testpassword")
+        self.user = User.objects.create_user(
+                username="testuser", password="testpassword")
         self.product = Product.objects.create(name="Test Product", price=10.99)
 
     def test_wishlist_entry_creation(self):
         """Test that a Wishlist entry is created correctly"""
-        wishlist_item = Wishlist.objects.create(user=self.user, product=self.product)
+        wishlist_item = Wishlist.objects.create(
+                user=self.user, product=self.product)
         self.assertEqual(Wishlist.objects.count(), 1)
         self.assertEqual(wishlist_item.user, self.user)
         self.assertEqual(wishlist_item.product, self.product)
@@ -19,7 +22,8 @@ class WishlistModelTest(TestCase):
 
     def test_wishlist_str_method(self):
         """Test the string representation of the Wishlist model"""
-        wishlist_item = Wishlist.objects.create(user=self.user, product=self.product)
+        wishlist_item = Wishlist.objects.create(
+                user=self.user, product=self.product)
         self.assertEqual(str(wishlist_item), f"testuser - {self.product.name}")
 
     def test_wishlist_deletes_on_user_delete(self):

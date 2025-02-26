@@ -3,7 +3,6 @@ from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
-    
     class Meta:
         verbose_name_plural = 'Categories'
 
@@ -38,10 +37,12 @@ class Product(models.Model):
     discount = models.PositiveIntegerField(default=0)
     age_group = models.CharField(max_length=20, null=True, blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
-    category = models.ForeignKey('Category', null=True, blank=True, on_delete=models.SET_NULL)
+    category = models.ForeignKey(
+        'Category', null=True, blank=True, on_delete=models.SET_NULL)
     sku = models.CharField(max_length=254, null=True, blank=True)
     description = models.TextField()
-    rating = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    rating = models.DecimalField(
+        max_digits=6, decimal_places=2, null=True, blank=True)
     image_url = models.URLField(max_length=1024, null=True, blank=True)
     image = CloudinaryField('image', null=True, blank=True, default=None)
 

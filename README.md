@@ -510,6 +510,7 @@ Mindspark uses Stripe API for secure payment processing. Follow these steps to s
 
 - Displays a welcoming layout with carousel about images showcasing the website features, and essential navigation links.
 - Offers quick access to the most popular or recently updated blog posts.
+- Allows users to leave a review, it has options of edit and delete for the respective users.
 
 **Blog Page:**
 

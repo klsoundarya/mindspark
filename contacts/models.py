@@ -8,9 +8,12 @@ from django.db import models
     - email: Email address of the contact person (max length: 70).
     - subject: Subject of the message (max length: 80).
     - message: Content of the contact message.
-    - created_at: Date and time when the contact message was created (auto set on creation).
-    - read: Boolean flag indicating whether the message has been read by an admin (default is False).
+    - created_at: Date and time when the contact message
+    was created (auto set on creation).
+    - read: Boolean flag indicating whether the message
+    has been read by an admin (default is False).
 """
+
 
 class ContactUs(models.Model):
     name = models.CharField(max_length=50)

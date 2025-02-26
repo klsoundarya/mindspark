@@ -6,10 +6,13 @@ from .forms import TestimonialForm
 
 from django.contrib.admin.views.decorators import staff_member_required
 
+
 @staff_member_required
 def admin_testimonials(request):
     testimonials = Testimonial.objects.all()
-    return render(request, 'admin_testimonials.html', {'testimonials': testimonials})
+    return render(request, 'admin_testimonials.html', {
+            'testimonials': testimonials})
+
 
 @login_required
 def delete_testimonial(request, testimonial_id):
@@ -20,9 +23,12 @@ def delete_testimonial(request, testimonial_id):
         testimonial.delete()
         messages.success(request, "Testimonial deleted successfully.")
     else:
-        messages.error(request, "You do not have permission to delete this testimonial.")
+        messages.error(
+            request,
+            "You do not have permission to delete this testimonial.")
 
     return redirect('home')
+
 
 @login_required
 def edit_testimonial(request, testimonial_id):
@@ -42,7 +48,9 @@ def edit_testimonial(request, testimonial_id):
     else:
         form = TestimonialForm(instance=testimonial)
 
-    return render(request, 'testimonials/edit_testimonial.html', {'form': form})
+    return render(request, 'testimonials/edit_testimonial.html', {
+        'form': form})
+
 
 @login_required
 def submit_testimonial(request):
@@ -56,9 +64,13 @@ def submit_testimonial(request):
             return redirect('home')
     else:
         form = TestimonialForm()
-    
-    return render(request, 'testimonials/submit_testimonial.html', {'form': form})
+
+    return render(request, 'testimonials/submit_testimonial.html', {
+        'form': form})
+
 
 def display_testimonials(request):
     testimonials = Testimonial.objects.all().order_by('-created_at')[:4]
-    return render(request, 'testimonials/testimonials_section.html', {'testimonials': testimonials})
+    return render(
+        request, 'testimonials/testimonials_section.html',
+        {'testimonials': testimonials})

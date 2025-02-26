@@ -5,19 +5,24 @@ from .models import Wishlist
 from shop.models import Product
 from django.contrib.auth.decorators import user_passes_test
 
+
 def is_admin(user):
     return user.is_superuser
+
 
 @user_passes_test(is_admin)
 def admin_wishlist_view(request):
     wishlists = Wishlist.objects.all().select_related('user', 'product')
     return render(request, 'admin_wishlist.html', {'wishlists': wishlists})
 
+
 @login_required
 def wishlist_view(request):
     """Display the user's wishlist."""
     wishlist_items = Wishlist.objects.filter(user=request.user)
-    return render(request, "wishlist/wishlist.html", {"wishlist_items": wishlist_items})
+    return render(request, "wishlist/wishlist.html", {
+            "wishlist_items": wishlist_items})
+
 
 @login_required
 def add_to_wishlist(request, product_id):
@@ -25,7 +30,8 @@ def add_to_wishlist(request, product_id):
     product = get_object_or_404(Product, pk=product_id)
 
     if Wishlist.objects.filter(user=request.user, product=product).exists():
-        messages.warning(request, f'{product.name} is already in your Wishlist.')
+        messages.warning(request, f'{
+            product.name} is already in your Wishlist.')
     else:
         Wishlist.objects.create(user=request.user, product=product)
         messages.success(request, f'{product.name} added to Wishlist!')
@@ -33,15 +39,18 @@ def add_to_wishlist(request, product_id):
     # Redirect to the product detail page
     return redirect(reverse('product_detail', args=[product_id]))
 
+
 @login_required
 def remove_from_wishlist(request, product_id):
     """Remove a product from the user's wishlist."""
     product = get_object_or_404(Product, pk=product_id)
-    wishlist_item = Wishlist.objects.filter(user=request.user, product=product).first()
+    wishlist_item = Wishlist.objects.filter(
+        user=request.user, product=product).first()
 
     if wishlist_item:
         wishlist_item.delete()
-        messages.success(request, f"'{product.name}' removed from your wishlist.")
+        messages.success(request, f"'{
+                product.name}' removed from your wishlist.")
     else:
         messages.error(request, f"'{product.name}' was not in your wishlist.")
 

@@ -3,12 +3,13 @@ from django.conf import settings
 from django.shortcuts import get_object_or_404
 from shop.models import Product
 
+
 def cart_contents(request):
     cart_items = []
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
-    
+
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
@@ -37,5 +38,4 @@ def cart_contents(request):
         'free_delivery_threshold': settings.FREE_DELIVERY_THRESHOLD,
         'grand_total': grand_total,
     }
-    
     return context

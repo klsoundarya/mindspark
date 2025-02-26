@@ -3,6 +3,7 @@ from django import forms
 from django.forms import NumberInput
 from .models import Testimonial
 
+
 class TestimonialAdminForm(forms.ModelForm):
     class Meta:
         model = Testimonial
@@ -16,6 +17,7 @@ class TestimonialAdminForm(forms.ModelForm):
         if rating < 1 or rating > 5:
             raise forms.ValidationError("Rating must be between 1 and 5.")
         return rating
+
 
 @admin.register(Testimonial)
 class TestimonialAdmin(admin.ModelAdmin):
