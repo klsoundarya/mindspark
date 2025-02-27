@@ -124,6 +124,12 @@ Mindspark is an innovative e-commerce platform offering Montessori learning tool
 - Add featured product sections or highlight new products that align with the users’ interests.
 - Include call-to-action buttons (e.g., “Discover more educational tools”) to guide users to other sections of the website like the blog, shop categories, or featured collections.
 
+**Content checklist**
+
+- "I have implemented all the steps outlined in the checklist."
+
+![checklist](read-me/features/pp5-checklist.JPG)
+
 
 <!-- Some of the mentioned user stories have already been implemented, while the remaining ones from above content challenge are planned for future features. -->
 
