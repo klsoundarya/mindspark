@@ -5,11 +5,16 @@ from shop.models import Product
 
 
 def cart_contents(request):
+    """
+    Retrieve the contents of the shopping cart from the session and calculate 
+    the total cost, delivery charges, and grand total.
+    """
     cart_items = []
     total = 0
     product_count = 0
     cart = request.session.get('cart', {})
 
+    # Retrieve product details and calculate cart total
     for item_id, quantity in cart.items():
         product = get_object_or_404(Product, pk=item_id)
         total += quantity * product.price
@@ -20,6 +25,7 @@ def cart_contents(request):
             'product': product,
         })
 
+    # Determine delivery charge based on the total cost
     if total < settings.FREE_DELIVERY_THRESHOLD:
         delivery = total * Decimal(settings.STANDARD_DELIVERY_PERCENTAGE / 100)
         free_delivery_delta = settings.FREE_DELIVERY_THRESHOLD - total

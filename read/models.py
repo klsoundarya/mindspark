@@ -1,6 +1,7 @@
 from django.db import models
 from cloudinary.models import CloudinaryField
 
+# Define the Article model to store blog/article content
 class Article(models.Model):
     title = models.CharField(max_length=200, unique=True)
     content = models.TextField(blank=True)

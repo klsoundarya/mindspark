@@ -5,7 +5,7 @@ from django.contrib.admin.views.decorators import staff_member_required
 from .models import Article
 from .forms import ArticleForm
 
-
+# Admin function to delete an article
 @staff_member_required
 def delete_article(request, pk):
     article = get_object_or_404(Article, pk=pk)
@@ -14,6 +14,7 @@ def delete_article(request, pk):
     return redirect('article_list')
 
 
+# Admin function to publish an article
 @staff_member_required
 def publish_article(request, pk):
     article = get_object_or_404(Article, pk=pk)
@@ -24,7 +25,7 @@ def publish_article(request, pk):
         "published successfully!")
     return redirect("article_detail", pk=pk)
 
-
+# Function to display a list of articles (all for admins, only published for users)
 def article_list(request):
     if request.user.is_superuser:
         articles = Article.objects.all()
@@ -33,7 +34,7 @@ def article_list(request):
 
     return render(request, "read/article_list.html", {"articles": articles})
 
-
+# Function to display article details
 def article_detail(request, pk):
     article = get_object_or_404(Article, pk=pk)
     if not article.published and not request.user.is_superuser:
@@ -41,11 +42,11 @@ def article_detail(request, pk):
 
     return render(request, "read/article_detail.html", {"article": article})
 
-
+# Function to check if the user is a superuser
 def is_superuser(user):
     return user.is_superuser
 
-
+# Function to edit an existing article (restricted to superusers)
 @login_required
 @user_passes_test(is_superuser)
 def edit_article(request, pk):
@@ -63,7 +64,7 @@ def edit_article(request, pk):
     return render(request, "read/edit_article.html", {
             "form": form, "article": article})
 
-
+# Function to create a new article (restricted to superusers)
 @login_required
 @user_passes_test(is_superuser)
 def article_create(request):

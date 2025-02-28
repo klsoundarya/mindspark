@@ -3,10 +3,8 @@ from django.db import models
     Model to store contact form submissions.
 
     Fields:
-    - first_name: First name of the contact person (max length: 50).
-    - last_name: Last name of the contact person (max length: 50).
+    - Name: Name of the contact person (max length: 50).
     - email: Email address of the contact person (max length: 70).
-    - subject: Subject of the message (max length: 80).
     - message: Content of the contact message.
     - created_at: Date and time when the contact message
     was created (auto set on creation).

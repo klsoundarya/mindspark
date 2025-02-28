@@ -102,12 +102,12 @@ Mindspark is an innovative e-commerce platform offering Montessori learning tool
 - User Account Features: Allow customers to track their orders, save favorites, and manage their personal information.
 
 3. **How can you make the information easy to understand?**
-- Use simple, straightforward language to explain product features and benefits.
+- By Using simple, straightforward language to explain product features and benefits.
 - Utilize bullet points, images to break down complex information.
 - Have a FAQ section to address common questions about the products and services.
 
 4. **How can you demonstrate expertise, authoritativeness, and trustworthiness in your content?**
-- Include expert reviews or input from Montessori educators or specialists.
+- By Including expert reviews or input from Montessori educators or specialists.
 - Feature real customer testimonials and success stories to show the impact of your products.
 
 5. **Would there be other pages within your own site you could link to from your chosen page?**
@@ -117,12 +117,10 @@ Mindspark is an innovative e-commerce platform offering Montessori learning tool
 
 6. **Are there opportunities to link back to external websites that already rank highly on Google?**
 - Link to authoritative Montessori organizations and educational institutions to support the credibility of your learning tools.
-- You can also link to relevant research articles or educational blogs that talk about the importance of hands-on learning and Montessori principles.
 
 7. **How can you help users discover other relevant parts of your web application?**
-- Use recommendation algorithms to show customers products they may like based on their browsing and purchase history.
 - Add featured product sections or highlight new products that align with the users’ interests.
-- Include call-to-action buttons (e.g., “Discover more educational tools”) to guide users to other sections of the website like the blog, shop categories, or featured collections.
+- Include call-to-action buttons to guide users to other sections of the website like the blog, shop categories, or featured collections.
 
 **Content checklist**
 
@@ -987,7 +985,7 @@ The following technologies were used in this overall project.
 ### Acknowledgements
 
 - I want to express my gratitude to my Code Institute mentor, [Dick Vlaanderen](https://github.com/dickvla), for his invaluable support, encouragement, and feedback throughout this project.
-- I would like to thank my Cohort Facilitator, [lewis](https://github.com/LewisMDillon), for guidance and support, providing us with the relevant learning materials, 
+- I would like to thank my Cohort Facilitator, [lewis](https://github.com/LewisMDillon) and [amy] for guidance and support, providing us with the relevant learning materials, 
 - I would like to thank my fellow teammates to be sharing their knowledge and
 - I personally want to thank my partner for his critique review and unwavering support, belief, and feedback.
 

@@ -2,6 +2,7 @@
 {% load static %}
 {% load crispy_forms_tags %}
 
+<!-- It manages the testimonials section where users can view and submit feedback. -->
 {% block page_header %}
 <div class="container header-container custom-product">
     <div class="row">
@@ -22,7 +23,7 @@
 
 
 {% block content %}
-
+<!-- Only authenticated users can leave testimonials. -->
 <div class="container">
     <!-- Testimonial Form -->
     <div class="testimonial-custom mb-4">

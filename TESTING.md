@@ -29,58 +29,58 @@ Return back to the [README.md](README.md) file.
 <br>
  
 
-| **Page Name**       | **Action**                                           | **Expected Behavior**                                               | **Pass/Fail** |
-|---------------------|------------------------------------------------------|----------------------------------------------------------------------|--------------|
-| **Base**       | Click on the contact icon                            | Redirects to the contact page                                         | ✅ Pass      |
-| **Base**       | Use the search bar                                   | Allows users to search for content successfully                      | ✅ Pass      |
-| **Base**       | Click on navigation links                            | Navigates to the respective pages                                    | ✅ Pass      |
-| **Base**       | Click on the website logo                           | Redirects to the home page                                           | ✅ Pass      |
-| **Base**       | Open on smaller screens                              | Displays a responsive hamburger menu                                | ✅ Pass      |
-| **Base**       | Check for favicon                                    | Favicon is properly displayed                                       | ✅ Pass      |
-| **Home**       | View the homepage carousel                          | Three sliding images transition smoothly                            | ✅ Pass      |
-| **Home**       | View the About section                              | Displays images and a "Shop" button linking to the shop page        | ✅ Pass      |
-| **Home**       | View Latest Blogs section                           | Blog content is displayed with a "Read Blog" button                 | ✅ Pass      |
-| **Home**       | Click "Read Blog" button                            | Navigates to the respective blog page                               | ✅ Pass      |
-| **Home**       | Submit a testimonial                               | Redirects to login page if user is unauthenticated                  | ✅ Pass      |
-| **Home**       | Submit a testimonial (authenticated user)           | User can leave a review through a form                              | ✅ Pass      |
-| **Home**       | Edit or delete own testimonial                      | Users can modify or remove their own reviews                        | ✅ Pass      |
-| **Home**       | View testimonials                                   | All users (authenticated & unauthenticated) can see reviews         | ✅ Pass      |
-| **Footer (Base)** | Click on social media links                     | Redirects to respective social media platforms                      | ✅ Pass      |
-| **Footer (Base)** | Click on Privacy Policy link                     | Navigates to the Privacy Policy page                                | ✅ Pass      |
-| **Footer (Base)** | Check for free delivery message                  | "Free Delivery on Orders Above €50" message is visible              | ✅ Pass      |
-| **Blog Page**       | Admin adds new blog post                           | UI allows adding a blog post with title, content, and image         | ✅ Pass      |
-| **Blog Page**       | Admin saves blog post as draft                     | Blog remains hidden from public view                                | ✅ Pass      |
-| **Blog Page**       | Admin publishes blog post                          | Blog becomes visible to all users                                  | ✅ Pass      |
-| **Blog Page**       | Admin edits a blog post                            | UI allows editing the title, content, and image                     | ✅ Pass      |
-| **Blog Page**       | Admin deletes a blog post                          | Blog is removed from the system                                    | ✅ Pass      |
-| **Blog Page**       | Click "Cancel" while editing                       | Redirects to blog list without saving changes                      | ✅ Pass      |
-| **Blog Page**       | View blog posts                                    | Only published blog posts are visible to all users                  | ✅ Pass      |
-| **Shop Page**           | View all products                                  | Displays all available products with images, name, and price    | ✅ Pass      |
-| **Shop Page**           | Click on a product                                | Redirects to the product detail page                            | ✅ Pass      |
-| **Product Detail Page** | View product details                              | Displays product image, description, price, and "Add to Cart" button | ✅ Pass      |
-| **Product Detail Page** | Click "Add to Cart"                               | Product is added to the cart                                    | ✅ Pass      |
-| **Product Detail Page** | View related products                             | Displays other recommended products                             | ✅ Pass      |
-| **Login Page**         | Enter valid credentials and submit                 | User is logged in successfully                                 | ✅ Pass      |
-| **Login Page**         | Enter invalid credentials                          | Error message is displayed                                    | ✅ Pass      |
-| **Logout**            | Click logout button                                | User is logged out and redirected to the home page            | ✅ Pass      |
-| **Signup Page**       | Enter valid details and submit                     | User is registered successfully and logged in                  | ✅ Pass      |
-| **Signup Page**       | Enter invalid/missing details                      | Error messages are displayed                                  | ✅ Pass      |
-| **FAQs Page**        | View FAQs section                                  | All questions and answers are displayed                        | ✅ Pass      |
-| **My Profile Page**  | View profile details                              | Displays user details with an option to edit                   | ✅ Pass      |
-| **My Profile Page**  | Update profile information                         | Changes are saved successfully                                 | ✅ Pass      |
-| **Update Password**  | Change password successfully                       | User can log in with a new password                           | ✅ Pass      |
-| **Delete Account**   | Click "Delete Account" and confirm                 | Account is permanently removed                                | ✅ Pass      |
-| **Wishlist Page**    | Click "Add to Wishlist" (Unauthenticated user)     | Redirects to login page                                       | ✅ Pass      |
-| **Wishlist Page**    | Click "Add to Wishlist" (Authenticated user)       | Product is saved to the wishlist                              | ✅ Pass      |
-| **Wishlist Page**    | View wishlist                                      | Displays saved products                                      | ✅ Pass      |
-| **Wishlist Page**    | Remove product from wishlist                       | Product is removed successfully                              | ✅ Pass      |
-| **Cart Page**        | View cart                                          | Displays all added products with quantity and total price    | ✅ Pass      |
-| **Cart Page**        | Update product quantity                            | Price updates accordingly                                   | ✅ Pass      |
-| **Cart Page**        | Remove product from cart                           | Product is removed successfully                            | ✅ Pass      |
-| **Checkout Page**    | Click "Proceed to Checkout"                        | Redirects to checkout page                                  | ✅ Pass      |
-| **Checkout Page**    | Enter shipping details and complete order          | Order is placed successfully                                | ✅ Pass      |
-| **Checkout Page**    | Enter incorrect details                            | Error messages are displayed                               | ✅ Pass      |
-| **Thank You Page**   | View order confirmation message                    | Displays order details and "Continue Shopping" button      | ✅ Pass      |
+| **Page Name**       | **Action**                                           | **Expected Behavior**                                               | **Pass/Fail** | **Tested** |
+|---------------------|------------------------------------------------------|----------------------------------------------------------------------|--------------|------------|
+| **Base**           | Click on the contact icon                            | Redirects to the contact page                                       | ✅ Pass      | Yes        |
+| **Base**           | Use the search bar                                   | Allows users to search for content successfully                      | ✅ Pass      | Yes        |
+| **Base**           | Click on navigation links                            | Navigates to the respective pages                                    | ✅ Pass      | Yes        |
+| **Base**           | Click on the website logo                           | Redirects to the home page                                           | ✅ Pass      | Yes        |
+| **Base**           | Open on smaller screens                              | Displays a responsive hamburger menu                                | ✅ Pass      | Yes        |
+| **Base**           | Check for favicon                                    | Favicon is properly displayed                                       | ✅ Pass      | Yes        |
+| **Home**           | View the homepage carousel                          | Three sliding images transition smoothly                            | ✅ Pass      | Yes        |
+| **Home**           | View the About section                              | Displays images and a "Shop" button linking to the shop page        | ✅ Pass      | Yes        |
+| **Home**           | View Latest Blogs section                           | Blog content is displayed with a "Read Blog" button                 | ✅ Pass      | Yes        |
+| **Home**           | Click "Read Blog" button                            | Navigates to the respective blog page                               | ✅ Pass      | Yes        |
+| **Home**           | Submit a testimonial                               | Redirects to login page if user is unauthenticated                  | ✅ Pass      | Yes        |
+| **Home**           | Submit a testimonial (authenticated user)           | User can leave a review through a form                              | ✅ Pass      | Yes        |
+| **Home**           | Edit or delete own testimonial                      | Users can modify or remove their own reviews                        | ✅ Pass      | Yes        |
+| **Home**           | View testimonials                                   | All users (authenticated & unauthenticated) can see reviews         | ✅ Pass      | Yes        |
+| **Footer (Base)**  | Click on social media links                         | Redirects to respective social media platforms                      | ✅ Pass      | Yes        |
+| **Footer (Base)**  | Click on Privacy Policy link                        | Navigates to the Privacy Policy page                                | ✅ Pass      | Yes        |
+| **Footer (Base)**  | Check for free delivery message                     | "Free Delivery on Orders Above €50" message is visible             | ✅ Pass      | Yes        |
+| **Blog Page**      | Admin adds new blog post                            | UI allows adding a blog post with title, content, and image         | ✅ Pass      | Yes        |
+| **Blog Page**      | Admin saves blog post as draft                      | Blog remains hidden from public view                                | ✅ Pass      | Yes        |
+| **Blog Page**      | Admin publishes blog post                           | Blog becomes visible to all users                                   | ✅ Pass      | Yes        |
+| **Blog Page**      | Admin edits a blog post                             | UI allows editing the title, content, and image                     | ✅ Pass      | Yes        |
+| **Blog Page**      | Admin deletes a blog post                           | Blog is removed from the system                                    | ✅ Pass      | Yes        |
+| **Blog Page**      | Click "Cancel" while editing                        | Redirects to blog list without saving changes                      | ✅ Pass      | Yes        |
+| **Blog Page**      | View blog posts                                     | Only published blog posts are visible to all users                  | ✅ Pass      | Yes        |
+| **Shop Page**      | View all products                                   | Displays all available products with images, name, and price       | ✅ Pass      | Yes        |
+| **Shop Page**      | Click on a product                                 | Redirects to the product detail page                               | ✅ Pass      | Yes        |
+| **Product Detail** | View product details                               | Displays product image, description, price, and "Add to Cart" button | ✅ Pass  | Yes        |
+| **Product Detail** | Click "Add to Cart"                                | Product is added to the cart                                       | ✅ Pass      | Yes        |
+| **Product Detail** | View related products                              | Displays other recommended products                                | ✅ Pass      | Yes        |
+| **Login Page**     | Enter valid credentials and submit                 | User is logged in successfully                                    | ✅ Pass      | Yes        |
+| **Login Page**     | Enter invalid credentials                          | Error message is displayed                                       | ✅ Pass      | Yes        |
+| **Logout**        | Click logout button                                 | User is logged out and redirected to the home page               | ✅ Pass      | Yes        |
+| **Signup Page**   | Enter valid details and submit                      | User is registered successfully and logged in                     | ✅ Pass      | Yes        |
+| **Signup Page**   | Enter invalid/missing details                       | Error messages are displayed                                     | ✅ Pass      | Yes        |
+| **FAQs Page**     | View FAQs section                                   | All questions and answers are displayed                          | ✅ Pass      | Yes        |
+| **Profile Page**  | View profile details                               | Displays user details with an option to edit                     | ✅ Pass      | Yes        |
+| **Profile Page**  | Update profile information                          | Changes are saved successfully                                   | ✅ Pass      | Yes        |
+| **Update Password** | Change password successfully                     | User can log in with a new password                             | ✅ Pass      | Yes        |
+| **Delete Account** | Click "Delete Account" and confirm                 | Account is permanently removed                                 | ✅ Pass      | Yes        |
+| **Wishlist Page** | Click "Add to Wishlist" (Unauthenticated user)      | Redirects to login page                                        | ✅ Pass      | Yes        |
+| **Wishlist Page** | Click "Add to Wishlist" (Authenticated user)        | Product is saved to the wishlist                               | ✅ Pass      | Yes        |
+| **Wishlist Page** | View wishlist                                      | Displays saved products                                       | ✅ Pass      | Yes        |
+| **Wishlist Page** | Remove product from wishlist                       | Product is removed successfully                               | ✅ Pass      | Yes        |
+| **Cart Page**     | View cart                                          | Displays all added products with quantity and total price     | ✅ Pass      | Yes        |
+| **Cart Page**     | Update product quantity                            | Price updates accordingly                                    | ✅ Pass      | Yes        |
+| **Cart Page**     | Remove product from cart                           | Product is removed successfully                             | ✅ Pass      | Yes        |
+| **Checkout Page** | Click "Proceed to Checkout"                       | Redirects to checkout page                                  | ✅ Pass      | Yes        |
+| **Checkout Page** | Enter shipping details and complete order          | Order is placed successfully                                | ✅ Pass      | Yes        |
+| **Checkout Page** | Enter incorrect details                            | Error messages are displayed                               | ✅ Pass      | Yes        |
+| **Thank You Page** | View order confirmation message                   | Displays order details and "Continue Shopping" button      | ✅ Pass      | Yes        |
 
 <hr>
 
@@ -101,7 +101,9 @@ Return back to the [README.md](README.md) file.
 
 ### Validator Testing
 
-All pages passed through the Lighthouse test
+### Lighthouse
+
+All pages passed through the Lighthouse test. The performance score is lower due to image aspect ratios, the absence of WebP images, and the use of Stripe and jQuery CDN. I will analyze these factors in future versions to identify improvements and enhance performance.
 
 - [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/1.JPG)
 - [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/2.JPG)
@@ -231,6 +233,8 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 <details>
 <summary>Bugs Fixed</summary>
 <br>
+
+- When a user submits a form on the contact details page, if they use the erase functionality (e.g., clearing or editing the form) and attempt to fill in the details and resubmit, a 403 Forbidden CSRF token error occurs. However, if the page is refreshed before submitting the form, the submission works as expected.
 
 | No. 	| Bugs                                            	| Notes 	|
 |-----	|-------------------------------------------------	|-------	|
