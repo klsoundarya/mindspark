@@ -634,11 +634,11 @@ There are media query breakpoints. This convenient feature allows users to easil
 | Nav            	  | ![nav](read-me/features/desktop/nav.JPG)           	| ![nav](read-me/features/phone/nav.jpg)           	|
 | Footer          	| ![footer](read-me/features/desktop/footer.JPG)     	| ![footer](read-me/features/phone/footer.jpg)     	|
 | Alert          	| ![alert](read-me/features/desktop/alert.JPG)     	| ![alert](read-me/features/phone/alert.JPG)     	|
-| Home            	| ![home](read-me/features/desktop/1.png)            	| ![home](read-me/features/phone/1.PNG)            	|
-| Blog           	| ![blog](read-me/features/desktop/2.JPG)           	| ![blog](read-me/features/phone/2.jpg)           	|
+| Home            	| ![home](read-me/features/desktop/1.png)            	| ![home](read-me/features/phone/1.png)            	|
+| Blog           	| ![blog](read-me/features/desktop/2.JPG)           	| ![blog](read-me/features/phone/2.JPG)           	|
 | Shop          	| ![shop](read-me/features/desktop/3.JPG)          	| ![shop](read-me/features/phone/3.JPG)          	|
 | Product-detail          	| ![product](read-me/features/desktop/4.JPG)          	| ![product](read-me/features/phone/4.JPG)          	|
-| Shop-Footer   	| ![shop-footer](read-me/features/desktop/5.JPG)   	| ![shop-footer](read-me/features/phone/5.jpg)   	|
+| Shop-Footer   	| ![shop-footer](read-me/features/desktop/5.JPG)   	| ![shop-footer](read-me/features/phone/5.JPG)   	|
 | Contact         	| ![contact](read-me/features/desktop/6.JPG)         	| ![contact](read-me/features/phone/6.JPG)         	|
 | Log In          	| ![login](read-me/features/desktop/7.JPG)           	| ![login](read-me/features/phone/7.JPG)           	|
 | Log Out         	| ![logout](read-me/features/desktop/8.JPG)          	| ![logout](read-me/features/phone/8.JPG)          	|
