@@ -2,6 +2,8 @@ from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib.auth.decorators import login_required
 from .models import DeletedUser
 from django.contrib.auth import logout, login
+from django.core.mail import send_mail
+from django.conf import settings
 from django.contrib import messages
 from .forms import (
     PasswordChangeForm,
@@ -24,8 +26,23 @@ def delete_account(request):
     if request.method == "POST":
         # Delete the user and log them out
         user = request.user
+        user_email = user.email
         # Log the deleted user's details
         DeletedUser.objects.create(username=user.username, email=user.email)
+
+        # Send confirmation email
+        if user_email:
+            send_mail(
+                subject="Account Deletion Confirmation",
+                message=f"""Dear {user.username},
+                    Your account has been successfully deleted.
+                    If you did not request this action,
+                    please contact support immediately.""",
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                recipient_list=[user_email],
+                fail_silently=False,
+            )
+
         user.delete()
         logout(request)
         messages.success(

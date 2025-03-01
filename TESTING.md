@@ -105,43 +105,43 @@ Return back to the [README.md](README.md) file.
 
 All pages passed through the Lighthouse test. The performance score is lower due to image aspect ratios, the absence of WebP images, and the use of Stripe and jQuery CDN. I will analyze these factors in future versions to identify improvements and enhance performance.
 
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/1.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/2.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/3.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/4.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/5.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/6.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/7.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/8.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/9.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/10.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/11.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/12.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/13.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/14.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/15.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/16.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/17.JPG)
-- [Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/18.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/1.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/2.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/3.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/4.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/5.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/6.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/7.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/8.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/9.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/10.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/11.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/12.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/13.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/14.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/15.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/16.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/17.JPG)
+![Lighthouse test for all Apps in Mobile](read-me/testing-validators/lighthouse-mobile/18.JPG)
 
 <hr>
 
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/1.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/2.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/3.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/4.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/5.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/6.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/7.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/8.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/9.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/10.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/11.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/12.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/13.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/14.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/15.JPG)
-- [Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/16.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/1.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/2.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/3.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/4.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/5.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/6.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/7.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/8.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/9.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/10.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/11.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/12.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/13.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/14.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/15.JPG)
+![Lighthouse test for all Apps in Desktop](read-me/testing-validators/lighthouse-desktop/16.JPG)
 
 <hr>
 
@@ -236,6 +236,11 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 
 - When a user submits a form on the contact details page, if they use the erase functionality (e.g., clearing or editing the form) and attempt to fill in the details and resubmit, a 403 Forbidden CSRF token error occurs. However, if the page is refreshed before submitting the form, the submission works as expected.
 
+- Emails not sent for user signup, order checkout, or forgot password when using an incognito tab.
+
+- If any issues occur during checkout, a 500 Internal Server Error is displayed.
+![500 server error](read-me/bugs/500-internal-error.JPG) 
+
 | No. 	| Bugs                                            	| Notes 	|
 |-----	|-------------------------------------------------	|-------	|
 | 1.  	| ![Bug 1](read-me/bugs/html-validator/1.JPG)     	| Fixed 	|
@@ -255,6 +260,12 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 
 ### Unfixed Bugs
 
-There are no other known bugs to be fixed.
+- On the checkout success page, the dropdowns for "Shop" and "Account" do not transition smoothly.
+
+- When a user registers an account, deletes it, and then creates a new one with the same details, the confirmation email is delayed due to an issue with SendGrid.
+
+- When removing products from the wishlist, the alert message bar also displays the cart update notification. I'll address this issue later.
+
+![wishlist bug](read-me/bugs/wishlist_remove.JPG) 
 
 </details>
