@@ -34,7 +34,8 @@
                         <div class="col-lg-2 col-sm-4">
                             <a href="{% url 'product_detail' item.product.id %}">
                                 {% if item.product.image %}
-                                <img class="w-100 wishlist-prod" src="{{ item.product.image.url }}" alt="{{ item.product.name }}">
+                                <img class="w-100 wishlist-prod" src="{{ item.product.image.url }}"
+                                    alt="{{ item.product.name }}">
                                 {% else %}
                                 <img class="w-100 wishlist-prod" src="{{ MEDIA_URL }}product_placeholder.png"
                                     alt="{{ item.product.name }}">
@@ -44,11 +45,23 @@
                         <div class="col-lg-6 col-sm-4 text-left">
                             <p class="my-0">{{ item.product.name }}</p>
                         </div>
-                        <div class="col-lg-4 col-sm-4">
-                            <a href="{% url 'remove_from_wishlist' item.product.id %}" class="wishlist-delete btn btn-outline-danger md">
-                                <i class="fas fa-trash wishlist-icon"></i> Remove
+                        <div class="col-lg-4 col-sm-4 d-flex justify-content-around">
+                            <!-- Remove from Wishlist Button -->
+                            <a href="{% url 'remove_from_wishlist' item.product.id %}" class="btn btn-outline-danger">
+                                <i class="fas fa-trash"></i> Remove
                             </a>
+
+                            <!-- Add to Cart Button -->
+                            <form class="d-inline" action="{% url 'add_to_cart' item.product.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <button type="submit" class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </form>
                         </div>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
                     </div>
                 </li>
                 {% endfor %}
@@ -63,4 +76,3 @@
 </div>
 
 {% endblock %}
-

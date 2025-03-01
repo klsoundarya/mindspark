@@ -236,6 +236,9 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 
 - When a user submits a form on the contact details page, if they use the erase functionality (e.g., clearing or editing the form) and attempt to fill in the details and resubmit, a 403 Forbidden CSRF token error occurs. However, if the page is refreshed before submitting the form, the submission works as expected.
 
+- If any issues occur during checkout, a 500 Internal Server Error is displayed.
+![500 server error](read-me/bugs/500-internal-error.JPG) 
+
 | No. 	| Bugs                                            	| Notes 	|
 |-----	|-------------------------------------------------	|-------	|
 | 1.  	| ![Bug 1](read-me/bugs/html-validator/1.JPG)     	| Fixed 	|
@@ -255,6 +258,12 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 
 ### Unfixed Bugs
 
-There are no other known bugs to be fixed.
+- On the checkout success page, the dropdowns for "Shop" and "Account" do not transition smoothly.
+
+- When removing products from the wishlist, the alert message bar also displays the cart update notification. I'll address this issue later.
+
+![wishlist bug](read-me/bugs/wishlist_remove.JPG) 
+
+- There are no other known bugs to be fixed.
 
 </details>
