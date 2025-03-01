@@ -630,18 +630,18 @@ There are media query breakpoints. This convenient feature allows users to easil
 
 | Features        	| Desktop                                            	| Phone                                            	|
 |-----------------	|----------------------------------------------------	|--------------------------------------------------	|
-| Top Header       |![top header](read-me/features/desktop/top-header.jpg)| ![top header](read-me/features/phone/top-header.jpg)|
-| Nav            	  | ![nav](read-me/features/desktop/nav.jpg)           	| ![nav](read-me/features/phone/nav.jpg)           	|
-| Footer          	| ![footer](read-me/features/desktop/footer.jpg)     	| ![footer](read-me/features/phone/footer.jpg)     	|
+| Top Header       |![top header](read-me/features/desktop/top-header.JPG)| ![top header](read-me/features/phone/top-header.jpg)|
+| Nav            	  | ![nav](read-me/features/desktop/nav.JPG)           	| ![nav](read-me/features/phone/nav.jpg)           	|
+| Footer          	| ![footer](read-me/features/desktop/footer.JPG)     	| ![footer](read-me/features/phone/footer.jpg)     	|
 | Alert          	| ![alert](read-me/features/desktop/alert.JPG)     	| ![alert](read-me/features/phone/alert.JPG)     	|
-| Home            	| ![home](read-me/features/desktop/1.PNG)            	| ![home](read-me/features/phone/1.PNG)            	|
-| Blog           	| ![blog](read-me/features/desktop/2.jpg)           	| ![blog](read-me/features/phone/2.jpg)           	|
-| Shop          	| ![shop](read-me/features/desktop/3.jpg)          	| ![shop](read-me/features/phone/3.JPG)          	|
-| Product-detail          	| ![product](read-me/features/desktop/4.jpg)          	| ![product](read-me/features/phone/4.JPG)          	|
-| Shop-Footer   	| ![shop-footer](read-me/features/desktop/5.jpg)   	| ![shop-footer](read-me/features/phone/5.jpg)   	|
+| Home            	| ![home](read-me/features/desktop/1.png)            	| ![home](read-me/features/phone/1.PNG)            	|
+| Blog           	| ![blog](read-me/features/desktop/2.JPG)           	| ![blog](read-me/features/phone/2.jpg)           	|
+| Shop          	| ![shop](read-me/features/desktop/3.JPG)          	| ![shop](read-me/features/phone/3.JPG)          	|
+| Product-detail          	| ![product](read-me/features/desktop/4.JPG)          	| ![product](read-me/features/phone/4.JPG)          	|
+| Shop-Footer   	| ![shop-footer](read-me/features/desktop/5.JPG)   	| ![shop-footer](read-me/features/phone/5.jpg)   	|
 | Contact         	| ![contact](read-me/features/desktop/6.JPG)         	| ![contact](read-me/features/phone/6.JPG)         	|
-| Log In          	| ![login](read-me/features/desktop/7.jpg)           	| ![login](read-me/features/phone/7.JPG)           	|
-| Log Out         	| ![logout](read-me/features/desktop/8.jpg)          	| ![logout](read-me/features/phone/8.JPG)          	|
+| Log In          	| ![login](read-me/features/desktop/7.JPG)           	| ![login](read-me/features/phone/7.JPG)           	|
+| Log Out         	| ![logout](read-me/features/desktop/8.JPG)          	| ![logout](read-me/features/phone/8.JPG)          	|
 | Sign Up         	| ![sign Up](read-me/features/desktop/9.JPG)         	| ![sign Up](read-me/features/phone/9.JPG)         	|
 | FAQ        	| ![faq](read-me/features/desktop/10.JPG)         	| ![faq](read-me/features/phone/10.JPG)         	|
 | Update Password 	| ![Update Password](read-me/features/desktop/11.JPG) 	| ![Update Password](read-me/features/phone/11.JPG) 	|
