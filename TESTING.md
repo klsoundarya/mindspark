@@ -262,8 +262,6 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 
 - On the checkout success page, the dropdowns for "Shop" and "Account" do not transition smoothly.
 
-- When a user registers an account, deletes it, and then creates a new one with the same details, the confirmation email is delayed due to an issue with SendGrid.
-
 - When removing products from the wishlist, the alert message bar also displays the cart update notification. I'll address this issue later.
 
 ![wishlist bug](read-me/bugs/wishlist_remove.JPG) 
