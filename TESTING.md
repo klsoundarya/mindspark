@@ -31,7 +31,7 @@ Return back to the [README.md](README.md) file.
 
 | **Page Name**       | **Action**                                           | **Expected Behavior**                                               | **Pass/Fail** | **Tested** |
 |---------------------|------------------------------------------------------|----------------------------------------------------------------------|--------------|------------|
-| **Base**           | Click on the contact icon                            | Redirects to the contact page                                       | ✅ Pass      | Yes        |
+| **Base**           | Click on the message icon                            | Redirects to the contact page                                       | ✅ Pass      | Yes        |
 | **Base**           | Use the search bar                                   | Allows users to search for content successfully                      | ✅ Pass      | Yes        |
 | **Base**           | Click on navigation links                            | Navigates to the respective pages                                    | ✅ Pass      | Yes        |
 | **Base**           | Click on the website logo                           | Redirects to the home page                                           | ✅ Pass      | Yes        |
@@ -45,6 +45,8 @@ Return back to the [README.md](README.md) file.
 | **Home**           | Submit a testimonial (authenticated user)           | User can leave a review through a form                              | ✅ Pass      | Yes        |
 | **Home**           | Edit or delete own testimonial                      | Users can modify or remove their own reviews                        | ✅ Pass      | Yes        |
 | **Home**           | View testimonials                                   | All users (authenticated & unauthenticated) can see reviews         | ✅ Pass      | Yes        |
+| **Home**           | Admins can delete inappropriate testimonials to maintain content quality | Admin has the ability to delete testimonials submitted by both authenticated and unauthenticated users.| ✅ Pass      | Yes        |
+| **Home**           | Any user can subscribe to the newsletter to receive updates. | Users can sign up for the newsletter to stay updated. | ✅ Pass      | Yes        |
 | **Footer (Base)**  | Click on social media links                         | Redirects to respective social media platforms                      | ✅ Pass      | Yes        |
 | **Footer (Base)**  | Click on Privacy Policy link                        | Navigates to the Privacy Policy page                                | ✅ Pass      | Yes        |
 | **Footer (Base)**  | Check for free delivery message                     | "Free Delivery on Orders Above €50" message is visible             | ✅ Pass      | Yes        |
@@ -57,19 +59,24 @@ Return back to the [README.md](README.md) file.
 | **Blog Page**      | View blog posts                                     | Only published blog posts are visible to all users                  | ✅ Pass      | Yes        |
 | **Shop Page**      | View all products                                   | Displays all available products with images, name, and price       | ✅ Pass      | Yes        |
 | **Shop Page**      | Click on a product                                 | Redirects to the product detail page                               | ✅ Pass      | Yes        |
-| **Product Detail** | View product details                               | Displays product image, description, price, and "Add to Cart" button | ✅ Pass  | Yes        |
-| **Product Detail** | Click "Add to Cart"                                | Product is added to the cart                                       | ✅ Pass      | Yes        |
+| **Product Detail** | View product details                               | Displays product image, rating, description, price, qty, stock, share option and "Add to Cart" button | ✅ Pass  | Yes        |
+| **Product Detail** | View product details to the authenticated users     | Displays product image, rating, description, price, qty, stock, share option and "Add to Cart" and "Add to Wishlist" button | ✅ Pass  | Yes        |
+| **Product Detail** | Admin can edit and delete a product through the UI    | Admin can update product image, rating, description, price, in stock through the UI | ✅ Pass  | Yes        |
+| **Product Detail** | Click "Add to Cart"                                | Product is added to the cart   logged in                     |                                     | ✅ Pass      | Yes        |
+| **Product Detail** | Click "Add to Wishlist" by authenticated users   | Product is added to the wishlist                                     | ✅ Pass      | Yes        |
 | **Product Detail** | View related products                              | Displays other recommended products                                | ✅ Pass      | Yes        |
 | **Login Page**     | Enter valid credentials and submit                 | User is logged in successfully                                    | ✅ Pass      | Yes        |
 | **Login Page**     | Enter invalid credentials                          | Error message is displayed                                       | ✅ Pass      | Yes        |
-| **Logout**        | Click logout button                                 | User is logged out and redirected to the home page               | ✅ Pass      | Yes        |
-| **Signup Page**   | Enter valid details and submit                      | User is registered successfully and logged in                     | ✅ Pass      | Yes        |
+| **Forgot Password**     | User can click on forgot password                | An email is sent to change the password                  | ✅ Pass      | Yes        |
+| **Logout**        | Click logout button                                 | User is logged out and redirected to the login page               | ✅ Pass      | Yes        |
+| **Signup Page**   | Enter valid details and submit                      | User is registered successfully and an email confirmation link is sent | ✅ Pass      | Yes        |
 | **Signup Page**   | Enter invalid/missing details                       | Error messages are displayed                                     | ✅ Pass      | Yes        |
 | **FAQs Page**     | View FAQs section                                   | All questions and answers are displayed                          | ✅ Pass      | Yes        |
-| **Profile Page**  | View profile details                               | Displays user details with an option to edit                     | ✅ Pass      | Yes        |
+| **Profile Page**  | View profile details                               | Displays user details with an option to update                   | ✅ Pass      | Yes        |
 | **Profile Page**  | Update profile information                          | Changes are saved successfully                                   | ✅ Pass      | Yes        |
 | **Update Password** | Change password successfully                     | User can log in with a new password                             | ✅ Pass      | Yes        |
-| **Delete Account** | Click "Delete Account" and confirm                 | Account is permanently removed                                 | ✅ Pass      | Yes        |
+| **Delete Account** | Click "Delete Account" and confirm                 | Account is permanently removed and an email confirmation is sent                                | ✅ Pass      | Yes        |
+| **Add a product** | Admin can add a product through UI                 | Added product can be viewed in shop page                               | ✅ Pass      | Yes        |
 | **Wishlist Page** | Click "Add to Wishlist" (Unauthenticated user)      | Redirects to login page                                        | ✅ Pass      | Yes        |
 | **Wishlist Page** | Click "Add to Wishlist" (Authenticated user)        | Product is saved to the wishlist                               | ✅ Pass      | Yes        |
 | **Wishlist Page** | View wishlist                                      | Displays saved products                                       | ✅ Pass      | Yes        |
@@ -261,7 +268,11 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 
 - On the checkout success page, the dropdowns for "Shop" and "Account" do not transition smoothly.
 
-- When removing products from the wishlist, the alert message bar also displays the cart update notification. I'll address this issue later.
+-  500 Error When Deleted Product Exists in admin Wishlist/Cart.
+  - Identified issue where removing a product from the database while it's in a admin cart or wishlist causes a server error. 
+  - The error persists until the cache cookie is cleared. 
+
+- When removing products from the wishlist, the alert message bar also displays the cart update notification when items are in cart. I'll address this issue later.
 
 ![wishlist bug](read-me/bugs/wishlist_remove.JPG) 
 
