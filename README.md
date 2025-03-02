@@ -626,7 +626,7 @@ CSRF (Cross-Site Request Forgery) tokens are security features included in every
 
 There are media query breakpoints. This convenient feature allows users to easily access different sections of the website, making the browsing experience smoother and more efficient.
 
-- Changed the icon of the contact, so it varies in the features image.
+- Changed the contact icon to differentiate it from the feature image. Also added an "Add to Cart" button in the wishlist, which is not available in the feature images. As part of continuous development, new features are being added.
 
 | Features        	| Desktop                                            	| Phone                                            	|
 |-----------------	|----------------------------------------------------	|--------------------------------------------------	|

@@ -48,6 +48,15 @@
                             <a href="{% url 'remove_from_wishlist' item.product.id %}" class="wishlist-delete btn btn-outline-danger md">
                                 <i class="fas fa-trash wishlist-icon"></i> Remove
                             </a>
+                            <!-- Add to Cart Button -->
+                            <form class="d-inline" action="{% url 'add_to_cart' item.product.id %}" method="POST">
+                                {% csrf_token %}
+                                <input type="hidden" name="quantity" value="1">
+                                <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                                <button type="submit" class="btn btn-outline-secondary">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </li>

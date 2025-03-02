@@ -81,6 +81,7 @@ Return back to the [README.md](README.md) file.
 | **Wishlist Page** | Click "Add to Wishlist" (Authenticated user)        | Product is saved to the wishlist                               | ✅ Pass      | Yes        |
 | **Wishlist Page** | View wishlist                                      | Displays saved products                                       | ✅ Pass      | Yes        |
 | **Wishlist Page** | Remove product from wishlist                       | Product is removed successfully                               | ✅ Pass      | Yes        |
+| **Wishlist Page** | Add product from wishlist to Cart                       | Product is added to cart successfully                               | ✅ Pass      | Yes        |
 | **Cart Page**     | View cart                                          | Displays all added products with quantity and total price     | ✅ Pass      | Yes        |
 | **Cart Page**     | Update product quantity                            | Price updates accordingly                                    | ✅ Pass      | Yes        |
 | **Cart Page**     | Remove product from cart                           | Product is removed successfully                             | ✅ Pass      | Yes        |
@@ -267,6 +268,8 @@ User Stories are documented in the Mindspark [GitHub Projects Board](https://git
 ### Unfixed Bugs
 
 - On the checkout success page, the dropdowns for "Shop" and "Account" do not transition smoothly.
+
+- I will look in the future to making the product disappear from the wishlist when added to the cart.
 
 -  500 Error When Deleted Product Exists in admin Wishlist/Cart.
   - Identified issue where removing a product from the database while it's in a admin cart or wishlist causes a server error. 
